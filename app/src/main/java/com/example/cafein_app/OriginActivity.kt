@@ -14,11 +14,11 @@ class OriginActivity : AppCompatActivity() {
         var signupbutton = findViewById<Button>(R.id.originpage_siginupbutton)
 
         loginbutton.setOnClickListener {
-            var intent = Intent(this, LoginActivity::class.java)
+            var intent = Intent(this, LoginActivity::class.java) // 오리진화면 -> 로그인
             startActivity(intent)
         }
         signupbutton.setOnClickListener {
-            var intent = Intent(this, SignupActivity::class.java)
+            var intent = Intent(this, SignupActivity::class.java) // 오리진 화면 -> 회원가입
             startActivity(intent)
         }
     }
