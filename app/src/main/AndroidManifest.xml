@@ -10,7 +10,7 @@
 			android:supportsRtl="true"
 			android:theme="@style/Theme.CAFEIN_APP">
 		<activity
-				android:name=".MainActivity"
+				android:name=".OriginActivity"
 				android:exported="true">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN"/>
@@ -18,6 +18,10 @@
 				<category android:name="android.intent.category.LAUNCHER"/>
 			</intent-filter>
 		</activity>
+<!--		추가 액티비티 -->
+		<activity android:name=".LoginActivity" android:label="Login"></activity>
+		<activity android:name=".SignupActivity" android:label="Signup"></activity>
+
 	</application>
 
 </manifest>

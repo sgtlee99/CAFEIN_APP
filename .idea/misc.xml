@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/layout/activity_main.xml" value="0.1125" />
+        <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/layout/origin_activity.xml" value="0.1" />
+        <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/layout/siginup_activity.xml" value="0.2526041666666667" />
+        <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/layout/signup_activity.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$" />
   </component>
