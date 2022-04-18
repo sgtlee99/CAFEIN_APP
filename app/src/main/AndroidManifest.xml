@@ -21,6 +21,9 @@
 <!--		추가 액티비티 -->
 		<activity android:name=".LoginActivity" android:label="Login"></activity>
 		<activity android:name=".SignupActivity" android:label="Signup"></activity>
+		<activity android:name=".SurveyActivity"/>
+		<activity android:name=".HomeActivity"/>
+
 
 	</application>
 

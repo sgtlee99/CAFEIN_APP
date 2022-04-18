@@ -4,9 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/layout/activity_main.xml" value="0.1125" />
-        <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/layout/origin_activity.xml" value="0.1" />
+        <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/layout/home_activity.xml" value="0.11875" />
+        <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/layout/origin_activity.xml" value="0.264" />
         <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/layout/siginup_activity.xml" value="0.2526041666666667" />
         <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/layout/signup_activity.xml" value="0.1" />
+        <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/layout/survey_activity.xml" value="0.1" />
       </map>
     </option>
   </component>
