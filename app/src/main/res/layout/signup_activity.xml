@@ -86,10 +86,11 @@
 
 	<Button
 			android:text="NEXT"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
+			android:layout_width="300dp"
+			android:layout_height="60dp"
 			android:id="@+id/signuppage_NextButton"
 			android:layout_gravity="center"
 			android:layout_marginTop="18dp"
+			android:backgroundTint="@color/orange"
 			/>
 </LinearLayout>
