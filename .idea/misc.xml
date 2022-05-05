@@ -3,31 +3,37 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
-        <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/drawable/ic_launcher_background.xml" value="0.193" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/drawable/img_outline.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/drawable/like_cafe_shape.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/drawable/like_cafe_shape2.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/drawable/text_outline.xml" value="0.1335" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/drawable/textoutline.xml" value="0.193" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/layout/activity_mypage.xml" value="0.22735507246376813" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/layout/fragment_board.xml" value="0.17889492753623187" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/layout/fragment_home.xml" value="0.240625" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/layout/fragment_setting.xml" value="0.33" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/layout/home_activity.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/layout/like_cafe_activity.xml" value="0.33" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/layout/login_activity.xml" value="0.33" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/layout/my_info_change_activity.xml" value="0.33" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/layout/mypage_activity.xml" value="0.33" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/layout/origin_activity.xml" value="0.22735507246376813" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/layout/signup_activity.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/layout/survey_activity.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/layout/activity_main.xml" value="0.1125" />
-        <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/layout/fragment_board.xml" value="0.25364583333333335" />
-        <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/layout/fragment_home.xml" value="0.1" />
-        <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/layout/fragment_setting.xml" value="0.2390625" />
         <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/layout/home_activity.xml" value="0.11875" />
-        <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/layout/login_activity.xml" value="0.1" />
-        <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/layout/origin_activity.xml" value="0.176" />
+        <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/layout/origin_activity.xml" value="0.264" />
         <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/layout/siginup_activity.xml" value="0.2526041666666667" />
         <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/layout/signup_activity.xml" value="0.1" />
         <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/layout/survey_activity.xml" value="0.1" />
-        <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/menu/appmenu.xml" value="0.24010416666666667" />
-        <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/menu/home_appbar.xml" value="0.1" />
-        <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/menu/home_tag_list.xml" value="0.1296875" />
-        <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/menu/navi_menu.xml" value="0.2671875" />
-        <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.13125" />
-        <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.13125" />
       </map>
     </option>
   </component>
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$" />
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="jbr-11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
