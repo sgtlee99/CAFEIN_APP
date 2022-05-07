@@ -7,6 +7,11 @@
         <entry key="..\:/Users/USER/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/drawable/img_outline.xml" value="0.1" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/drawable/like_cafe_shape.xml" value="0.1" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/drawable/like_cafe_shape2.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/drawable/like_cafe_shape3.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/drawable/my_written_board_shape.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/drawable/my_written_board_shape2.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/drawable/my_written_board_shape3.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/drawable/mypage_shape.xml" value="0.1" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/drawable/text_outline.xml" value="0.1335" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/drawable/textoutline.xml" value="0.193" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/layout/activity_mypage.xml" value="0.22735507246376813" />
@@ -17,6 +22,7 @@
         <entry key="..\:/Users/USER/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/layout/like_cafe_activity.xml" value="0.33" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/layout/login_activity.xml" value="0.33" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/layout/my_info_change_activity.xml" value="0.33" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/layout/my_written_board_activity.xml" value="0.33" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/layout/mypage_activity.xml" value="0.33" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/layout/origin_activity.xml" value="0.22735507246376813" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/layout/signup_activity.xml" value="0.36614583333333334" />

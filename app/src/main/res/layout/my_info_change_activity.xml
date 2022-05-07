@@ -42,7 +42,7 @@
         android:background="@drawable/text_outline"
         android:layout_gravity="center_horizontal"
         android:gravity="center_vertical"
-        android:layout_marginTop="18dp" />
+        android:layout_marginTop="40dp" />
 
     <EditText
         android:layout_width="300dp"
@@ -75,7 +75,7 @@
             android:id="@+id/gender_TextView"
             android:text="성별"
             android:layout_marginStart="56dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="35dp"
             android:textSize="20sp" />
 
         <RadioButton
@@ -83,8 +83,7 @@
             android:layout_height="50dp"
             android:id="@+id/infochange_MaleradioButton"
             android:text="Male"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp" />
+            android:layout_gravity="center" />
 
         <RadioButton
             android:layout_width="300dp"
@@ -102,7 +101,7 @@
         android:text="설문조사 다시하기"
         android:layout_gravity="center"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="75dp"
         android:backgroundTint="@color/orange" />
 
     <Button
@@ -112,7 +111,7 @@
         android:text="수정 완료"
         android:layout_gravity="center"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:backgroundTint="@color/orange" />
 
 </LinearLayout>

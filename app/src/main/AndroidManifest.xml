@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CAFEIN_APP">
         <activity
+            android:name=".MyWrittenBoardActivity"
+            android:exported="false" />
+        <activity
             android:name=".LikeCafeActivity"
             android:exported="false" />
         <activity

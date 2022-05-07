@@ -4,12 +4,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 
-class LikeCafeActivity : AppCompatActivity() {
+class MyWrittenBoardActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.like_cafe_activity)
+        setContentView(R.layout.my_written_board_activity)
 
-        var backbutton = findViewById<Button>(R.id.likecafe_BackButton)
+        var backbutton = findViewById<Button>(R.id.mywrittenboard_BackButton)
 
         backbutton.setOnClickListener {
             finish()

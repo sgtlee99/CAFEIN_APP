@@ -38,6 +38,14 @@
 				android:textSize="24sp" />
 		</LinearLayout>
 
+		<ImageView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/mypage_Profile"
+			android:background="@drawable/mypage_shape"
+			android:layout_marginTop="20dp"
+			android:layout_marginStart="60dp" />
+
 		<LinearLayout
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
@@ -49,7 +57,7 @@
 				android:id="@+id/id_TextView"
 				android:text="아이디"
 				android:layout_marginStart="65dp"
-				android:layout_marginTop="35dp"
+				android:layout_marginTop="25dp"
 				android:textSize="20sp" />
 
 			<TextView
@@ -59,7 +67,7 @@
 				android:text="tkdgns123"
 				android:background="@drawable/text_outline"
 				android:layout_marginStart="35dp"
-				android:layout_marginTop="29dp" />
+				android:layout_marginTop="19dp" />
 		</LinearLayout>
 
 		<LinearLayout
@@ -73,7 +81,7 @@
 				android:id="@+id/nickname_TextView"
 				android:text="닉네임"
 				android:layout_marginStart="65dp"
-				android:layout_marginTop="25dp"
+				android:layout_marginTop="15dp"
 				android:textSize="20sp" />
 
 			<TextView
@@ -83,7 +91,7 @@
 				android:text="Sanghun"
 				android:background="@drawable/text_outline"
 				android:layout_marginStart="35dp"
-				android:layout_marginTop="19dp" />
+				android:layout_marginTop="9dp" />
 		</LinearLayout>
 
 		<LinearLayout
@@ -97,7 +105,7 @@
 				android:id="@+id/mygroup_TextView"
 				android:text="나의 그룹"
 				android:layout_marginStart="65dp"
-				android:layout_marginTop="25dp"
+				android:layout_marginTop="15dp"
 				android:textSize="20sp" />
 
 			<ImageView
@@ -105,7 +113,7 @@
 				android:layout_height="35dp"
 				android:src="@drawable/groupimg_cat"
 				android:layout_marginStart="150dp"
-				android:layout_marginTop="20dp"/>
+				android:layout_marginTop="10dp"/>
 		</LinearLayout>
 
 
@@ -116,7 +124,7 @@
 			android:text="내 정보 수정"
 			android:layout_gravity="center"
 			android:layout_centerHorizontal="true"
-			android:layout_marginTop="150dp"
+			android:layout_marginTop="70dp"
 			android:backgroundTint="@color/orange" />
 
 		<Button
