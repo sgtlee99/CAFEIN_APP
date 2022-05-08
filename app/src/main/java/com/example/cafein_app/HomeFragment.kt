@@ -33,6 +33,8 @@ class HomeFragment : Fragment() {
         list.add("지산동")
         list.add("태그1")
         list.add("태그2")
+
+
     }
 
     override fun onCreateView(
