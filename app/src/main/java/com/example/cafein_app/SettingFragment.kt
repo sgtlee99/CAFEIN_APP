@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import kotlinx.android.synthetic.main.fragment_setting.*
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -32,9 +31,17 @@ class SettingFragment : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
-
     }
 
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+
+        var myinfo = view?.findViewById<Button>(R.id.mypage_InfoChangeButton)
+        myinfo?.setOnClickListener {
+            var intent = Intent(context, MyInfoChangeActivity::class.java)
+            startActivity(intent)
+        }
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
