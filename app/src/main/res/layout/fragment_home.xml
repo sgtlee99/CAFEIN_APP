@@ -6,11 +6,6 @@
 			 xmlns:app="http://schemas.android.com/apk/res-auto"
 			 tools:context=".HomeFragment">
 
-	<!-- TODO: Update blank fragment layout -->
-	<!--	<TextView-->
-	<!--			android:layout_width="match_parent"-->
-	<!--			android:layout_height="match_parent"-->
-	<!--			android:text="home"/>-->
 	<LinearLayout
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
@@ -77,7 +72,7 @@
 
 			<LinearLayout
 					android:layout_width="match_parent"
-					android:layout_height="match_parent"
+					android:layout_height="wrap_content"
 					android:orientation="vertical">
 
 
