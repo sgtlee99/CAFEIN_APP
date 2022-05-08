@@ -27,6 +27,12 @@ class HomeFragment : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+
+        var list = ArrayList<String>()
+        list.add("수성구")
+        list.add("지산동")
+        list.add("태그1")
+        list.add("태그2")
     }
 
     override fun onCreateView(
