@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-android-extensions'
 }
 
 android {
@@ -8,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.cafein_app"
-        minSdk 31
+        minSdk 29
         targetSdk 31
         versionCode 1
         versionName "1.0"
