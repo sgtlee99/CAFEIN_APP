@@ -20,6 +20,7 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="60dp"
             android:layout_marginEnd="75dp"
+            android:textColor="#FFFFFFFF"
             android:backgroundTint="@color/orange" />
 
         <TextView
@@ -102,6 +103,7 @@
         android:layout_gravity="center"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="75dp"
+        android:textColor="#FFFFFFFF"
         android:backgroundTint="@color/orange" />
 
     <Button
@@ -112,6 +114,7 @@
         android:layout_gravity="center"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="5dp"
+        android:textColor="#FFFFFFFF"
         android:backgroundTint="@color/orange" />
 
 </LinearLayout>

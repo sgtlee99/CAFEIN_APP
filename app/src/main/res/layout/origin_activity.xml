@@ -14,6 +14,7 @@
 			android:layout_width="300dp"
 			android:layout_height="60dp"
 			android:text="로그인"
+			android:textColor="#FFFFFFFF"
 			android:backgroundTint="@color/bright_red"
 			android:layout_marginTop="500dp"
 			android:layout_gravity="center"
@@ -25,6 +26,7 @@
 			android:layout_width="300dp"
 			android:layout_height="60dp"
 			android:text="회원가입"
+			android:textColor="#FFFFFFFF"
 			android:backgroundTint="@color/orange"
 			android:layout_gravity="center"
 			/>

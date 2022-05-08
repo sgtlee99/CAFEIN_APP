@@ -36,6 +36,7 @@
 			android:layout_toStartOf="@+id/signupButton"
 			android:layout_margin="15px"
 			android:layout_gravity="center"
+			android:textColor="#FFFFFFFF"
 			android:backgroundTint="@color/orange"
 			/>
 

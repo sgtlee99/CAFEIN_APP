@@ -103,6 +103,7 @@
 			android:layout_gravity="center"
 			android:layout_centerHorizontal="true"
 			android:layout_marginTop="70dp"
+			android:textColor="#FFFFFFFF"
 			android:backgroundTint="@color/orange" />
 
 		<Button
@@ -113,6 +114,7 @@
 			android:layout_gravity="center"
 			android:layout_centerHorizontal="true"
 			android:layout_marginTop="5dp"
+			android:textColor="#FFFFFFFF"
 			android:backgroundTint="@color/orange" />
 
 		<Button
@@ -123,6 +125,7 @@
 			android:layout_gravity="center"
 			android:layout_centerHorizontal="true"
 			android:layout_marginTop="5dp"
+			android:textColor="#FFFFFFFF"
 			android:backgroundTint="@color/orange" />
 
 		<Button
@@ -133,6 +136,7 @@
 			android:layout_gravity="center"
 			android:layout_centerHorizontal="true"
 			android:layout_marginTop="5dp"
+			android:textColor="#FFFFFFFF"
 			android:backgroundTint="@color/orange" />
 
 	</LinearLayout>
