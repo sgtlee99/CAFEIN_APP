@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  android:layout_width="match_parent"
+			  android:layout_height="match_parent"
+			  android:orientation="vertical">
+
+	<EditText
+			android:layout_width="300dp"
+			android:layout_height="50dp"
+			android:id="@+id/signup_emailInput"
+			android:hint="ID"
+			android:layout_gravity="center_horizontal"
+			android:gravity="center_vertical"
+			/>
+
+	<EditText
+			android:layout_width="300dp"
+			android:layout_height="50dp"
+			android:id="@+id/signup_pwInput"
+			android:hint="PW"
+			android:layout_gravity="center_horizontal"
+			android:gravity="center_vertical"
+			android:layout_marginTop="18dp"
+			/>
+
+	<EditText
+			android:layout_width="300dp"
+			android:layout_height="50dp"
+			android:id="@+id/singup_pwInput_confirm"
+			android:hint="PW confirm"
+			android:layout_gravity="center_horizontal"
+			android:gravity="center_vertical"
+			android:layout_marginTop="18dp"
+
+			/>
+
+	<EditText
+			android:layout_width="300dp"
+			android:layout_height="50dp"
+			android:id="@+id/singup_NickName"
+			android:hint="NickName"
+			android:layout_gravity="center_horizontal"
+			android:gravity="center_vertical"
+			android:layout_marginTop="18dp"
+
+			/>
+
+	<Switch
+			android:text="Are you Manager?"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/switch1"
+			android:layout_gravity="center_horizontal"
+			android:gravity="center_vertical"
+			android:layout_marginTop="18dp"/>
+
+	<RadioGroup
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			>
+
+		<RadioButton
+				android:text="Male"
+				android:layout_width="300dp"
+				android:layout_height="50dp"
+				android:id="@+id/male_radioButton2"
+				android:layout_gravity="center"
+				android:layout_marginTop="18dp"/>
+
+		<RadioButton
+				android:text="Female"
+				android:layout_width="300dp"
+				android:layout_height="50dp"
+				android:id="@+id/female_radioButton"
+				android:layout_gravity="center"
+				/>
+	</RadioGroup>
+
+	<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Suvey for recommend"
+			android:layout_gravity="center"
+			android:layout_marginTop="18dp"
+			/>
+
+	<Button
+			android:text="NEXT"
+			android:layout_width="300dp"
+			android:layout_height="60dp"
+			android:id="@+id/signuppage_NextButton"
+			android:layout_gravity="center"
+			android:layout_marginTop="18dp"
+			android:textColor="#FFFFFFFF"
+			android:backgroundTint="@color/orange"
+			/>
+</LinearLayout>

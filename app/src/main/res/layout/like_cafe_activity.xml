@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LikeCafeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/likecafe_BackButton"
+            android:text="◀"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="70dp"
+            android:textColor="#FFFFFFFF"
+            android:backgroundTint="@color/orange" />
+
+        <TextView
+            android:layout_width="145dp"
+            android:layout_height="37dp"
+            android:id="@+id/likecafe_Title"
+            android:text="좋아하는 카페"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="32dp"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/likecafe_outBoard"
+            android:background="@drawable/like_cafe_shape" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/likecafe_inBoard"
+            android:background="@drawable/like_cafe_shape2"
+            android:layout_gravity="center"
+            android:layout_marginBottom="70dp" />
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:id="@+id/likecafe_ListCafename"
+            android:text="영진 카페"
+            android:layout_marginTop="225dp"
+            android:layout_marginStart="20dp"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/likecafe_ListProfile"
+            android:background="@drawable/like_cafe_shape3"
+            android:layout_marginTop="220dp"
+            android:layout_marginStart="280dp" />
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:id="@+id/likecafe_ListTag"
+            android:text="#테이크 아웃 #복현동 #분위기"
+            android:layout_marginTop="280dp"
+            android:layout_marginStart="20dp"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/likecafe_HeartImg"
+            android:src="@drawable/heart"
+            android:layout_marginTop="295dp"
+            android:layout_marginStart="295dp" />
+    </FrameLayout>
+
+</LinearLayout>
