@@ -9,10 +9,6 @@ class LikeCafeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.like_cafe_activity)
 
-        var backbutton = findViewById<Button>(R.id.likecafe_BackButton)
 
-        backbutton.setOnClickListener {
-            finish()
-        }
     }
 }

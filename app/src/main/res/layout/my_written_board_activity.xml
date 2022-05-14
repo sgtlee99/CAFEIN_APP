@@ -12,28 +12,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <Button
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:id="@+id/mywrittenboard_BackButton"
-            android:text="◀"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="60dp"
-            android:layout_marginEnd="70dp"
-            android:textColor="#FFFFFFFF"
-            android:backgroundTint="@color/orange" />
-
-        <TextView
-            android:layout_width="145dp"
-            android:layout_height="37dp"
-            android:id="@+id/mywrittenboard_Title"
-            android:text="나의 작성글"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center"
-            android:layout_marginTop="32dp"
-            android:textSize="24sp" />
-    </LinearLayout>
-
     <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -83,4 +61,5 @@
 
     </FrameLayout>
 
+</LinearLayout>
 </LinearLayout>

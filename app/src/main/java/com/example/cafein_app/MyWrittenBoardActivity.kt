@@ -9,10 +9,5 @@ class MyWrittenBoardActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.my_written_board_activity)
 
-        var backbutton = findViewById<Button>(R.id.mywrittenboard_BackButton)
-
-        backbutton.setOnClickListener {
-            finish()
-        }
     }
 }

@@ -10,12 +10,7 @@ class MyInfoChangeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.my_info_change_activity)
 
-        var backbutton = findViewById<Button>(R.id.infochange_BackButton)
         var okbutton = findViewById<Button>(R.id.infochange_OkButton)
-
-        backbutton.setOnClickListener {
-            finish()
-        }
 
         okbutton.setOnClickListener {
             var intent = Intent(this, SettingFragment::class.java)
