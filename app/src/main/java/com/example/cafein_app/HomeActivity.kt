@@ -31,8 +31,8 @@ class HomeActivity : AppCompatActivity() {
                         supportFragmentManager.beginTransaction().replace(R.id.fl_container, homeFragment).commit()
                     }
                     R.id.second -> {
-                        val boardFragment = BoardFragment()
-                        supportFragmentManager.beginTransaction().replace(R.id.fl_container, boardFragment).commit()
+                        val writingFragment = WritingFragment()
+                        supportFragmentManager.beginTransaction().replace(R.id.fl_container, writingFragment).commit()
                     }
                     R.id.third -> {
                         val settingFragment = SettingFragment()

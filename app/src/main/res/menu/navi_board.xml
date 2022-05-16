@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+	  xmlns:app="http://schemas.android.com/apk/res-auto">
+	<item android:id="@+id/board_view" app:showAsAction="ifRoom" android:enabled="true" android:title="게시글" />
+	<item android:id="@+id/board_review" app:showAsAction="ifRoom"
+		  android:title="리뷰"/>
+</menu>

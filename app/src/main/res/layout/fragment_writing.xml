@@ -17,14 +17,14 @@
 		<EditText
 				android:layout_width="match_parent"
 				android:layout_height="50dp"
-				android:hint="제목"
+				android:hint=" 제목"
 				android:background="@drawable/text_outline"
 				android:layout_marginTop="15dp"
 				/>
 		<EditText
 				android:layout_width="match_parent"
 				android:layout_height="50dp"
-				android:hint="사진첨부"
+				android:hint=" 사진첨부"
 				android:background="@drawable/text_outline"
 				android:layout_marginTop="15dp"
 
@@ -32,7 +32,7 @@
 		<EditText
 				android:layout_width="match_parent"
 				android:layout_height="340dp"
-				android:hint="내용"
+				android:hint=" 내용"
 				android:background="@drawable/text_outline"
 				android:layout_marginTop="15dp"
 
@@ -45,7 +45,7 @@
 		<EditText
 				android:layout_width="match_parent"
 				android:layout_height="50dp"
-				android:hint="태그"
+				android:hint=" 태그"
 				android:background="@drawable/text_outline"
 				android:layout_marginTop="15dp"
 
@@ -53,7 +53,7 @@
 		<EditText
 				android:layout_width="match_parent"
 				android:layout_height="50dp"
-				android:hint="자동 태그"
+				android:hint=" 자동 태그"
 				android:background="@drawable/text_outline"
 				android:layout_marginTop="15dp"
 
@@ -61,7 +61,7 @@
 		<Button
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:text="완료"
+				android:text=" 완료"
 				android:layout_gravity="right"
 				android:layout_marginTop="15dp"
 				/>
