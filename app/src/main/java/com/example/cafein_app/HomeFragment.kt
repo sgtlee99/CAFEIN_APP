@@ -45,7 +45,7 @@ class HomeFragment : Fragment() {
 //        tagAdpater?.adapter = TagAdapter(tagarr)
 
 
-        var list_view = view?.findViewById<ListView>(R.id.list_view)
+
 
     }
 }
