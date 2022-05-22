@@ -6,5 +6,16 @@
 <TextView
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:text="tag"/>
+		android:text="tag"
+		android:textSize="20sp"
+		android:id="@+id/tag_text"/>
+	<androidx.appcompat.widget.AppCompatButton
+			android:id="@+id/tag_button1"
+			android:textColor="#FFFFFF"
+			android:layout_width="45dp"
+			android:layout_height="45dp"
+			android:background="@drawable/redbutton_round"
+			android:layout_marginRight="10dp"
+
+			/>
 </LinearLayout>

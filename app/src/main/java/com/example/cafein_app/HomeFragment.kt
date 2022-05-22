@@ -5,63 +5,65 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Adapter
+import android.widget.ListView
+import androidx.annotation.Nullable
+import androidx.recyclerview.widget.RecyclerView
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [HomeFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class HomeFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    lateinit var tagAdpater : RecyclerView
+    var tagarr = arrayListOf<Tag>(
+        Tag("hello"),
+        Tag("hello2"),
+        Tag("hello3"),
+        Tag("hello4"),
+        Tag("hello5"),
+        Tag("hello6"),
+        Tag("hello7"),
+    )
+
+    var UserList = arrayListOf<User>(
+        User("심효근","shimhg02@naver.com","아령하세요잇!"),
+        User("박채연","asdf@naver.com","할말이 없다"),
+        User("박서연","qwerqr2@naver.com","ㄷ"),
+        User("박태욱","ㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹ@naver.com","ㅁㄴㅇㄹ"),
+        User("김민식","qwer2@naver.com","ㅇㅁㄴㄹ!"),
+        User("이소명","shㅇㄹ@naver.com","아령dsafsdf!"),
+        User("한규언","shiㅁㄴㅇㄹ@naver.com","afsdf!"),
+        User("정빈","shi@naver.com","ㅁㄴㅇㄹ"),
+        User("김태양","sㅁㄴㅇㄹㅁㅇㄴㄹaver.com","아ㅇ잇!")
+    )
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-
-        var list = ArrayList<String>()
-        list.add("수성구")
-        list.add("지산동")
-        list.add("태그1")
-        list.add("태그2")
-
-
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        //리사이클러뷰 태그
+//        val Adapter = TagAdapter(this, tagList)
+//        var tag_listview = view?.findViewById<ListView>(R.id.tag_listview)
+//        tag_listview?.adapter = Adapter
+        //앱바 변경 코드 (미완성)
+        // ActionBar actionbar = ((HomeActivity)getActivity()).getSupportActionBar();
+        // actionBar.setTitle("HOME");
+        // actionBar.setDisplayHomeAsUpEnabled(false);
+        //===========================================
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment HomeFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            HomeFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+//        tagAdpater = view?.findViewById(R.id.tag_listview)
+//        tagAdpater?.adapter = TagAdapter(tagarr)
+
+        val Adapter = ListAdapter(,UserList)
+        var list_view = view?.findViewById<ListView>(R.id.list_view)
+        list_view.adapter = Adapter
     }
 }

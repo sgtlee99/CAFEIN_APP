@@ -37,6 +37,7 @@ class WritingFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_writing, container, false)
     }
 
+
     companion object {
         /**
          * Use this factory method to create a new instance of

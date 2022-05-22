@@ -59,8 +59,9 @@
 
 
 		</LinearLayout>
+<!--		아이디 tag_listview-->
 		<androidx.recyclerview.widget.RecyclerView
-				android:id="@+id/tag_listview"
+				android:id="@+id/list_view"
 				android:layout_width="match_parent"
 				android:layout_height="50dp"
 				app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
