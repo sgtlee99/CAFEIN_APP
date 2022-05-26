@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 			 xmlns:tools="http://schemas.android.com/tools"
 			 android:layout_width="match_parent"
 			 android:layout_height="match_parent"
+			 android:orientation="vertical"
 			 xmlns:app="http://schemas.android.com/apk/res-auto">
-
-	<LinearLayout
-		android:layout_width="match_parent"
-		android:layout_height="match_parent"
-		android:orientation="vertical">
-
-
 
 		<ScrollView
 			android:layout_width="match_parent"
@@ -28,22 +22,18 @@
 					android:background="@drawable/like_cafe_shape3"
 					android:layout_margin="10dp" />
 
-
 				<com.google.android.material.card.MaterialCardView
 					android:layout_width="match_parent"
 					android:layout_height="350dp"
 					app:strokeWidth="1dp"
 					app:cardCornerRadius="20dp"
 					app:strokeColor="@color/black"
-					android:layout_margin="10dp"
-					>
+					android:layout_margin="10dp">
 
 					<LinearLayout
 						android:layout_width="match_parent"
 						android:layout_height="match_parent"
 						android:orientation="vertical">
-
-
 
 						<ImageView
 							android:layout_width="match_parent"
@@ -53,9 +43,7 @@
 							android:id="@+id/image_cafe"
 							tools:ignore="MissingConstraints"
 							android:scaleType="centerCrop"
-							tools:layout_editor_absoluteX="0dp"
-
-							/>
+							tools:layout_editor_absoluteX="0dp" />
 
 						<TextView
 							android:layout_margin="20dp"
@@ -65,26 +53,16 @@
 							android:text="몬스터 커피의 더치 커피를 먹어보지 않은자 말을말라!"
 							android:textSize="20dp"
 							android:textStyle="bold"
-
 							tools:layout_editor_absoluteX="51dp"
 							app:layout_constraintTop_toBottomOf="@+id/image_cafe"
-							android:id="@+id/textView"
-							/>
-
-
-
+							android:id="@+id/textView" />
 
 					</LinearLayout>
 
 				</com.google.android.material.card.MaterialCardView>
 
-
-
 			</LinearLayout>
+
 		</ScrollView>
 
-
-	</LinearLayout>
-
-
-</FrameLayout>
+</LinearLayout>
