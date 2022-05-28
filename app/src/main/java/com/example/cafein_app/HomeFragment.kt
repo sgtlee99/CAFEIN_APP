@@ -16,12 +16,20 @@ class HomeFragment : Fragment() {
     lateinit var tagAdpater : RecyclerView
 
 
-
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
+
+    // override fun onActivityCreated(savedInstanceState: Bundle?) {
+        // super.onActivityCreated(savedInstanceState)
+
+        // var nextinfo = view?.findViewById<Button>(R.id.image_cafe)
+        // nextinfo?.setOnClickListener {
+            // var intent = Intent(context, BoardFragment::class.java)
+            // startActivity(intent)
+        // }
+
+    // }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
