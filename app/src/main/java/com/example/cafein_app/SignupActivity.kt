@@ -13,7 +13,7 @@ class SignupActivity : AppCompatActivity() {
         var signupnextbutton = findViewById<Button>(R.id.signuppage_NextButton)
 
         signupnextbutton.setOnClickListener {
-            var intent = Intent(this, SurveyActivity::class.java)
+            var intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
     }
