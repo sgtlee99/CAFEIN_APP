@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
+// fragment_boardreview
+
 class ReviewBoardFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

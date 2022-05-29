@@ -5,6 +5,8 @@ import android.view.Menu
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
+// board_fragment_activity
+
 class BoardFragmentActivity : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

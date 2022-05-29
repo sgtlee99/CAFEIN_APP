@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import android.widget.ListView
 import androidx.recyclerview.widget.RecyclerView
 
+// fragment_boardview
+
 class BoardFragment : Fragment() {
     lateinit var tagAdapter : RecyclerView
 
