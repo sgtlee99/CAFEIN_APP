@@ -62,8 +62,8 @@ class HomeFragment : Fragment() {
 //        tagAdpater = view?.findViewById(R.id.tag_listview)
 //        tagAdpater?.adapter = TagAdapter(tagarr)
 
-        val Adapter = ListAdapter(,UserList)
-        var list_view = view?.findViewById<ListView>(R.id.list_view)
-        list_view.adapter = Adapter
+//        val Adapter = ListAdapter(,UserList)
+//        var list_view = view?.findViewById<ListView>(R.id.list_view)
+//        list_view.adapter = Adapter
     }
 }
