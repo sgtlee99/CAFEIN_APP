@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.cafein_app">
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.example.cafein_app">
 
     <application
         android:allowBackup="true"
@@ -26,14 +27,46 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- 추가 액티비티 -->
+        </activity>
+        <!-- 추가 액티비티 -->
         <activity
             android:name=".LoginActivity"
             android:label="Login" />
         <activity
             android:name=".SignupActivity"
             android:label="Signup" />
-        <activity android:name=".SurveyActivity" />
+        <activity
+                android:name=".SurveyActivity1"
+                android:label="survey"
+                tools:ignore="Instantiatable"/>
+        <activity
+                android:name=".SurveyActivity2"
+                android:label="survey"
+                tools:ignore="Instantiatable"/>
+        <activity
+                android:name=".SurveyActivity3"
+                android:label="survey"
+                tools:ignore="Instantiatable"/>
+        <activity
+                android:name=".SurveyActivity4"
+                android:label="survey"
+                tools:ignore="Instantiatable"/>
+        <activity
+                android:name=".SurveyActivity5"
+                android:label="survey"
+                tools:ignore="Instantiatable"/>
+        <activity
+                android:name=".SurveyActivity6"
+                android:label="survey"
+                tools:ignore="Instantiatable"/>
+        <activity
+                android:name=".SurveyActivity7"
+                android:label="survey"
+                tools:ignore="Instantiatable"/>
+        <activity
+                android:name=".ViewPager2"
+                android:label="survey"
+                tools:ignore="Instantiatable"/>
         <activity
             android:name=".HomeActivity"
             android:label="Home" />
