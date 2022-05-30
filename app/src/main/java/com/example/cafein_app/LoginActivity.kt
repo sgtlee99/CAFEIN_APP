@@ -12,7 +12,7 @@ class LoginActivity : AppCompatActivity() {
 
         var loginbutton = findViewById<Button>(R.id.loginpage_loginbutton)
         loginbutton.setOnClickListener {
-            var intent = Intent(this,HomeActivity::class.java)
+            var intent = Intent(this,ViewPager2::class.java)
             startActivity(intent)
         }
     }
