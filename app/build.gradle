@@ -30,6 +30,15 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    // Android Studio 3.6 버전대
+//    viewBinding {
+//        enabled = true
+//    }
+    // Android Studio 4.0 이상
+    buildFeatures {
+        viewBinding = true
+    }
+
 }
 
 dependencies {

@@ -58,240 +58,31 @@
 					/>
 
 		</LinearLayout>
-<!--		아이디 tag_listview-->
-		<androidx.recyclerview.widget.RecyclerView
-				android:id="@+id/list_view"
-				android:layout_width="match_parent"
-				android:layout_height="50dp"
-				app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-				android:orientation="horizontal"
-				/>
+		<!--		아이디 tag_listview-->
 
-		<ScrollView
-				android:layout_width="match_parent"
-				android:layout_height="match_parent">
+
 
 			<LinearLayout
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
 					android:orientation="vertical">
 
-
-				<com.google.android.material.card.MaterialCardView
+				<androidx.recyclerview.widget.RecyclerView
 						android:layout_width="match_parent"
-						android:layout_height="400dp"
-						app:strokeWidth="1dp"
-						app:cardCornerRadius="10dp"
-						app:strokeColor="@color/black"
-						android:layout_margin="10dp">
+						android:layout_height="50dp"
+						app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+						android:orientation="horizontal"
+						android:id="@+id/list_viewview"
 
-					<androidx.constraintlayout.widget.ConstraintLayout
-							android:layout_width="match_parent"
-							android:layout_height="match_parent"
-							android:layout_margin="20dp"
-							>
-
-						<LinearLayout
-								android:layout_width="341dp"
-								android:layout_height="48dp"
-								android:orientation="horizontal"
-								android:id="@+id/linearLayout"
-								tools:ignore="MissingConstraints"
-								tools:layout_editor_absoluteX="0dp">
-
-							<androidx.appcompat.widget.AppCompatButton
-									android:id="@+id/angry_btn"
-									android:text="8"
-									android:textColor="#FFFFFF"
-									android:textSize="20sp"
-									android:layout_width="45dp"
-									android:layout_height="45dp"
-									android:background="@drawable/redbutton_round"
-									android:layout_marginRight="10dp"
-
-									/>
-
-							<androidx.appcompat.widget.AppCompatButton
-									android:id="@+id/angry_dbtn"
-									android:text="5"
-									android:textColor="#FFFFFF"
-									android:textSize="20sp"
-									android:layout_width="45dp"
-									android:layout_height="45dp"
-									android:background="@drawable/orangebutton_round"
-									android:layout_marginRight="10dp"
-									/>
-
-							<androidx.appcompat.widget.AppCompatButton
-									android:id="@+id/angry_btn12"
-									android:text="3"
-									android:textColor="#FFFFFF"
-									android:textSize="20sp"
-									android:layout_width="45dp"
-									android:layout_height="45dp"
-									android:background="@drawable/bluebutton_round"
-									android:layout_marginRight="10dp"
-									/>
-
-							<androidx.appcompat.widget.AppCompatButton
-									android:id="@+id/angry_bt2n"
-									android:text="2"
-									android:textColor="#FFFFFF"
-									android:textSize="20sp"
-									android:layout_width="45dp"
-									android:layout_height="45dp"
-									android:background="@drawable/greenbutton_round"
-									android:layout_marginRight="10dp"
-									/>
-						</LinearLayout>
-
-						<ImageView
-								android:layout_width="350dp"
-								android:layout_height="200dp"
-								android:src="@drawable/cafe_front"
-								android:id="@+id/image_cafe"
-								tools:ignore="MissingConstraints"
-								android:scaleType="centerCrop"
-								tools:layout_editor_absoluteX="0dp"
-								app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-								android:layout_marginTop="12dp"/>
-
-						<TextView
-								android:layout_width="wrap_content"
-								android:layout_height="wrap_content"
-								android:text="호작질"
-								android:textSize="25dp"
-								android:textStyle="bold"
-								android:layout_toEndOf="@+id/image_cafe"
-								tools:layout_editor_absoluteX="51dp"
-								app:layout_constraintTop_toBottomOf="@+id/image_cafe"
-								android:id="@+id/textView"
-								android:layout_marginTop="20dp"/>
-
-						<TextView
-								android:layout_width="wrap_content"
-								android:layout_height="wrap_content"
-								android:text="#수성구 #지산동 #디저트 #프랜차이즈"
-								android:textSize="15dp"
-								android:textStyle="italic"
-								tools:ignore="MissingConstraints"
-								tools:layout_editor_absoluteX="51dp"
-								app:layout_constraintTop_toBottomOf="@+id/textView"
-								android:layout_marginTop="20dp"/>
-
-					</androidx.constraintlayout.widget.ConstraintLayout>
-
-				</com.google.android.material.card.MaterialCardView>
-
-				<com.google.android.material.card.MaterialCardView
+						/>
+				<androidx.recyclerview.widget.RecyclerView
 						android:layout_width="match_parent"
-						android:layout_height="400dp"
-						app:strokeWidth="1dp"
-						app:cardCornerRadius="10dp"
-						app:strokeColor="@color/black"
-						android:layout_margin="10dp">
-
-					<androidx.constraintlayout.widget.ConstraintLayout
-							android:layout_width="match_parent"
-							android:layout_height="match_parent"
-							android:layout_margin="20dp"
-							>
-
-						<LinearLayout
-								android:layout_width="341dp"
-								android:layout_height="48dp"
-								android:orientation="horizontal"
-								android:id="@+id/linearLayout1"
-								tools:ignore="MissingConstraints"
-								tools:layout_editor_absoluteX="0dp">
-
-							<androidx.appcompat.widget.AppCompatButton
-									android:id="@+id/angry_btn1"
-									android:text="8"
-									android:textColor="#FFFFFF"
-									android:textSize="20sp"
-									android:layout_width="45dp"
-									android:layout_height="45dp"
-									android:background="@drawable/redbutton_round"
-									android:layout_marginRight="10dp"
-
-									/>
-
-							<androidx.appcompat.widget.AppCompatButton
-									android:id="@+id/angry_dbtn2"
-									android:text="5"
-									android:textColor="#FFFFFF"
-									android:textSize="20sp"
-									android:layout_width="45dp"
-									android:layout_height="45dp"
-									android:background="@drawable/orangebutton_round"
-									android:layout_marginRight="10dp"
-									/>
-
-							<androidx.appcompat.widget.AppCompatButton
-									android:id="@+id/angry_btn13"
-									android:text="3"
-									android:textColor="#FFFFFF"
-									android:textSize="20sp"
-									android:layout_width="45dp"
-									android:layout_height="45dp"
-									android:background="@drawable/bluebutton_round"
-									android:layout_marginRight="10dp"
-									/>
-
-							<androidx.appcompat.widget.AppCompatButton
-									android:id="@+id/angry_bt2n4"
-									android:text="2"
-									android:textColor="#FFFFFF"
-									android:textSize="20sp"
-									android:layout_width="45dp"
-									android:layout_height="45dp"
-									android:background="@drawable/greenbutton_round"
-									android:layout_marginRight="10dp"
-									/>
-						</LinearLayout>
-
-						<ImageView
-								android:layout_width="350dp"
-								android:layout_height="200dp"
-								android:src="@drawable/cafe_front"
-								android:id="@+id/image_cafe5"
-								tools:ignore="MissingConstraints"
-								android:scaleType="centerCrop"
-								tools:layout_editor_absoluteX="0dp"
-								app:layout_constraintTop_toBottomOf="@+id/linearLayout1"
-								android:layout_marginTop="12dp"/>
-
-						<TextView
-								android:layout_width="wrap_content"
-								android:layout_height="wrap_content"
-								android:text="호작질"
-								android:textSize="25dp"
-								android:textStyle="bold"
-								android:layout_toEndOf="@+id/image_cafe5"
-								tools:layout_editor_absoluteX="51dp"
-								app:layout_constraintTop_toBottomOf="@+id/image_cafe5"
-								android:id="@+id/textView1"
-								android:layout_marginTop="20dp"/>
-
-						<TextView
-								android:layout_width="wrap_content"
-								android:layout_height="wrap_content"
-								android:text="#수성구 #지산동 #디저트 #프랜차이즈"
-								android:textSize="15dp"
-								android:textStyle="italic"
-								tools:ignore="MissingConstraints"
-								tools:layout_editor_absoluteX="51dp"
-								app:layout_constraintTop_toBottomOf="@+id/textView1"
-								android:layout_marginTop="20dp"/>
-
-					</androidx.constraintlayout.widget.ConstraintLayout>
-
-				</com.google.android.material.card.MaterialCardView>
+						android:layout_height="wrap_content"
+						app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+						android:id="@+id/cardview_recyclerviewview"
+						/>
 
 			</LinearLayout>
-		</ScrollView>
-
 
 	</LinearLayout>
 

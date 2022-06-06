@@ -33,43 +33,46 @@
             android:name=".LoginActivity"
             android:label="Login" />
         <activity
-            android:name=".SignupActivity"
+            android:name="signuppack.SignupActivity"
             android:label="Signup" />
         <activity
-                android:name=".SurveyActivity1"
+                android:name="signuppack.SurveyActivity1"
                 android:label="survey"
                 tools:ignore="Instantiatable"/>
         <activity
-                android:name=".SurveyActivity2"
+                android:name="signuppack.SurveyActivity2"
                 android:label="survey"
                 tools:ignore="Instantiatable"/>
         <activity
-                android:name=".SurveyActivity3"
+                android:name="signuppack.SurveyActivity3"
                 android:label="survey"
                 tools:ignore="Instantiatable"/>
         <activity
-                android:name=".SurveyActivity4"
+                android:name="signuppack.SurveyActivity4"
                 android:label="survey"
                 tools:ignore="Instantiatable"/>
         <activity
-                android:name=".SurveyActivity5"
+                android:name="signuppack.SurveyActivity5"
                 android:label="survey"
                 tools:ignore="Instantiatable"/>
         <activity
-                android:name=".SurveyActivity6"
+                android:name="signuppack.SurveyActivity6"
                 android:label="survey"
                 tools:ignore="Instantiatable"/>
         <activity
-                android:name=".SurveyActivity7"
+                android:name="signuppack.SurveyActivity7"
                 android:label="survey"
                 tools:ignore="Instantiatable"/>
         <activity
-                android:name=".ViewPager2"
+                android:name="signuppack.ViewPager2"
                 android:label="survey"
                 tools:ignore="Instantiatable"/>
         <activity
             android:name=".HomeActivity"
             android:label="Home" />
+        <activity
+                android:name=".BoardFragmentActivity"
+                android:label="Board_Home" />
     </application>
 
 </manifest>

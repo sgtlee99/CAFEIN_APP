@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  android:layout_width="match_parent"
+			  android:layout_height="match_parent"
+			  xmlns:app="http://schemas.android.com/apk/res-auto"
+			  xmlns:tools="http://schemas.android.com/tools"
+			  android:orientation="vertical">
+
+	<com.google.android.material.card.MaterialCardView
+			android:layout_width="match_parent"
+			android:layout_height="400dp"
+			app:strokeWidth="1dp"
+			app:cardCornerRadius="10dp"
+			app:strokeColor="@color/black"
+			android:layout_margin="10dp"
+			android:id="@+id/cardview_id">
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_margin="20dp"
+				>
+
+			<LinearLayout
+					android:layout_width="341dp"
+					android:layout_height="48dp"
+					android:orientation="horizontal"
+					android:id="@+id/linearLayout"
+					tools:ignore="MissingConstraints"
+					tools:layout_editor_absoluteX="0dp">
+
+				<androidx.appcompat.widget.AppCompatButton
+						android:id="@+id/cardview_group1_button"
+						android:text="0"
+						android:textColor="#FFFFFF"
+						android:textSize="20sp"
+						android:layout_width="45dp"
+						android:layout_height="45dp"
+						android:background="@drawable/redbutton_round"
+						android:layout_marginRight="10dp"
+
+						/>
+
+				<androidx.appcompat.widget.AppCompatButton
+						android:id="@+id/cardview_group2_button"
+						android:text="0"
+						android:textColor="#FFFFFF"
+						android:textSize="20sp"
+						android:layout_width="45dp"
+						android:layout_height="45dp"
+						android:background="@drawable/orangebutton_round"
+						android:layout_marginRight="10dp"
+						/>
+
+				<androidx.appcompat.widget.AppCompatButton
+						android:id="@+id/cardview_group3_button"
+						android:text="0"
+						android:textColor="#FFFFFF"
+						android:textSize="20sp"
+						android:layout_width="45dp"
+						android:layout_height="45dp"
+						android:background="@drawable/bluebutton_round"
+						android:layout_marginRight="10dp"
+						/>
+
+				<androidx.appcompat.widget.AppCompatButton
+						android:id="@+id/cardview_group4_button"
+						android:text="0"
+						android:textColor="#FFFFFF"
+						android:textSize="20sp"
+						android:layout_width="45dp"
+						android:layout_height="45dp"
+						android:background="@drawable/greenbutton_round"
+						android:layout_marginRight="10dp"
+						/>
+			</LinearLayout>
+
+			<ImageView
+					android:layout_width="350dp"
+					android:layout_height="200dp"
+					android:src="@drawable/friend"
+					android:id="@+id/cardview_cafe_img"
+					tools:ignore="MissingConstraints"
+					android:scaleType="centerCrop"
+					tools:layout_editor_absoluteX="0dp"
+					app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+					android:layout_marginTop="12dp"/>
+
+			<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Title"
+					android:textSize="25dp"
+					android:textStyle="bold"
+					android:layout_toEndOf="@+id/cardview_cafe_img"
+					tools:layout_editor_absoluteX="51dp"
+					app:layout_constraintTop_toBottomOf="@+id/cardview_cafe_img"
+					android:id="@+id/cardview_title"
+					android:layout_marginTop="20dp"/>
+
+			<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="#Tag1 #Tag2"
+					android:textSize="15dp"
+					android:textStyle="italic"
+					tools:ignore="MissingConstraints"
+					tools:layout_editor_absoluteX="51dp"
+					app:layout_constraintTop_toBottomOf="@+id/cardview_title"
+					android:layout_marginTop="20dp"
+					android:id="@+id/cardview_tag"/>
+
+		</androidx.constraintlayout.widget.ConstraintLayout>
+
+	</com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

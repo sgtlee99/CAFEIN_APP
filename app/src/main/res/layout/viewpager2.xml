@@ -12,18 +12,18 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"/>
 
-    <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
-        android:id="@+id/spring"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
-        android:layout_gravity="center"
-        app:dampingRatio="1"
-        app:dotsCornerRadius="20dp"
-        app:dotsSize="16dp"
-        app:dotsSpacing="6dp"
-        app:dotsStrokeWidth="2dp"
-        app:stiffness="300" />
+<!--    <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator-->
+<!--        android:id="@+id/spring"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="50dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        app:dampingRatio="1"-->
+<!--        app:dotsCornerRadius="20dp"-->
+<!--        app:dotsSize="16dp"-->
+<!--        app:dotsSpacing="6dp"-->
+<!--        app:dotsStrokeWidth="2dp"-->
+<!--        app:stiffness="300" />-->
 
 </LinearLayout>
 
