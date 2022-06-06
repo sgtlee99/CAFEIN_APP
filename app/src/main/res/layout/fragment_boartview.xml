@@ -1,6 +1,199 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-												   android:layout_width="match_parent"
-												   android:layout_height="match_parent">
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			 xmlns:tools="http://schemas.android.com/tools"
+			 android:layout_width="match_parent"
+			 android:layout_height="match_parent"
+			 xmlns:app="http://schemas.android.com/apk/res-auto"
+			 tools:context=".BoardFragment">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+	<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical">
+
+		<ScrollView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+
+			<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical">
+
+				<com.google.android.material.card.MaterialCardView
+						android:layout_width="match_parent"
+						android:layout_height="300dp"
+						app:strokeWidth="1dp"
+						app:cardCornerRadius="10dp"
+						app:strokeColor="@color/black"
+						android:layout_margin="10dp">
+
+					<FrameLayout
+							android:layout_width="match_parent"
+							android:layout_height="match_parent">
+
+						<ImageView
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:src="@drawable/cafe_front"
+								android:id="@+id/image_cafe"
+								tools:ignore="MissingConstraints"
+								android:scaleType="centerCrop"
+								tools:layout_editor_absoluteX="0dp"
+								app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+						<TextView
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="호작질"
+								android:textSize="40dp"
+								android:textStyle="bold"
+								android:textColor="@color/white"
+								android:layout_marginTop="200dp"
+								android:layout_marginStart="20dp"
+								android:id="@+id/textView"
+								tools:ignore="MissingConstraints" />
+
+						<LinearLayout
+								android:layout_width="341dp"
+								android:layout_height="30dp"
+								android:orientation="horizontal"
+								android:id="@+id/linearLayout"
+								android:layout_marginTop="258dp"
+								android:layout_marginStart="20dp"
+								tools:ignore="MissingConstraints"
+								tools:layout_editor_absoluteX="0dp">
+
+							<androidx.appcompat.widget.AppCompatButton
+									android:id="@+id/angry_btn"
+									android:text="8"
+									android:textColor="#FFFFFF"
+									android:textSize="15sp"
+									android:layout_width="25dp"
+									android:layout_height="25dp"
+									android:background="@drawable/redbutton_round"
+									android:layout_marginRight="10dp" />
+
+							<androidx.appcompat.widget.AppCompatButton
+									android:id="@+id/angry_dbtn"
+									android:text="5"
+									android:textColor="#FFFFFF"
+									android:textSize="15sp"
+									android:layout_width="25dp"
+									android:layout_height="25dp"
+									android:background="@drawable/orangebutton_round"
+									android:layout_marginRight="10dp" />
+
+							<androidx.appcompat.widget.AppCompatButton
+									android:id="@+id/angry_btn12"
+									android:text="3"
+									android:textColor="#FFFFFF"
+									android:textSize="15sp"
+									android:layout_width="25dp"
+									android:layout_height="25dp"
+									android:background="@drawable/bluebutton_round"
+									android:layout_marginRight="10dp" />
+
+							<androidx.appcompat.widget.AppCompatButton
+									android:id="@+id/angry_bt2n"
+									android:text="2"
+									android:textColor="#FFFFFF"
+									android:textSize="15sp"
+									android:layout_width="25dp"
+									android:layout_height="25dp"
+									android:background="@drawable/greenbutton_round"
+									android:layout_marginRight="10dp" />
+
+						</LinearLayout>
+
+					</FrameLayout>
+
+				</com.google.android.material.card.MaterialCardView>
+
+
+
+				<com.google.android.material.card.MaterialCardView
+						android:layout_width="match_parent"
+						android:layout_height="250dp"
+						app:strokeWidth="1dp"
+						app:cardCornerRadius="10dp"
+						app:strokeColor="@color/black"
+						android:layout_margin="10dp">
+
+					<FrameLayout
+							android:layout_width="match_parent"
+							android:layout_height="match_parent">
+
+						<ImageView
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								tools:ignore="MissingConstraints"
+								android:scaleType="centerCrop"
+								android:background="#FF948B8B"
+								tools:layout_editor_absoluteX="0dp"
+								app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+						<LinearLayout
+								android:layout_width="match_parent"
+								android:layout_height="match_parent"
+								android:orientation="vertical">
+
+							<TextView
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:text="대구시 북구 동북로 241"
+									android:textSize="15dp"
+									android:textStyle="bold"
+									android:textColor="@color/white"
+									android:layout_margin="20dp"
+									android:id="@+id/bottomTextView"
+									tools:ignore="MissingConstraints"/>
+
+							<TextView
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:text="OPEN 8:00 ~ CLOSE 22:00 EVERYDAY"
+									android:textSize="15dp"
+									android:textStyle="bold"
+									android:textColor="@color/white"
+									android:layout_marginStart="20dp"
+									android:id="@+id/bottomTextView2"
+									tools:ignore="MissingConstraints"/>
+
+							<TextView
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:text="053-959-2266 ☎"
+									android:textSize="15dp"
+									android:textStyle="bold"
+									android:textColor="@color/white"
+									android:layout_marginStart="20dp"
+									android:id="@+id/bottomTextView3"
+									tools:ignore="MissingConstraints"/>
+
+							<TextView
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:text="영진전문대 서문 아파트상가에 위치하고있습니다."
+									android:textSize="20dp"
+									android:textStyle="bold"
+									android:textColor="@color/white"
+									android:layout_marginTop="55dp"
+									android:layout_marginStart="20dp"
+									android:layout_marginEnd="20dp"
+									android:id="@+id/bottomTextView4"
+									tools:ignore="MissingConstraints"/>
+
+						</LinearLayout>
+
+					</FrameLayout>
+
+				</com.google.android.material.card.MaterialCardView>
+
+			</LinearLayout>
+
+		</ScrollView>
+
+	</LinearLayout>
+
+</FrameLayout>
