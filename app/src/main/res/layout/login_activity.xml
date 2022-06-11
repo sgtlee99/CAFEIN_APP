@@ -8,29 +8,26 @@
 	<EditText
 			android:layout_width="300dp"
 			android:layout_height="50dp"
-			android:id="@+id/emailInput"
 			android:layout_centerHorizontal="true"
 			android:hint="ID"
 			android:layout_gravity="center"
+			android:id="@+id/input_loginID"
 			/>
 
 	<EditText
 			android:layout_width="300dp"
 			android:layout_height="50dp"
-			android:id="@+id/passwordInput"
 			android:layout_centerHorizontal="true"
 			android:hint="Password"
-			android:layout_below="@+id/emailInput"
-
+			android:layout_below="@+id/input_loginID"
 			android:layout_gravity="center"
-
+			android:id="@+id/input_loginPW"
 			/>
 
 	<Button
 			android:layout_width="300dp"
 			android:layout_height="60dp"
 			android:text="Log in"
-			android:id="@+id/loginpage_loginbutton"
 			android:textAllCaps="false"
 			android:layout_below="@+id/passwordInput"
 			android:layout_toStartOf="@+id/signupButton"
@@ -38,6 +35,7 @@
 			android:layout_gravity="center"
 			android:textColor="#FFFFFFFF"
 			android:backgroundTint="@color/orange"
+			android:id="@+id/loginpage_loginbutton"
 			/>
 
 
@@ -45,10 +43,9 @@
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:text="Remember login"
-			android:id="@+id/checkBox"
 			android:layout_below="@+id/loginButton"
 			android:layout_centerHorizontal="true"
 			android:layout_gravity="center"
-
+			android:id="@+id/checkBox"
 			/>
 </LinearLayout>

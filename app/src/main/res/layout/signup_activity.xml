@@ -7,52 +7,54 @@
 	<EditText
 			android:layout_width="300dp"
 			android:layout_height="50dp"
-			android:id="@+id/signup_emailInput"
 			android:hint="ID"
 			android:layout_gravity="center_horizontal"
 			android:gravity="center_vertical"
+			android:id="@+id/input_signupID"
+
 			/>
 
 	<EditText
 			android:layout_width="300dp"
 			android:layout_height="50dp"
-			android:id="@+id/signup_pwInput"
 			android:hint="PW"
 			android:layout_gravity="center_horizontal"
 			android:gravity="center_vertical"
 			android:layout_marginTop="18dp"
+			android:id="@+id/input_signupPW"
+
 			/>
 
 	<EditText
 			android:layout_width="300dp"
 			android:layout_height="50dp"
-			android:id="@+id/singup_pwInput_confirm"
 			android:hint="PW confirm"
 			android:layout_gravity="center_horizontal"
 			android:gravity="center_vertical"
 			android:layout_marginTop="18dp"
+			android:id="@+id/input_signupPW_confirm"
 
 			/>
 
 	<EditText
 			android:layout_width="300dp"
 			android:layout_height="50dp"
-			android:id="@+id/singup_NickName"
 			android:hint="NickName"
 			android:layout_gravity="center_horizontal"
 			android:gravity="center_vertical"
 			android:layout_marginTop="18dp"
-
+			android:id="@+id/input_signipNickname"
 			/>
 
 	<Switch
-			android:text="Are you Manager?"
+			android:text="점주님 이신가요?"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:id="@+id/switch1"
 			android:layout_gravity="center_horizontal"
 			android:gravity="center_vertical"
-			android:layout_marginTop="18dp"/>
+			android:layout_marginTop="18dp"
+			android:id="@+id/input_owner"
+			/>
 
 	<RadioGroup
 			android:layout_width="match_parent"
