@@ -39,13 +39,16 @@
 			/>
 
 
-	<CheckBox
+
+
+	<Button
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:text="Remember login"
-			android:layout_below="@+id/loginButton"
-			android:layout_centerHorizontal="true"
-			android:layout_gravity="center"
-			android:id="@+id/checkBox"
+			android:id="@+id/setup"
 			/>
+	<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="db info"
+			android:id="@+id/dbtest"/>
 </LinearLayout>

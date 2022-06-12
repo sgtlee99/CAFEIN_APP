@@ -1,5 +1,7 @@
 package signuppack
 
+import DB_Dao_Helper.LoginDatabase
+import DB_Dao_Helper.USER
 import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
@@ -9,21 +11,25 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.room.Room
 import com.example.cafein_app.LoginActivity
 import com.example.cafein_app.R
 import kotlinx.android.synthetic.main.login_activity.*
 import kotlinx.android.synthetic.main.signup_activity.*
+
 //회원가입 과정
 //기초 정보 입력 (아이디, 비번, 닉네임 등) -> 설문조사 ->
 class SignupActivity : AppCompatActivity() {
-    val TAG : String = "SIGNUP"
+    val TAG: String = "SIGNUP"
     var isExitBlank = false
     var isPWSame = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.signup_activity)
-
+        val db = Room.databaseBuilder(
+            applicationContext, LoginDatabase::class.java, "database"
+        ).allowMainThreadQueries().build()
 
         //설문조사로 이동
         var signupnextbutton = findViewById<Button>(R.id.signuppage_NextButton)
@@ -43,15 +49,15 @@ class SignupActivity : AppCompatActivity() {
             //val sex
 
             //사용자가 입력항목을 다 채우지 않은 경우
-            if(id.isEmpty() || pw.isEmpty() || pw_cf.isEmpty() || nick.isEmpty()) {
+            if (id.isEmpty() || pw.isEmpty() || pw_cf.isEmpty() || nick.isEmpty()) {
                 isExitBlank = true
             } else {
-                if(pw == pw_cf) {
+                if (pw == pw_cf) {
                     isPWSame = true
                 }
             }
 
-            if(!isExitBlank && isPWSame) { //입력항목이 다 채워진경우 && 비밀번호와 비밀번호 확인 일치
+            if (!isExitBlank && isPWSame) { //입력항목이 다 채워진경우 && 비밀번호와 비밀번호 확인 일치
                 //회원가입 성공 토스트 메시지
                 Toast.makeText(this, "${nick}님 회원가입 성공입니다.", Toast.LENGTH_SHORT).show()
 
@@ -63,7 +69,8 @@ class SignupActivity : AppCompatActivity() {
                 editor.putString("nickname", nick)
 
                 editor.apply()
-
+                //★데이터 베이스에 저장★
+                db.dao().insert(USER(id,pw,nick))
                 //로그인 화면으로 이동
                 var intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)
@@ -72,7 +79,7 @@ class SignupActivity : AppCompatActivity() {
 //                startActivity(intent)
             } else {
                 //상태에따른 다이얼로그 띄우기
-                if(isExitBlank) { //작성안한 곳이 있을 경우
+                if (isExitBlank) { //작성안한 곳이 있을 경우
                     dialog("blank") //다이얼로그 함수 만들어서 사용
                 } else if (!isPWSame) {//비밀번호가 확인 되지 않은경우
                     dialog("not same")
@@ -81,21 +88,21 @@ class SignupActivity : AppCompatActivity() {
         }
     }
 
-    fun dialog(type : String) {
+    fun dialog(type: String) {
         val dialog = AlertDialog.Builder(this)
 
 
-        if(type.equals("blank")) {  //작성안한 곳이 있을 경우
+        if (type.equals("blank")) {  //작성안한 곳이 있을 경우
             dialog.setTitle("회원가입 실패!")
             dialog.setMessage("입력하지 않은 항목이 있습니다.")
-        } else if (type.equals("not same")){    //비밀번호가 확인 되지 않은경우
+        } else if (type.equals("not same")) {    //비밀번호가 확인 되지 않은경우
             dialog.setTitle("회원가입 실패!")
             dialog.setMessage("비밀번호가 다릅니다.")
         }
 
         val dialog_listener = object : DialogInterface.OnClickListener {
-            override fun onClick(dialog : DialogInterface?, which : Int) {
-                when(which) {
+            override fun onClick(dialog: DialogInterface?, which: Int) {
+                when (which) {
                     DialogInterface.BUTTON_POSITIVE -> Log.d(TAG, "다이얼로그")
                 }
             }
