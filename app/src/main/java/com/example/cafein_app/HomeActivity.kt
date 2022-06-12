@@ -1,5 +1,6 @@
 package com.example.cafein_app
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import androidx.appcompat.app.AppCompatActivity
@@ -44,4 +45,5 @@ class HomeActivity : AppCompatActivity() {
             selectedItemId = R.id.first
         }
     }
+
 }
