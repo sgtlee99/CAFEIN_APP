@@ -1,7 +1,5 @@
 package com.example.cafein_app
 
-import Adapters.ReviewRecyclerAdapter
-import Adapters.Review_Info
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
