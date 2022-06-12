@@ -1,20 +1,16 @@
-package Adapters
+package com.example.cafein_app
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.appcompat.widget.AppCompatButton
 import androidx.recyclerview.widget.RecyclerView
-import com.example.cafein_app.R
-import com.example.myapplication1.CardViewAdapter
-import org.w3c.dom.Text
 
 //       프로필사진, 닉네임, 리뷰사진, 포스트
 class ReviewRecyclerAdapter(val reviewList: ArrayList<Review_Info>): RecyclerView.Adapter<ReviewRecyclerAdapter.ViewHolder>() {
     // 아이템 레이아웃과 결합
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ReviewRecyclerAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.review_items, parent, false)
         return ViewHolder(view)
     }
@@ -23,7 +19,7 @@ class ReviewRecyclerAdapter(val reviewList: ArrayList<Review_Info>): RecyclerVie
         return reviewList.size
     }
     // View에 내용 입력
-    override fun onBindViewHolder(holder: ReviewRecyclerAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.profile_Image.setImageResource(reviewList[position].profile_image)
         holder.nickname.text = reviewList[position].nickname
         holder.review_Image.setImageResource(reviewList[position].review_image)
