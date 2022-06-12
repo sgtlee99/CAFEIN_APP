@@ -34,7 +34,7 @@ private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
 // private val GALLERY = 1
-
+// gg
 /**
  * A simple [Fragment] subclass.
  * Use the [BoardFragment.newInstance] factory method to
