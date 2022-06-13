@@ -22,14 +22,25 @@
         <activity
             android:name=".MyInfoChangeActivity"
             android:exported="false" />
+
+        <!--Splash Activity-->
+        <!-- 스플래쉬 액티비티 때문에 OriginActivity에 있던 intent-filter부분을 옮겨줌 -->
+        <!-- android:exported 값중 true는 다른앱과 통신할때, 애뮬레이터 사용시, false는 다른앱과 통신 필요없을때 -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--Splash Activity-->
+
         <activity
             android:name=".OriginActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity> <!-- 추가 액티비티 -->
         <activity
             android:name=".LoginActivity"
@@ -41,6 +52,8 @@
         <activity
             android:name=".HomeActivity"
             android:label="Home" />
+
+
     </application>
 
 </manifest>
