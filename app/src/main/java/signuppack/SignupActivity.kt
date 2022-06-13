@@ -27,6 +27,7 @@ class SignupActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.signup_activity)
+        //DB사용
         val db = Room.databaseBuilder(
             applicationContext, LoginDatabase::class.java, "database"
         ).allowMainThreadQueries().build()
@@ -90,7 +91,6 @@ class SignupActivity : AppCompatActivity() {
 
     fun dialog(type: String) {
         val dialog = AlertDialog.Builder(this)
-
 
         if (type.equals("blank")) {  //작성안한 곳이 있을 경우
             dialog.setTitle("회원가입 실패!")

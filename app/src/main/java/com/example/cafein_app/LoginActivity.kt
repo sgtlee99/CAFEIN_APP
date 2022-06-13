@@ -31,43 +31,27 @@ class LoginActivity : AppCompatActivity() {
             dbtest.text = todos.toString()
         })
 
-
-        var login_idCheck = input_loginID.text.toString()
-        var login_pwCheck = input_loginPW.text.toString()
-
-
+        //로그인 버튼을 눌렀을때
         var loginbutton = findViewById<Button>(R.id.loginpage_loginbutton)
         loginbutton.setOnClickListener {
 
-
-//            var intent = Intent(this, HomeActivity::class.java)
-//            startActivity(intent)
             startLogin()
 
-
-
-
-
-//            if (db.dao().isUerIDExist(login_idCheck) == null) {
-//                //사용자 아이디가 없을 때
-//                login_error_dialog("no id found")
-//            } else if (db.dao().isUerIDExist(login_idCheck) != null){
-//                //사용자 아이디가 있을 때 (로그인 수행)
-//                if (login_pwCheck.equals(db.dao().pwcorrect(login_idCheck))) {
-//                    //로그인 성공 토스트
-//                    Toast.makeText(this, "${login_idCheck}님 로그인 성공입니다.", Toast.LENGTH_SHORT).show()
-//                    //일치할때 다음 액티비티로 가는 기능 수행
+//            var login_idCheck = input_loginID.text.toString()
+//            var login_pwCheck = input_loginPW.text.toString()
+//
+//            if (db.dao().isUserIDExist(login_idCheck) != null) {    //아이디가 널이 아닐때 -> 있을때
+//                if(db.dao().pwcorrect(login_idCheck).equals(login_pwCheck)) {
+//                    // pwcorrect 는 아이디를 넣으면 비밀번호를 반환하는 함수
+//                    // pwcorrect에서 반환받은 비밀번호와 사용자가 입력한 비밀번호가 같다면 로그인 성공
+//                    Toast.makeText(this, "${db.dao().showNickname(login_idCheck)} 님 안녕하세요!", Toast.LENGTH_SHORT).show()
 //                    startLogin()
+//                } else {
+//                    login_error_dialog("pw not correct")
 //                }
-//
-//
+//            } else {
+//                login_error_dialog("id not found")
 //            }
-//            else if () {
-//                //아이디는 OK 비밀번호가 일치하지 않을때
-//                login_error_dialog("pw not correct")
-//            }
-
-
 
         }
     }
@@ -75,25 +59,28 @@ class LoginActivity : AppCompatActivity() {
         startActivity(Intent(applicationContext, HomeActivity::class.java))
     }
 
+    fun login_error_dialog(type : String) {
+        val dialog = AlertDialog.Builder(this)
 
+        if (type.equals("id not found")) {
+            //아이디가 없을 때
+            dialog.setTitle("로그인 실패!")
+            dialog.setMessage("아이디가 없습니다.")
+        } else if (type.equals("pw not correct")) {
+            //비밀번호가 맞지 않을때
+            dialog.setTitle("로그인 실패!")
+            dialog.setMessage("비밀번호가 일치하지 않습니다.")
+        }
 
-//    fun login_error_dialog(type : String) {
-//        val dialog = AlertDialog.Builder(this)
-//
-//        if (type.equals("no id found")) {
-//            //아이디가 없을 때
-//        } else if (type.equals("pw not correct")) {
-//            //비밀번호가 맞지 않을때
-//        }
-//        val lo_e_dialog_listener = object : DialogInterface.OnClickListener {
-//            override fun onClick(dialog : DialogInterface?, which : Int) {
-//                TODO("Not yet implemented")
-//                when (which) {
-//                    DialogInterface.BUTTON_POSITIVE -> Log.d(TAG, "로그인다이얼로그")
-//                }
-//            }
-//        }
-//        dialog.setPositiveButton("확인", lo_e_dialog_listener)
-//        dialog.show()
-//    }
+        val lo_e_dialog_listener = object : DialogInterface.OnClickListener {
+            override fun onClick(dialog : DialogInterface?, which : Int) {
+                TODO("Not yet implemented")
+                when (which) {
+                    DialogInterface.BUTTON_POSITIVE -> Log.d(TAG, "로그인다이얼로그")
+                }
+            }
+        }
+        dialog.setPositiveButton("확인", lo_e_dialog_listener)
+        dialog.show()
+    }
 }
