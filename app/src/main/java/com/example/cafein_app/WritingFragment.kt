@@ -11,6 +11,7 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.provider.MediaStore
+import android.text.TextUtils
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -19,9 +20,11 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.lifecycle.ViewModelProvider
 import androidx.room.Room
 import com.example.cafein_app.databinding.FragmentWritingBinding
 import kotlinx.android.synthetic.main.fragment_writing.*
+import kotlinx.android.synthetic.main.fragment_writing.view.*
 import java.io.IOException
 import java.text.SimpleDateFormat
 
@@ -145,9 +148,12 @@ class WritingFragment : Fragment() {
         // Inflate the layout for this fragment
         mBinding = FragmentWritingBinding.inflate(inflater, container, false)
 
+        val view = inflater.inflate(R.layout.fragment_writing, container, false)
+
+
 
         return binding.root
-        return inflater.inflate(R.layout.fragment_writing, container, false)
+        return view
 
     }
 
@@ -170,7 +176,7 @@ class WritingFragment : Fragment() {
             var direct_tag = input_direct_tag.text.toString()
             var auto_tag = input_auto_tag.text.toString()
 
-            db.TagDao().insertTag(Tag_Info(1, direct_tag)) //포스트 넘 빠져있음
+            db.TagDao().insertTag(Tag_Info(1, 0,direct_tag)) //포스트 넘 빠져있음
             Toast.makeText(context,"포스트 작성 완료",Toast.LENGTH_SHORT).show()
             toHomeActivity()
 
@@ -181,4 +187,5 @@ class WritingFragment : Fragment() {
     fun toHomeActivity() {
         startActivity(Intent(activity!!.applicationContext, HomeActivity::class.java))
     }
+
 }

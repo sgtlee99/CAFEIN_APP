@@ -1,18 +1,17 @@
 package DB_Dao_Helper
 
+
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.dbtest.DAO
 
-@Database(entities = [USER::class, Tag_Info::class],  version = 1, exportSchema = false)
+@Database(entities = [USER::class, Tag_Info::class], version = 1, exportSchema = false)
 abstract class LoginDatabase : RoomDatabase() {
 
     abstract fun dao(): DAO
-
-    abstract fun TagDao() : TagDao
-
+    abstract fun TagDao(): TagDao
 // 싱글톤 방식 - 권장
 //    companion object {
 //        private var instance: LoginDatabase? = null

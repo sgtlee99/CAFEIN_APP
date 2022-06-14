@@ -21,7 +21,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     private val binding get() = _binding!!
 
     val itemList = arrayListOf<CardView_Info>()      // 아이템 배열
-    val tagList = arrayListOf<Tag_Info>() //태그 배열
+    var tagList = arrayListOf<Tag_Info>() //태그 배열
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,24 +43,45 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+//        tagDb = context?.let { LoginDatabase.getInstance(it) }
+//        tagDb = LoginDatabase.getInstance(context)
+
+//        var r = Runnable {
+//            //데이터를 읽고 쓸때는 쓰레드 사용
+//            tagList = tagDb?.TagDao()?.tag_getAll()!!
+//        }
+//        val thread = Thread(r)
+//        thread.start()
+
+//        // db 연결
+//        val db = Room.databaseBuilder(
+//            activity!!.applicationContext, LoginDatabase::class.java, "database"
+//        ).allowMainThreadQueries().build()
+//
+//        tagList = db.TagDao().tag_getAll()
+
         //===================태그====================================
-        binding.listViewview.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false)
-        binding.listViewview.adapter = TRecyclerViewAdapter(tagList).apply { setItemClickListener(object : TRecyclerViewAdapter.OnItemClickListener {
-            override fun onItemClick(v: View, position: Int) {
-                Toast.makeText(v.context, "Tag", Toast.LENGTH_SHORT).show()
+        binding.listViewview.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        binding.listViewview.adapter = TRecyclerViewAdapter(tagList).apply {
+            setItemClickListener(object : TRecyclerViewAdapter.OnItemClickListener {
+                override fun onItemClick(v: View, position: Int) {
+                    Toast.makeText(v.context, "Tag", Toast.LENGTH_SHORT).show()
+                }
 
-            }
-
-        }) }
+            })
+        }
 //            //=============카드 뷰 ====================================
-        binding.cardviewRecyclerviewview.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-        binding.cardviewRecyclerviewview.adapter = CardViewAdapter(itemList).apply { setItemClickListener(object : CardViewAdapter.OnItemClickListener {
-            override fun onClick(v: View, position: Int) {
-                Toast.makeText(v.context, "cardview", Toast.LENGTH_SHORT).show()
-                var intent = Intent(context, BoardFragmentActivity::class.java)
-                startActivity(intent)
-            }
-        })}
+        binding.cardviewRecyclerviewview.layoutManager =
+            LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+        binding.cardviewRecyclerviewview.adapter = CardViewAdapter(itemList).apply {
+            setItemClickListener(object : CardViewAdapter.OnItemClickListener {
+                override fun onClick(v: View, position: Int) {
+                    Toast.makeText(v.context, "cardview", Toast.LENGTH_SHORT).show()
+                    var intent = Intent(context, BoardFragmentActivity::class.java)
+                    startActivity(intent)
+                }
+            })
+        }
 
 //        // 아이템 추가
         itemList.add(CardView_Info("오타니", "#안녕하세요 #반갑습니다", R.drawable.friend, 3, 2, 5, 4))
@@ -68,8 +89,18 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         itemList.add(CardView_Info("자동차", "#무슨사진 #이더라", R.drawable.cafe_front2, 50, 5, 5, 12))
         itemList.add(CardView_Info("오타니", "#창백한 #푸른 #눈", R.drawable.cafe_front3, 78, 9, 5, 99))
 //태그 아이템 추가
-        tagList.add(Tag_Info(1,"Tag"))
+        tagList.add(Tag_Info(1,0,"Tag"))
 
+//        var tag_text = db.TagDao().
+
+//        val tagform = Tag_Info(1,"") //Contacts 생성
+//        db.TagDao().insertTag(tagform)
+//        var get_postnum = db.TagDao().getPostNum()
+//        var get_tag= db.TagDao().getTag()
+//        var get_tagnum = db.TagDao().getTagNum()
+//        tagList.add(Tag_Info(get_postnum,get_tag)) //리스트추가
+
+//        tagList.add(db.TagDao().tag_getAll().)
         // 리스트가 변경됨을 어댑터에 알림
         TRecyclerViewAdapter(tagList).notifyDataSetChanged()
         CardViewAdapter(itemList).notifyDataSetChanged()

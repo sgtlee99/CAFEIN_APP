@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class TRecyclerViewAdapter(val tagList : ArrayList<Tag_Info>) : RecyclerView.Adapter<TRecyclerViewAdapter.ViewHolder>() {
+
     // (1) 아이템 레이아웃과 결합
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TRecyclerViewAdapter.ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.tag_items, parent, false)
@@ -41,4 +42,8 @@ class TRecyclerViewAdapter(val tagList : ArrayList<Tag_Info>) : RecyclerView.Ada
     // setItemClickListener로 설정한 함수 실행
     private lateinit var itemClickListener: OnItemClickListener
 
+//    fun setTagData(tag : ArrayList<Tag_Info>) {
+//        tagList = tag
+//        notifyDataSetChanged()
+//    }
 }
