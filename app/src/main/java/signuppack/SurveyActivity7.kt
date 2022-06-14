@@ -19,13 +19,11 @@ class SurveyActivity7 : AppCompatActivity() {
 
         button.setOnClickListener {
             var intent = Intent(this, SignupActivity::class.java)
-
 //            if (style1.isChecked) {
 //                intent.putExtra("msg3", style1.text.toString()) // chb1 텍스트 값 msg 담아 보냄
 //            } else if (style2.isChecked) {
 //                intent.putExtra("msg3", style2.text.toString())
 //            }
-
             startActivity(intent)
         }
     }
