@@ -2,40 +2,31 @@ package signuppack
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Button
-import androidx.fragment.app.Fragment
+import android.widget.CheckBox
+import androidx.appcompat.app.AppCompatActivity
 import com.example.cafein_app.R
-import com.example.cafein_app.ResultActivity
 
-class SurveyActivity7 : Fragment() {
+class SurveyActivity7 : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.survey_activity7)
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.survey_activity7, container, false)
-    }
+        var button = findViewById<Button>(R.id.b)
+        var style1 = findViewById<CheckBox>(R.id.style_cb1)
+        var style2 = findViewById<CheckBox>(R.id.style_cb2)
 
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+        button.setOnClickListener {
+            var intent = Intent(this, SignupActivity::class.java)
 
-        var button = view?.findViewById<Button>(R.id.btn_result)
-        button?.setOnClickListener {
-            var intent = Intent(context, ResultActivity::class.java)
+//            if (style1.isChecked) {
+//                intent.putExtra("msg3", style1.text.toString()) // chb1 텍스트 값 msg 담아 보냄
+//            } else if (style2.isChecked) {
+//                intent.putExtra("msg3", style2.text.toString())
+//            }
+
             startActivity(intent)
         }
-
- //       button?.setOnClickListener {
- //           val intent = Intent(context, ResultActivity::class.java)
-//            intent.putExtra("msg1", chb1.text.toString()) // chb1 텍스트 값 msg 담아 보냄
-//            intent.putExtra("msg2", chb2.text.toString())
-//            intent.putExtra("msg3", chb3.text.toString())
- //           startActivity(intent)
-  //      }
     }
 }

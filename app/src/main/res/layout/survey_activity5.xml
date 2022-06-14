@@ -1,54 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="430dp"
+        android:src="@drawable/dessert" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="450dp"
-            android:layout_marginTop="30dp"
-            android:src="@drawable/dessert"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <CheckBox
+            android:id="@+id/cb1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginLeft="20dp"
+            android:text="마카롱"
+            android:textSize="30dp" />
 
-            <CheckBox
-                android:id="@+id/cb1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="마카롱"
-                android:textSize="30dp"
-                android:layout_marginLeft="20dp" />
-
-            <CheckBox
-                android:id="@+id/cb2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="케이크"
-                android:textSize="30dp"
-                android:layout_marginLeft="130dp" />
-
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/tv"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginTop="20dp"
-            android:background="#111111"
-            android:gravity="center"
-            android:text="선호하는 디저트 종류는 무엇인가요?(앞에서 디저트 선호도 체크한 사람만)"
-            android:textColor="#ffffff"
-            android:textSize="20dp"
-            android:textStyle="normal" />
+        <CheckBox
+            android:id="@+id/cb2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="130dp"
+            android:text="케이크"
+            android:textSize="30dp" />
 
     </LinearLayout>
-</FrameLayout>
+
+    <Button
+        android:id="@+id/b"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/orange"
+        android:text="NEXT"
+        android:textSize="20dp"
+        android:textColor="#FFFFFFFF" />
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#111111"
+        android:gravity="center"
+        android:text="선호하는 디저트 종류는 무엇인가요?"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:textStyle="normal" />
+
+</LinearLayout>

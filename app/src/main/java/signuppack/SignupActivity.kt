@@ -37,7 +37,7 @@ class SignupActivity : AppCompatActivity() {
 
         //설문조사로 이동
         survettest.setOnClickListener {
-            var intent = Intent(this, ViewPager2::class.java)
+            var intent = Intent(this, SurveyActivity1::class.java)
             startActivity(intent)
         }
         //회원가입
