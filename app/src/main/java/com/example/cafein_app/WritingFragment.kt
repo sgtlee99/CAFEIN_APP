@@ -163,13 +163,22 @@ class WritingFragment : Fragment() {
             activity!!.applicationContext, LoginDatabase::class.java, "database"
         ).allowMainThreadQueries().build()
 
-        var direct_tag = input_direct_tag.text.toString()
-        var auto_tag = input_auto_tag.text.toString()
 
         var complete_button = view?.findViewById<Button>(R.id.post_complete_button)
         complete_button?.setOnClickListener {
+            //태그들
+            var direct_tag = input_direct_tag.text.toString()
+            var auto_tag = input_auto_tag.text.toString()
+
             db.TagDao().insertTag(Tag_Info(1, direct_tag)) //포스트 넘 빠져있음
+            Toast.makeText(context,"포스트 작성 완료",Toast.LENGTH_SHORT).show()
+            toHomeActivity()
+
         }
 
+    }
+
+    fun toHomeActivity() {
+        startActivity(Intent(activity!!.applicationContext, HomeActivity::class.java))
     }
 }
