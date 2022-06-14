@@ -1,17 +1,14 @@
 package com.example.cafein_app
 
+import DB_Dao_Helper.Tag_Info
 import android.content.Intent
-import android.graphics.Insets.add
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ListAdapter
-import android.widget.ListView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.cafein_app.databinding.FragmentHomeBinding
 import com.example.myapplication1.CardViewAdapter
 import com.example.myapplication1.CardView_Info
@@ -48,12 +45,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
         //===================태그====================================
         binding.listViewview.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false)
-//        binding.listViewview.adapter = TRecyclerViewAdapter(tagList)
-//        TRecyclerViewAdapter(tagList).setItemClickListener(object : TRecyclerViewAdapter.OnItemClickListener {
-//            override fun onItemClick(v: View, position: Int) {
-//                Toast.makeText(v.context, "Tag", Toast.LENGTH_SHORT).show()
-//            }
-//        })
         binding.listViewview.adapter = TRecyclerViewAdapter(tagList).apply { setItemClickListener(object : TRecyclerViewAdapter.OnItemClickListener {
             override fun onItemClick(v: View, position: Int) {
                 Toast.makeText(v.context, "Tag", Toast.LENGTH_SHORT).show()
@@ -63,14 +54,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         }) }
 //            //=============카드 뷰 ====================================
         binding.cardviewRecyclerviewview.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-//        binding.cardviewRecyclerviewview.adapter = CardViewAdapter(itemList)
-//        CardViewAdapter(itemList).setItemClickListener(object : CardViewAdapter.OnItemClickListener {
-//            override fun onClick(v: View, position: Int) {
-//                Toast.makeText(v.context, "cardview", Toast.LENGTH_SHORT).show()
-////                var intent = Intent(context, BoardFragmentActivity::class.java)
-////                startActivity(intent)
-//            }
-//        })
         binding.cardviewRecyclerviewview.adapter = CardViewAdapter(itemList).apply { setItemClickListener(object : CardViewAdapter.OnItemClickListener {
             override fun onClick(v: View, position: Int) {
                 Toast.makeText(v.context, "cardview", Toast.LENGTH_SHORT).show()
@@ -85,14 +68,10 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         itemList.add(CardView_Info("자동차", "#무슨사진 #이더라", R.drawable.cafe_front2, 50, 5, 5, 12))
         itemList.add(CardView_Info("오타니", "#창백한 #푸른 #눈", R.drawable.cafe_front3, 78, 9, 5, 99))
 //태그 아이템 추가
-        tagList.add(Tag_Info("Tag"))
-        tagList.add(Tag_Info("Tag"))
-        tagList.add(Tag_Info("Tag"))
-        tagList.add(Tag_Info("Tag"))
-        tagList.add(Tag_Info("Tag"))
-        tagList.add(Tag_Info("Tag"))
-        TRecyclerViewAdapter(tagList).notifyDataSetChanged()
+        tagList.add(Tag_Info(1,"Tag"))
+
         // 리스트가 변경됨을 어댑터에 알림
+        TRecyclerViewAdapter(tagList).notifyDataSetChanged()
         CardViewAdapter(itemList).notifyDataSetChanged()
     }
 

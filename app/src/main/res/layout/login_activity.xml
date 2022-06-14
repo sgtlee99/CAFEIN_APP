@@ -38,17 +38,15 @@
 			android:id="@+id/loginpage_loginbutton"
 			/>
 
-
-
-
-	<Button
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:id="@+id/setup"
-			/>
 	<TextView
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:text="db info"
 			android:id="@+id/dbtest"/>
+
+	<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="db info"
+			android:id="@+id/tagtest"/>
 </LinearLayout>

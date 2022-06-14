@@ -31,6 +31,10 @@ class LoginActivity : AppCompatActivity() {
             dbtest.text = todos.toString()
         })
 
+        db.TagDao().tag_getAll().observe(this, Observer { todos ->
+            tagtest.text = todos.toString()
+        })
+
         //로그인 버튼을 눌렀을때
         var loginbutton = findViewById<Button>(R.id.loginpage_loginbutton)
         loginbutton.setOnClickListener {
@@ -74,7 +78,6 @@ class LoginActivity : AppCompatActivity() {
 
         val lo_e_dialog_listener = object : DialogInterface.OnClickListener {
             override fun onClick(dialog : DialogInterface?, which : Int) {
-                TODO("Not yet implemented")
                 when (which) {
                     DialogInterface.BUTTON_POSITIVE -> Log.d(TAG, "로그인다이얼로그")
                 }

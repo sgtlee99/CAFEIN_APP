@@ -1,13 +1,11 @@
 package com.example.cafein_app
 
+import DB_Dao_Helper.Tag_Info
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
-import androidx.appcompat.widget.AppCompatButton
 import androidx.recyclerview.widget.RecyclerView
-import com.example.myapplication1.CardViewAdapter
 
 class TRecyclerViewAdapter(val tagList : ArrayList<Tag_Info>) : RecyclerView.Adapter<TRecyclerViewAdapter.ViewHolder>() {
     // (1) 아이템 레이아웃과 결합
