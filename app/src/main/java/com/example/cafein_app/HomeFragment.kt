@@ -1,5 +1,6 @@
 package com.example.cafein_app
 
+import DB_Dao_Helper.LoginDatabase
 import DB_Dao_Helper.Tag_Info
 import android.content.Intent
 import android.os.Bundle
@@ -8,10 +9,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.room.Room
 import com.example.cafein_app.databinding.FragmentHomeBinding
 import com.example.myapplication1.CardViewAdapter
 import com.example.myapplication1.CardView_Info
+import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
 
@@ -21,7 +26,11 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     private val binding get() = _binding!!
 
     val itemList = arrayListOf<CardView_Info>()      // 아이템 배열
-    var tagList = arrayListOf<Tag_Info>() //태그 배열
+
+
+
+
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -53,12 +62,18 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 //        val thread = Thread(r)
 //        thread.start()
 
-//        // db 연결
-//        val db = Room.databaseBuilder(
-//            activity!!.applicationContext, LoginDatabase::class.java, "database"
-//        ).allowMainThreadQueries().build()
-//
-//        tagList = db.TagDao().tag_getAll()
+        // db 연결
+        val db = Room.databaseBuilder(
+            activity!!.applicationContext, LoginDatabase::class.java, "database"
+        ).allowMainThreadQueries().build()
+
+
+        var tagList = listOf<Tag_Info>(Tag_Info(0,1,"Tag1"))
+
+        db.TagDao().tag_getAll().observe(this, Observer { todos->
+            tagList = todos
+        })
+
 
         //===================태그====================================
         binding.listViewview.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
@@ -66,6 +81,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             setItemClickListener(object : TRecyclerViewAdapter.OnItemClickListener {
                 override fun onItemClick(v: View, position: Int) {
                     Toast.makeText(v.context, "Tag", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(v.context,tagList.toString(),Toast.LENGTH_LONG).show()
                 }
 
             })
@@ -89,7 +105,11 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         itemList.add(CardView_Info("자동차", "#무슨사진 #이더라", R.drawable.cafe_front2, 50, 5, 5, 12))
         itemList.add(CardView_Info("오타니", "#창백한 #푸른 #눈", R.drawable.cafe_front3, 78, 9, 5, 99))
 //태그 아이템 추가
-        tagList.add(Tag_Info(1,0,"Tag"))
+
+//        tagtag.text = tagList.toString()
+
+//        tagList.add(Tag_Info(1,0,"Tag1"))
+
 
 //        var tag_text = db.TagDao().
 

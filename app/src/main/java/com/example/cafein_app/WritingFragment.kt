@@ -176,7 +176,7 @@ class WritingFragment : Fragment() {
             var direct_tag = input_direct_tag.text.toString()
             var auto_tag = input_auto_tag.text.toString()
 
-            db.TagDao().insertTag(Tag_Info(1, 0,direct_tag)) //포스트 넘 빠져있음
+            db.TagDao().insertTag(Tag_Info(0, 1,direct_tag)) //포스트 넘 빠져있음
             Toast.makeText(context,"포스트 작성 완료",Toast.LENGTH_SHORT).show()
             toHomeActivity()
 

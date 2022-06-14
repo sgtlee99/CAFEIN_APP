@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class TRecyclerViewAdapter(val tagList : ArrayList<Tag_Info>) : RecyclerView.Adapter<TRecyclerViewAdapter.ViewHolder>() {
+class TRecyclerViewAdapter(val tagList : List<Tag_Info>) : RecyclerView.Adapter<TRecyclerViewAdapter.ViewHolder>() {
 
     // (1) 아이템 레이아웃과 결합
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TRecyclerViewAdapter.ViewHolder {
@@ -25,7 +25,6 @@ class TRecyclerViewAdapter(val tagList : ArrayList<Tag_Info>) : RecyclerView.Ada
     }
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.Tag.text = tagList[position].tag
-
         holder.itemView.setOnClickListener { itemClickListener?.onItemClick(it,position) }
 
     }
@@ -42,8 +41,4 @@ class TRecyclerViewAdapter(val tagList : ArrayList<Tag_Info>) : RecyclerView.Ada
     // setItemClickListener로 설정한 함수 실행
     private lateinit var itemClickListener: OnItemClickListener
 
-//    fun setTagData(tag : ArrayList<Tag_Info>) {
-//        tagList = tag
-//        notifyDataSetChanged()
-//    }
 }

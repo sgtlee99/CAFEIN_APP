@@ -22,6 +22,9 @@ interface TagDao {
     @Query("SELECT * FROM Tag_Info ORDER BY Tag_Info.tag_num DESC")
     fun tag_getAll(): LiveData<List<Tag_Info>>
 
+//    @Query("SELECT tag FROM Tag_Info ")
+//    fun alltags() : LiveData<List<Tag_Info>>
+
 
 
     @Query("SELECT post_num FROM tag_info ORDER BY Tag_Info.tag_num DESC")
