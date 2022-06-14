@@ -32,7 +32,15 @@ class SignupActivity : AppCompatActivity() {
             applicationContext, LoginDatabase::class.java, "database"
         ).allowMainThreadQueries().build()
 
+
+
+
         //설문조사로 이동
+        survettest.setOnClickListener {
+            var intent = Intent(this, ViewPager2::class.java)
+            startActivity(intent)
+        }
+        //회원가입
         var signupnextbutton = findViewById<Button>(R.id.signuppage_NextButton)
 
         signupnextbutton.setOnClickListener {
