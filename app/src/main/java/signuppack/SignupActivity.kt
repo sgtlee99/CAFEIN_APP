@@ -45,7 +45,7 @@ class SignupActivity : AppCompatActivity() {
             val pw = input_signupPW.text.toString()
             val pw_cf = input_signupPW_confirm.text.toString()
             val nick = input_signipNickname.text.toString()
-
+//            val hello =
             //val owner
             //val sex
 

@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
 import com.example.cafein_app.R
+import com.example.cafein_app.ResultActivity
 
 class SurveyActivity7 : Fragment() {
 
