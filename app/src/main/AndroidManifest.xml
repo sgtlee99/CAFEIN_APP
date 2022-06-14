@@ -67,9 +67,11 @@
                 android:name=".ViewPager2"
                 android:label="survey"
                 tools:ignore="Instantiatable"/>
+
         <activity
-            android:name=".HomeActivity"
-            android:label="Home" />
+            android:name=".ResultActivity"
+            android:exported="true"/>
+
     </application>
 
 </manifest>

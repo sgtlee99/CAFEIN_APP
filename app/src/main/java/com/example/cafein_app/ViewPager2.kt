@@ -10,14 +10,14 @@ class ViewPager2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.viewpager2)
 
-        val spring: SpringDotsIndicator = findViewById(R.id.spring)
+//        val spring: SpringDotsIndicator = findViewById(R.id.spring)
 
         val vp: ViewPager2 = findViewById(R.id.vp)
 
         val viewpagerFragmentAdapter = ViewPagerAdapter(this)
 
         vp.adapter = viewpagerFragmentAdapter
-        spring.setViewPager2(vp)
+//        spring.setViewPager2(vp)
 
     }
 }

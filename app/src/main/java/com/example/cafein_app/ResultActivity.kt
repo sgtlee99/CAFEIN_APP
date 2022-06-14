@@ -5,15 +5,18 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
-class SignupActivity : AppCompatActivity() {
+
+class ResultActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.signup_activity)
+        setContentView(R.layout.result_activity)
 
-        var signupnextbutton = findViewById<Button>(R.id.signuppage_NextButton)
+        var btn_back = findViewById<Button>(R.id.btn_back)
+        var btn_ok = findViewById<Button>(R.id.btn_ok)
 
-        signupnextbutton.setOnClickListener {
-            var intent = Intent(this,ViewPager2::class.java)
+
+        btn_ok.setOnClickListener {
+            var intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
     }
