@@ -24,18 +24,22 @@
                 android:id="@+id/cb1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="65dp" />
+                android:text="인스타"
+                android:textSize="30dp"
+                android:layout_marginLeft="20dp" />
 
             <CheckBox
                 android:id="@+id/cb2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="190dp" />
+                android:text="블로그"
+                android:textSize="30dp"
+                android:layout_marginLeft="120dp" />
 
         </LinearLayout>
 
-        <EditText
-            android:id="@+id/et"
+        <TextView
+            android:id="@+id/tv"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_marginTop="20dp"

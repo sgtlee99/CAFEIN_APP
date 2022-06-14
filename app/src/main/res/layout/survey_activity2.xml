@@ -12,33 +12,37 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
-            android:src="@drawable/icon"/>
+            android:layout_marginTop="60dp"
+            android:src="@drawable/icon" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-        <CheckBox
-            android:id="@+id/cb1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="65dp" />
+            <CheckBox
+                android:id="@+id/cb1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:text="커피"
+                android:textSize="30dp" />
 
-        <CheckBox
-            android:id="@+id/cb2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="190dp" />
+            <CheckBox
+                android:id="@+id/cb2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="125dp"
+                android:text="디저트"
+                android:textSize="30dp" />
 
         </LinearLayout>
 
-        <EditText
-            android:id="@+id/et"
+        <TextView
+            android:id="@+id/tv"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="58dp"
             android:background="#111111"
             android:gravity="center"
             android:text="카페를 이용하는 주된 목적(1)은 무엇인가요?"
