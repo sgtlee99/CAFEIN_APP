@@ -16,46 +16,47 @@
 				android:orientation="vertical"
 				android:padding="15dp">
 
-			<EditText
-					android:layout_width="match_parent"
-					android:layout_height="50dp"
-					android:layout_marginTop="15dp"
-					android:background="@drawable/text_outline"
-					android:hint=" 제목"/>
+
 
 			<LinearLayout
 					android:layout_width="match_parent"
 					android:layout_height="match_parent"
 					android:orientation="horizontal"
 					android:layout_marginTop="15dp">
-
 				<EditText
 						android:layout_width="250dp"
 						android:layout_height="50dp"
+						android:layout_marginTop="15dp"
 						android:background="@drawable/text_outline"
-						android:hint=" 사진첨부"/>
+						android:hint=" 제목"/>
+
+
 
 				<Button
 						android:id="@+id/btnCamera"
 						android:layout_width="40dp"
 						android:layout_height="40dp"
-						android:layout_marginStart="10dp"
+						android:layout_marginTop="15dp"
+						android:layout_marginLeft="10dp"
 						android:background="@drawable/camera"/>
 
 				<Button
 						android:id="@+id/btnGallery"
 						android:layout_width="40dp"
 						android:layout_height="40dp"
-						android:layout_marginStart="10dp"
+						android:layout_marginTop="15dp"
+						android:layout_marginLeft="10dp"
 						android:background="@drawable/image"/>
 
 			</LinearLayout>
 
 			<ImageView
 					android:id="@+id/showImage_ImageView"
-					android:layout_width="wrap_content"
+					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
+					android:scaleType="centerCrop"
 					android:layout_marginTop="15dp"
+					android:layout_margin="25dp"
 					android:layout_centerHorizontal="true"/>
 
 			<EditText

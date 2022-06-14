@@ -68,7 +68,18 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         ).allowMainThreadQueries().build()
 
 
-        var tagList = listOf<Tag_Info>(Tag_Info(0,1,"Tag1"))
+        var tagList = listOf<Tag_Info>(
+            Tag_Info(0,1,"Tag1"),
+            Tag_Info(0,1,"Tag2"),
+            Tag_Info(0,1,"Tag3"),
+            Tag_Info(0,1,"Tag4"),
+            Tag_Info(0,1,"Tag5"),
+            Tag_Info(0,1,"Tag6"),
+            Tag_Info(0,1,"Tag7"),
+            Tag_Info(0,1,"Tag8"),
+            Tag_Info(0,1,"Tag9"),
+            Tag_Info(0,1,"Tag10"),
+        )
 
         db.TagDao().tag_getAll().observe(this, Observer { todos->
             tagList = todos
@@ -81,7 +92,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             setItemClickListener(object : TRecyclerViewAdapter.OnItemClickListener {
                 override fun onItemClick(v: View, position: Int) {
                     Toast.makeText(v.context, "Tag", Toast.LENGTH_SHORT).show()
-                    Toast.makeText(v.context,tagList.toString(),Toast.LENGTH_LONG).show()
+//                    Toast.makeText(v.context,tagList.toString(),Toast.LENGTH_LONG).show()
                 }
 
             })
@@ -100,10 +111,10 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         }
 
 //        // 아이템 추가
-        itemList.add(CardView_Info("오타니", "#안녕하세요 #반갑습니다", R.drawable.friend, 3, 2, 5, 4))
-        itemList.add(CardView_Info("헬로우", "#태그1 #태그2", R.drawable.nasa1, 44, 0, 8, 6))
-        itemList.add(CardView_Info("자동차", "#무슨사진 #이더라", R.drawable.cafe_front2, 50, 5, 5, 12))
-        itemList.add(CardView_Info("오타니", "#창백한 #푸른 #눈", R.drawable.cafe_front3, 78, 9, 5, 99))
+        itemList.add(CardView_Info("영진카페", "#복현동 #아메리카노", R.drawable.cafe_front, 3, 2, 5, 4))
+        itemList.add(CardView_Info("로켓", "#태그1 #태그2", R.drawable.nasa1, 44, 0, 8, 6))
+        itemList.add(CardView_Info("자동차", "#무슨사진 #이더라", R.drawable.beatle1, 50, 5, 5, 12))
+        itemList.add(CardView_Info("카페테스트2", "#tag1 #tag2", R.drawable.cafe_front3, 78, 9, 5, 99))
 //태그 아이템 추가
 
 //        tagtag.text = tagList.toString()

@@ -45,7 +45,7 @@
 						<TextView
 								android:layout_width="wrap_content"
 								android:layout_height="wrap_content"
-								android:text="호작질"
+								android:text="영진카페"
 								android:textSize="40dp"
 								android:textStyle="bold"
 								android:textColor="@color/white"
@@ -141,7 +141,7 @@
 							<TextView
 									android:layout_width="wrap_content"
 									android:layout_height="wrap_content"
-									android:text="대구시 북구 동북로 241"
+									android:text="대구광역시 북구 복현로 35"
 									android:textSize="15dp"
 									android:textStyle="bold"
 									android:textColor="@color/white"
@@ -163,7 +163,7 @@
 							<TextView
 									android:layout_width="wrap_content"
 									android:layout_height="wrap_content"
-									android:text="053-959-2266 ☎"
+									android:text="053-123-4567 ☎"
 									android:textSize="15dp"
 									android:textStyle="bold"
 									android:textColor="@color/white"
@@ -174,7 +174,7 @@
 							<TextView
 									android:layout_width="wrap_content"
 									android:layout_height="wrap_content"
-									android:text="영진전문대 서문 아파트상가에 위치하고있습니다."
+									android:text="영진카페입니다 많이 이용해 주세요."
 									android:textSize="20dp"
 									android:textStyle="bold"
 									android:textColor="@color/white"

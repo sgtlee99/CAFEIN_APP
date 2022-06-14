@@ -7,6 +7,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
@@ -38,23 +39,23 @@ class LoginActivity : AppCompatActivity() {
         var loginbutton = findViewById<Button>(R.id.loginpage_loginbutton)
         loginbutton.setOnClickListener {
 
-            startLogin()
+//            startLogin()
 
-//            var login_idCheck = input_loginID.text.toString()
-//            var login_pwCheck = input_loginPW.text.toString()
-//
-//            if (db.dao().isUserIDExist(login_idCheck) != null) {    //아이디가 널이 아닐때 -> 있을때
-//                if(db.dao().pwcorrect(login_idCheck).equals(login_pwCheck)) {
-//                    // pwcorrect 는 아이디를 넣으면 비밀번호를 반환하는 함수
-//                    // pwcorrect에서 반환받은 비밀번호와 사용자가 입력한 비밀번호가 같다면 로그인 성공
-//                    Toast.makeText(this, "${db.dao().showNickname(login_idCheck)} 님 안녕하세요!", Toast.LENGTH_SHORT).show()
-//                    startLogin()
-//                } else {
-//                    login_error_dialog("pw not correct")
-//                }
-//            } else {
-//                login_error_dialog("id not found")
-//            }
+            var login_idCheck = input_loginID.text.toString()
+            var login_pwCheck = input_loginPW.text.toString()
+
+            if (db.dao().isUserIDExist(login_idCheck) != null) {    //아이디가 널이 아닐때 -> 있을때
+                if(db.dao().pwcorrect(login_idCheck).equals(login_pwCheck)) {
+                    // pwcorrect 는 아이디를 넣으면 비밀번호를 반환하는 함수
+                    // pwcorrect에서 반환받은 비밀번호와 사용자가 입력한 비밀번호가 같다면 로그인 성공
+                    Toast.makeText(this, "${db.dao().showNickname(login_idCheck)} 님 안녕하세요!", Toast.LENGTH_SHORT).show()
+                    startLogin()
+                } else {
+                    login_error_dialog("pw not correct")
+                }
+            } else {
+                login_error_dialog("id not found")
+            }
 
         }
     }

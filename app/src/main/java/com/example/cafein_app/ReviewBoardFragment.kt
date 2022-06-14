@@ -47,10 +47,10 @@ class ReviewBoardFragment : Fragment(R.layout.fragment_boardreview) {
          */
         binding.reviewRecyclerView.adapter = ReviewRecyclerAdapter(reviewList)
         //리뷰글 추가 - 데이터베이스 연결필요
-        reviewList.add(Review_Info(R.drawable.friend, "오타니", R.drawable.friend,"안녕하세요 LA 에인절스 소속 오타니 입니다" ))
-        reviewList.add(Review_Info(R.drawable.nasa1, "SLS", R.drawable.nasa1,"화성... 아니 달 갈끄니까아앗~~!" ))
+        reviewList.add(Review_Info(R.drawable.friend, "홍길동", R.drawable.cafe_front,"사장님이 친절하고 커피가 맛있어요" ))
+        reviewList.add(Review_Info(R.drawable.nasa1, "SLS", R.drawable.cafe_front2,"분위기 좋아요" ))
         reviewList.add(Review_Info(R.drawable.beatle1, "비틀", R.drawable.beatle1,"폭스바겐 비틀은 비틀비틀 가나요?" ))
-        reviewList.add(Review_Info(R.drawable.cafe_front3,"카페돌이",R.drawable.cafe_front2,"커피 너무 맛있어요 서비스도 좋아요"))
+        reviewList.add(Review_Info(R.drawable.cafe_front3,"카페돌이",R.drawable.cafe_front3,"여기 커피 직접 볶는 집이에요 강추!"))
 
 //변경될때 알려줌
         ReviewRecyclerAdapter(reviewList).notifyDataSetChanged()
