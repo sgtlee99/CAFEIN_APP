@@ -78,10 +78,7 @@
                 android:name="signuppack.SurveyActivity7"
                 android:label="survey"
                 tools:ignore="Instantiatable"/>
-        <activity
-                android:name="signuppack.ViewPager2"
-                android:label="survey"
-                tools:ignore="Instantiatable"/>
+
 
         <activity
             android:name=".ResultActivity"
