@@ -91,7 +91,7 @@
             android:label="Home" />
         <activity
                 android:name=".BoardFragmentActivity"
-                android:label="Board_Home" />
+                android:label="POST" />
     </application>
 
 </manifest>

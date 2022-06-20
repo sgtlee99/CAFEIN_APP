@@ -78,5 +78,8 @@ dependencies {
     api "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines"
     api "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines"
 
+    //프로필사진
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
 
 }

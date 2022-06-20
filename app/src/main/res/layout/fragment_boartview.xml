@@ -56,7 +56,7 @@
 
 						<LinearLayout
 								android:layout_width="341dp"
-								android:layout_height="30dp"
+								android:layout_height="60dp"
 								android:orientation="horizontal"
 								android:id="@+id/linearLayout"
 								android:layout_marginTop="258dp"
@@ -72,7 +72,7 @@
 									android:layout_width="25dp"
 									android:layout_height="25dp"
 									android:background="@drawable/redbutton_round"
-									android:layout_marginRight="10dp" />
+									android:layout_marginRight="10dp"/>
 
 							<androidx.appcompat.widget.AppCompatButton
 									android:id="@+id/angry_dbtn"
@@ -82,7 +82,7 @@
 									android:layout_width="25dp"
 									android:layout_height="25dp"
 									android:background="@drawable/orangebutton_round"
-									android:layout_marginRight="10dp" />
+									android:layout_marginRight="10dp"/>
 
 							<androidx.appcompat.widget.AppCompatButton
 									android:id="@+id/angry_btn12"
@@ -92,7 +92,7 @@
 									android:layout_width="25dp"
 									android:layout_height="25dp"
 									android:background="@drawable/bluebutton_round"
-									android:layout_marginRight="10dp" />
+									android:layout_marginRight="10dp"/>
 
 							<androidx.appcompat.widget.AppCompatButton
 									android:id="@+id/angry_bt2n"
@@ -102,9 +102,44 @@
 									android:layout_width="25dp"
 									android:layout_height="25dp"
 									android:background="@drawable/greenbutton_round"
-									android:layout_marginRight="10dp" />
+									android:layout_marginRight="10dp"/>
+
+
+
 
 						</LinearLayout>
+						<androidx.constraintlayout.widget.ConstraintLayout
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:layout_marginLeft="250dp"
+								android:layout_marginTop="210dp"
+								>
+
+							<TextView
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:text="프로필"
+									android:textSize="8pt"
+									android:textColor="@color/white"
+									android:textStyle="bold"
+									tools:ignore="MissingConstraints"
+									android:id="@+id/textView2"
+
+									app:layout_constraintTop_toBottomOf="@+id/boardview_ListProfile"
+									app:layout_constraintEnd_toEndOf="@+id/boardview_ListProfile"
+									app:layout_constraintStart_toStartOf="@+id/boardview_ListProfile"/>
+
+							<de.hdodenhof.circleimageview.CircleImageView
+									android:id="@+id/boardview_ListProfile"
+									android:layout_width="60dp"
+									android:layout_height="60dp"
+									android:background="@android:color/transparent"
+									app:civ_border_overlay="true"
+									app:civ_border_width="1dp"
+									android:src="@drawable/friend"
+									tools:ignore="MissingConstraints"
+									/>
+						</androidx.constraintlayout.widget.ConstraintLayout>
 
 					</FrameLayout>
 

@@ -22,14 +22,17 @@
 				android:layout_height="wrap_content"
 				android:orientation="horizontal">
 
-			<ImageView
-					android:layout_width="50dp"
-					android:layout_height="50dp"
-					android:background="@drawable/like_cafe_shape3"
-					android:scaleType="centerCrop"
-					android:layout_marginLeft="10dp"
-					android:src="@drawable/ic_launcher_foreground"
+
+			<de.hdodenhof.circleimageview.CircleImageView
 					android:id="@+id/review_profile_image"
+					android:layout_width="60dp"
+					android:layout_height="60dp"
+					android:background="@android:color/transparent"
+					app:civ_border_overlay="true"
+					app:civ_border_width="1dp"
+					android:src="@drawable/ic_launcher_foreground"
+					android:layout_marginLeft="10dp"
+					android:layout_marginTop="10dp"
 					/>
 
 			<TextView
@@ -38,7 +41,8 @@
 					android:text="REVIEW NICKNAME"
 					android:textSize="25dp"
 					android:layout_marginLeft="10dp"
-					android:id="@+id/review_nickname"/>
+					android:id="@+id/review_nickname"
+					android:layout_marginTop="17dp"/>
 		</LinearLayout>
 
 		<com.google.android.material.card.MaterialCardView
