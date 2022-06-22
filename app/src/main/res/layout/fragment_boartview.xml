@@ -108,12 +108,38 @@
 
 
 						</LinearLayout>
+
+<!--						<ImageButton-->
+<!--								android:layout_width="50dp"-->
+<!--								android:layout_height="50dp"-->
+<!--								android:src="@drawable/likebuttonunselect"-->
+<!--								android:id="@+id/imageButton"-->
+<!--								android:layout_marginBottom="100dp"-->
+<!--								tools:ignore="MissingConstraints"-->
+<!--								/>-->
 						<androidx.constraintlayout.widget.ConstraintLayout
 								android:layout_width="wrap_content"
 								android:layout_height="wrap_content"
+								android:layout_marginLeft="275dp"
+								android:layout_marginTop="15dp"
+								>
+							<ImageButton
+									android:layout_width="40dp"
+									android:layout_height="40dp"
+									android:src="@drawable/likebuttonunselect"
+									android:scaleType="centerCrop"
+									tools:ignore="MissingConstraints"
+									android:background="#00ff0000"
+									android:id="@+id/post_likebutton"
+									/>
+						</androidx.constraintlayout.widget.ConstraintLayout>
+						<androidx.constraintlayout.widget.ConstraintLayout
+								android:layout_width="wrap_content"
+								android:layout_height="160dp"
 								android:layout_marginLeft="265dp"
 								android:layout_marginTop="210dp"
 								>
+
 
 							<TextView
 									android:layout_width="wrap_content"
@@ -138,8 +164,11 @@
 									app:civ_border_width="1dp"
 									android:src="@drawable/friend"
 									tools:ignore="MissingConstraints"
+									app:layout_constraintTop_toBottomOf="@+id/imageButton"
 									/>
 						</androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 					</FrameLayout>
 

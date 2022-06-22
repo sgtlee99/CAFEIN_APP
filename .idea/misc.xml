@@ -41,8 +41,11 @@
         <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/drawable/backbutton.xml" value="0.13055555555555556" />
         <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/drawable/background_splash.xml" value="0.22685185185185186" />
         <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/drawable/bluebutton_round.xml" value="0.22685185185185186" />
+        <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/drawable/cardview_stroke.xml" value="0.2677083333333333" />
         <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/drawable/ic_launcher_background.xml" value="0.22685185185185186" />
         <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/drawable/img_outline.xml" value="0.22685185185185186" />
+        <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/drawable/like_button_select.xml" value="0.26666666666666666" />
+        <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/drawable/like_button_unselect.xml" value="0.2677083333333333" />
         <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/drawable/like_cafe_shape.xml" value="0.22685185185185186" />
         <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/drawable/like_cafe_shape2.xml" value="0.22685185185185186" />
         <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/drawable/like_cafe_shape3.xml" value="0.22685185185185186" />
@@ -58,7 +61,7 @@
         <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/layout/fragment_board.xml" value="0.264" />
         <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/layout/fragment_board_activity.xml" value="0.1" />
         <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/layout/fragment_boardreview.xml" value="0.21145833333333333" />
-        <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/layout/fragment_boartview.xml" value="0.2" />
+        <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/layout/fragment_boartview.xml" value="0.4" />
         <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/layout/fragment_home.xml" value="0.4" />
         <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/layout/fragment_setting.xml" value="0.2125" />
         <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/layout/fragment_writing.xml" value="0.2125" />
