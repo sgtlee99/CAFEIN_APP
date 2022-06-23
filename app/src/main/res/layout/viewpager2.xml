@@ -11,11 +11,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="10dp"
         app:dampingRatio="1"
         app:dotsCornerRadius="4dp"
         app:dotsWidthFactor="2.5"
         app:dotsSize="20dp"
-        app:dotsColor="@color/black"
+        app:dotsColor="@color/orange"
         app:dotsSpacing="6dp"
         app:dotsStrokeWidth="4dp"
         app:stiffness="300" />

@@ -14,6 +14,7 @@ import androidx.lifecycle.Observer
 import androidx.room.Room
 import com.example.cafein_app.databinding.FragmentHomeBinding
 import kotlinx.android.synthetic.main.login_activity.*
+import signuppack.SignupActivity
 
 class LoginActivity : AppCompatActivity() {
 

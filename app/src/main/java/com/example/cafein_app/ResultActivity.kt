@@ -11,11 +11,9 @@ class ResultActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.result_activity)
 
-        var btn_back = findViewById<Button>(R.id.btn_back)
-        var btn_ok = findViewById<Button>(R.id.btn_ok)
+        var next = findViewById<Button>(R.id.next_btn)
 
-
-        btn_ok.setOnClickListener {
+        next.setOnClickListener {
             var intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
