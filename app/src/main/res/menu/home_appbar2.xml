@@ -2,10 +2,16 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
 		xmlns:app="http://schemas.android.com/apk/res-auto">
 
-	<item
-		android:id="@+id/home_appbar"
-		android:title=""
-		app:showAsAction="always"
-			/>
 
+	<item
+			android:id="@+id/searchview_toolbtn"
+			android:icon="@drawable/search"
+			android:title="검색"
+			app:showAsAction="always|collapseActionView"
+			app:actionViewClass="androidx.appcompat.widget.SearchView"/>
+	<item
+			android:id="@+id/searchview_filter"
+			android:icon="@drawable/filter"
+			app:showAsAction="ifRoom"
+			android:title="필터"/>
 </menu>

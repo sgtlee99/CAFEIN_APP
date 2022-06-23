@@ -2,12 +2,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
 		xmlns:app="http://schemas.android.com/apk/res-auto">
 
+
 	<item
-		android:id="@+id/home_appbar"
-		android:icon="@drawable/ic_launcher_foreground"
-		android:title="CAFE-IN"
-		app:showAsAction="always"
-		app:actionViewClass="android.widget.SearchView"
-			/>
+			android:id="@+id/searchview_button"
+			android:icon="@drawable/search"
+			app:showAsAction="ifRoom"
+			android:title="검색"/>
+
+
 
 </menu>
