@@ -79,6 +79,11 @@
                 android:label="survey"
                 tools:ignore="Instantiatable"/>
 
+        <activity
+            android:name=".ReviewWritingActivity"
+            android:label="Review"
+            tools:ignore="Instantiatable"/>
+
 
         <activity
             android:name=".ResultActivity"
