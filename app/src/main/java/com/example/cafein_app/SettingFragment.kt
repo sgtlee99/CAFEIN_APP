@@ -27,12 +27,6 @@ class SettingFragment : Fragment() {
             startActivity(intent)
         }
 
-        var myboard = view?.findViewById<Button>(R.id.mypage_MyBoardButton)
-        myboard?.setOnClickListener {
-            var intent = Intent(context, MyWrittenBoardActivity::class.java)
-            startActivity(intent)
-        }
-
         var logout = view?.findViewById<Button>(R.id.mypage_LogoutButton)
         logout?.setOnClickListener {
             var intent = Intent(context, OriginActivity::class.java)
