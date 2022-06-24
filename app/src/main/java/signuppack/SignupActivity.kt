@@ -14,7 +14,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.room.Room
 import com.example.cafein_app.LoginActivity
 import com.example.cafein_app.R
-import kotlinx.android.synthetic.main.login_activity.*
 import kotlinx.android.synthetic.main.signup_activity.*
 
 //회원가입 과정
@@ -36,10 +35,11 @@ class SignupActivity : AppCompatActivity() {
 
 
         //설문조사로 이동
-        survettest.setOnClickListener {
-            var intent = Intent(this, SurveyActivity1::class.java)
+        surveytest.setOnClickListener {
+            var intent = Intent(this, ViewPager2 ::class.java)
             startActivity(intent)
         }
+
         //회원가입
         var signupnextbutton = findViewById<Button>(R.id.signuppage_NextButton)
 

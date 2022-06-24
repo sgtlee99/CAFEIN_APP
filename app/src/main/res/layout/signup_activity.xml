@@ -1,105 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-			  android:layout_width="match_parent"
-			  android:layout_height="match_parent"
-			  android:orientation="vertical">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-	<EditText
-			android:layout_width="300dp"
-			android:layout_height="50dp"
-			android:hint="ID"
-			android:layout_gravity="center_horizontal"
-			android:gravity="center_vertical"
-			android:id="@+id/input_signupID"
+    <EditText
+        android:id="@+id/input_signupID"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_vertical"
+        android:hint="ID"
 
-			/>
+        />
 
-	<EditText
-			android:layout_width="300dp"
-			android:layout_height="50dp"
-			android:hint="PW"
-			android:layout_gravity="center_horizontal"
-			android:gravity="center_vertical"
-			android:layout_marginTop="18dp"
-			android:id="@+id/input_signupPW"
+    <EditText
+        android:id="@+id/input_signupPW"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="18dp"
+        android:gravity="center_vertical"
+        android:hint="PW"
 
-			/>
+        />
 
-	<EditText
-			android:layout_width="300dp"
-			android:layout_height="50dp"
-			android:hint="PW confirm"
-			android:layout_gravity="center_horizontal"
-			android:gravity="center_vertical"
-			android:layout_marginTop="18dp"
-			android:id="@+id/input_signupPW_confirm"
+    <EditText
+        android:id="@+id/input_signupPW_confirm"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="18dp"
+        android:gravity="center_vertical"
+        android:hint="PW confirm"
 
-			/>
+        />
 
-	<EditText
-			android:layout_width="300dp"
-			android:layout_height="50dp"
-			android:hint="NickName"
-			android:layout_gravity="center_horizontal"
-			android:gravity="center_vertical"
-			android:layout_marginTop="18dp"
-			android:id="@+id/input_signipNickname"
-			/>
+    <EditText
+        android:id="@+id/input_signipNickname"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="18dp"
+        android:gravity="center_vertical"
+        android:hint="NickName" />
 
-	<Switch
-			android:text="점주님 이신가요?"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:layout_gravity="center_horizontal"
-			android:gravity="center_vertical"
-			android:layout_marginTop="18dp"
-			android:id="@+id/input_owner"
-			/>
+    <Switch
+        android:id="@+id/input_owner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="18dp"
+        android:gravity="center_vertical"
+        android:text="점주님 이신가요?" />
 
-	<RadioGroup
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-		<RadioButton
-				android:text="Male"
-				android:layout_width="300dp"
-				android:layout_height="50dp"
-				android:id="@+id/male_radioButton2"
-				android:layout_gravity="center"
-				android:layout_marginTop="18dp"/>
+        <RadioButton
+            android:id="@+id/male_radioButton2"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="18dp"
+            android:text="Male" />
 
-		<RadioButton
-				android:text="Female"
-				android:layout_width="300dp"
-				android:layout_height="50dp"
-				android:id="@+id/female_radioButton"
-				android:layout_gravity="center"
-				/>
-	</RadioGroup>
+        <RadioButton
+            android:id="@+id/female_radioButton"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:text="Female" />
+    </RadioGroup>
 
-	<TextView
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text="Suvey for recommend"
-			android:layout_gravity="center"
-			android:layout_marginTop="18dp"
-			/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="18dp"
+        android:text="Suvey for recommend" />
 
-	<Button
-			android:text="NEXT"
-			android:layout_width="300dp"
-			android:layout_height="60dp"
-			android:id="@+id/signuppage_NextButton"
-			android:layout_gravity="center"
-			android:layout_marginTop="18dp"
-			android:textColor="#FFFFFFFF"
-		android:backgroundTint="@color/orange"
-			/>
-	<Button
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text="설문하러가기"
-			android:id="@+id/survettest"
-			/>
+    <Button
+        android:id="@+id/signuppage_NextButton"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="18dp"
+        android:backgroundTint="@color/orange"
+        android:text="NEXT"
+        android:textColor="#FFFFFFFF" />
+
+    <Button
+        android:id="@+id/surveytest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="설문하러가기" />
 </LinearLayout>

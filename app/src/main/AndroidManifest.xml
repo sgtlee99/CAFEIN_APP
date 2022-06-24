@@ -24,8 +24,10 @@
                 android:name=".LikeCafeActivity"
                 android:exported="false"/>
         <activity
-                android:name=".MyInfoChangeActivity"
-                android:exported="false"/> <!-- Splash Activity -->
+            android:name=".MyInfoChangeActivity"
+            android:exported="true" />
+
+        <!--Splash Activity-->
         <!-- 스플래쉬 액티비티 때문에 OriginActivity에 있던 intent-filter부분을 옮겨줌 -->
         <!-- android:exported 값중 true는 다른앱과 통신할때, 애뮬레이터 사용시, false는 다른앱과 통신 필요없을때 -->
         <activity
@@ -45,43 +47,6 @@
         <activity
             android:name=".LoginActivity"
             android:label="Login" />
-        <activity
-            android:name="signuppack.SignupActivity"
-            android:label="Signup" />
-        <activity
-                android:name="signuppack.SurveyActivity1"
-                android:label="survey"
-                tools:ignore="Instantiatable"/>
-        <activity
-                android:name="signuppack.SurveyActivity2"
-                android:label="survey"
-                tools:ignore="Instantiatable"/>
-        <activity
-                android:name="signuppack.SurveyActivity3"
-                android:label="survey"
-                tools:ignore="Instantiatable"/>
-        <activity
-                android:name="signuppack.SurveyActivity4"
-                android:label="survey"
-                tools:ignore="Instantiatable"/>
-        <activity
-                android:name="signuppack.SurveyActivity5"
-                android:label="survey"
-                tools:ignore="Instantiatable"/>
-        <activity
-                android:name="signuppack.SurveyActivity6"
-                android:label="survey"
-                tools:ignore="Instantiatable"/>
-        <activity
-                android:name="signuppack.SurveyActivity7"
-                android:label="survey"
-                tools:ignore="Instantiatable"/>
-
-        <activity
-            android:name=".ReviewWritingActivity"
-            android:label="Review"
-            tools:ignore="Instantiatable"/>
-
 
         <activity
                 android:name=".ResultActivity"
@@ -92,6 +57,15 @@
         <activity
                 android:name=".BoardFragmentActivity"
                 android:label="POST"/>
+
+        <activity
+            android:name="signuppack.SignupActivity"
+            android:exported="true"/>
+
+        <activity
+                android:name="signuppack.ViewPager2"
+                android:label="Page"/>
+
     </application>
 
 </manifest>
