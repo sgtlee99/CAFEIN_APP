@@ -23,6 +23,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
@@ -48,6 +50,7 @@ class WritingFragment : Fragment() {
     private var mBinding: FragmentWritingBinding? = null
     private val binding get() = mBinding!!
 
+    // 권한
     private val requestPermissionLauncher =
         registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted ->
             if (isGranted) {
@@ -69,6 +72,8 @@ class WritingFragment : Fragment() {
         //프래그먼트에 사용할때는 activity!!. 붙여주기
 
 
+
+
         var btnOpenGallery = view?.findViewById<Button>(R.id.btnGallery)
         btnOpenGallery?.setOnClickListener {
             openGallery()
@@ -80,10 +85,11 @@ class WritingFragment : Fragment() {
 
         var btnOpenCamera = view?.findViewById<Button>(R.id.btnCamera)
         btnOpenCamera?.setOnClickListener {
-            requestPermissionLauncher.launch(Manifest.permission.CAMERA)
+            requestPermissionLauncher.launch(Manifest.permission.CAMERA)  // 권한
             openCamera()
         }
     }
+
 
     // var realUri: Uri? = null
 
@@ -92,7 +98,7 @@ class WritingFragment : Fragment() {
 
         createImageUri(newFileName(), "image/jpg")?.let {
             realUri = it
-            intent.putExtra(MediaStore.EXTRA_OUTPUT,realUri)
+            intent.putExtra(MediaStore.EXTRA_OUTPUT, realUri)
             startActivityForResult(intent, REQ_CAMERA)
         }
     }
@@ -107,9 +113,12 @@ class WritingFragment : Fragment() {
 
     fun createImageUri(filename: String, mimeType: String): Uri? {
         val values = ContentValues()
-        values.put(MediaStore.Images.Media.DISPLAY_NAME,filename)
-        values.put(MediaStore.Images.Media.MIME_TYPE,mimeType)
-        return binding.root.context.contentResolver.insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI,values)
+        values.put(MediaStore.Images.Media.DISPLAY_NAME, filename)
+        values.put(MediaStore.Images.Media.MIME_TYPE, mimeType)
+        return binding.root.context.contentResolver.insert(
+            MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
+            values
+        )
     }
 
 
@@ -119,16 +128,17 @@ class WritingFragment : Fragment() {
         return "$filename.jpg"
     }
 
-    fun loadBitmap(photoUri: Uri):Bitmap ?{
+    fun loadBitmap(photoUri: Uri): Bitmap? {
         var image: Bitmap? = null
         try {
-            image = if(Build.VERSION.SDK_INT>27) {   // API버전별 이미지 처리
-                val source: ImageDecoder.Source=ImageDecoder.createSource(binding.root.context.contentResolver,photoUri)
+            image = if (Build.VERSION.SDK_INT > 27) {     // API버전별 이미지 처리
+                val source: ImageDecoder.Source =
+                    ImageDecoder.createSource(binding.root.context.contentResolver, photoUri)
                 ImageDecoder.decodeBitmap(source)
-            }else {
-                MediaStore.Images.Media.getBitmap(binding.root.context.contentResolver,photoUri)
+            } else {
+                MediaStore.Images.Media.getBitmap(binding.root.context.contentResolver, photoUri)
             }
-        }catch (e: IOException) {
+        } catch (e: IOException) {
             e.printStackTrace()
         }
         return image
@@ -136,7 +146,11 @@ class WritingFragment : Fragment() {
 
 
     // 뷰 바인딩 관련코드는 북마크 블로그 참고
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         // Inflate the layout for this fragment
         mBinding = FragmentWritingBinding.inflate(inflater, container, false)
 
@@ -152,7 +166,7 @@ class WritingFragment : Fragment() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        if(resultCode == RESULT_OK) {
+        if (resultCode == RESULT_OK) {
             when (requestCode) {
                 REQ_CAMERA -> {
                     realUri?.let {
@@ -161,13 +175,13 @@ class WritingFragment : Fragment() {
                         realUri = null
                     }
                 }
-                REQ_STORAGE->{
+                REQ_STORAGE -> {
                     data?.data?.let {
                         binding.showImageImageView.setImageURI(it)
                     }
                 }
             }
-        }else{
+        } else {
             Log.d("", "onActivityResult false")
         }
     }
@@ -198,7 +212,6 @@ class WritingFragment : Fragment() {
     */
 
 
-
     override fun onDestroyView() {
         mBinding = null
         super.onDestroyView()
@@ -206,6 +219,26 @@ class WritingFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        // 자동태그
+        var tag_btn: Button = view?.findViewById(R.id.tagBtn) // 추출버튼
+        var post: EditText = view?.findViewById(R.id.edt) // 내용입력
+        var tag_complete: TextView = view?.findViewById(R.id.input_auto_tag) // 자동태그 텍스트뷰
+
+        tag_btn.setOnClickListener {
+            val tags = getTags(post.text.toString())
+            var result = ""
+
+            tags.forEach { tag ->
+                result += "${tag.value} "
+            }
+
+            if (result == "") result = "태그가 없습니다"
+
+            tag_complete.text = result
+        }
+
+
 
         val db = Room.databaseBuilder(
             activity!!.applicationContext, LoginDatabase::class.java, "database"
@@ -218,13 +251,26 @@ class WritingFragment : Fragment() {
             var direct_tag = input_direct_tag.text.toString()
             var auto_tag = input_auto_tag.text.toString()
 
-            db.TagDao().insertTag(Tag_Info(0, 1,direct_tag)) //포스트 넘 빠져있음
-            Toast.makeText(context,"포스트 작성 완료",Toast.LENGTH_SHORT).show()
+            db.TagDao().insertTag(Tag_Info(0, 1, direct_tag)) //포스트 넘 빠져있음
+            Toast.makeText(context, "포스트 작성 완료", Toast.LENGTH_SHORT).show()
             toHomeActivity()
 
         }
 
     }
+
+
+    private fun getTags(text: String): Sequence<MatchResult> {
+        /*
+        https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/-regex/
+         */
+        val pattern = """#([^#\s]+)""" // 태그 추출 정규식
+        val regex = pattern.toRegex()
+        val matches = regex.findAll(text)
+
+        return matches
+    }
+
 
     fun toHomeActivity() {
         startActivity(Intent(activity!!.applicationContext, HomeActivity::class.java))
