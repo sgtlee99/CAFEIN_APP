@@ -25,6 +25,9 @@ class LikeCafeActivity : AppCompatActivity() {
         //레이아웃 매니저와 어댑터 설정
         binding.likeCafeList.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         binding.likeCafeList.adapter=like_postlist
+        //리스터 이벤트 아직 구현 안함 누르면 에러
+
+
 
         itemList2.add(CardView_Info("영진카페", "#복현동 #아메리카노", R.drawable.cafe_front, 3, 2, 5, 4))
         itemList2.add(CardView_Info("로켓", "#태그1 #태그2", R.drawable.nasa1, 44, 0, 8, 6))
