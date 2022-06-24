@@ -220,10 +220,10 @@ class WritingFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
-        var tag_btn: Button = view?.findViewById(R.id.tagBtn) //추출
-        var post: EditText = view?.findViewById(R.id.edt) //내용
-        var tag_complete: TextView = view?.findViewById(R.id.input_auto_tag)
+        // 자동태그
+        var tag_btn: Button = view?.findViewById(R.id.tagBtn) // 추출버튼
+        var post: EditText = view?.findViewById(R.id.edt) // 내용입력
+        var tag_complete: TextView = view?.findViewById(R.id.input_auto_tag) // 자동태그 텍스트뷰
 
         tag_btn.setOnClickListener {
             val tags = getTags(post.text.toString())
@@ -236,9 +236,7 @@ class WritingFragment : Fragment() {
             if (result == "") result = "태그가 없습니다"
 
             tag_complete.text = result
-
         }
-
 
 
 
@@ -261,6 +259,7 @@ class WritingFragment : Fragment() {
 
     }
 
+
     private fun getTags(text: String): Sequence<MatchResult> {
         /*
         https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/-regex/
@@ -270,8 +269,8 @@ class WritingFragment : Fragment() {
         val matches = regex.findAll(text)
 
         return matches
-
     }
+
 
     fun toHomeActivity() {
         startActivity(Intent(activity!!.applicationContext, HomeActivity::class.java))
