@@ -17,8 +17,7 @@ class SearchActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search)
 
-        Appbar_Setting()
-
+        Appbar_Setting()    //앱바 타이틀 수정 (기능 추가 가능)
 
     }
     private fun Appbar_Setting() {
