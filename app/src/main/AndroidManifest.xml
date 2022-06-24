@@ -14,18 +14,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CAFEIN_APP">
-        <activity
-                android:name=".SearchActivity"
-                android:exported="true"/>
-        <activity
-                android:name=".MyWrittenBoardActivity"
-                android:exported="false"/>
-        <activity
-                android:name=".LikeCafeActivity"
-                android:exported="false"/>
-        <activity
-            android:name=".MyInfoChangeActivity"
-            android:exported="true" />
 
         <!--Splash Activity-->
         <!-- 스플래쉬 액티비티 때문에 OriginActivity에 있던 intent-filter부분을 옮겨줌 -->
@@ -36,17 +24,30 @@
                 android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-        </activity> <!-- Splash Activity -->
+        </activity>
+
+
         <activity
                 android:name=".OriginActivity"
                 android:exported="true">
-        </activity> <!-- 추가 액티비티 -->
+        </activity>
+        <!-- 추가 액티비티 -->
         <activity
-            android:name=".LoginActivity"
-            android:label="Login" />
+                android:name=".LoginActivity"
+                android:label="Login" />
+        <activity
+                android:name=".LikeCafeActivity"
+                android:exported="false"/>
+        <activity
+            android:name=".MyInfoChangeActivity"
+            android:exported="true" />
+
+        <activity
+                android:name=".SearchActivity"
+                android:exported="true"/>
+
 
         <activity
                 android:name=".ResultActivity"
@@ -57,11 +58,9 @@
         <activity
                 android:name=".BoardFragmentActivity"
                 android:label="POST"/>
-
         <activity
             android:name="signuppack.SignupActivity"
             android:exported="true"/>
-
         <activity
                 android:name="signuppack.ViewPager2"
                 android:label="Page"/>
