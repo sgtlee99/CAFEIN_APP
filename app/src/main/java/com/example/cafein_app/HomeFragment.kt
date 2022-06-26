@@ -28,11 +28,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     val itemList = arrayListOf<CardView_Info>()      // 아이템 배열
 
 
-
-
-
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
