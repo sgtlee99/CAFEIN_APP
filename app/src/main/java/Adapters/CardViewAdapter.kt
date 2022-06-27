@@ -55,6 +55,7 @@ class CardViewAdapter(val itemList: ArrayList<CardView_Info>): RecyclerView.Adap
     //리스너 인터페이스
     interface OnItemClickListener {
         fun onClick(v: View, position: Int)
+
     }
 
     //외부에서 클릭시 이벤트 설정

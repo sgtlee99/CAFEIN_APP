@@ -9,6 +9,4 @@
 			app:showAsAction="ifRoom"
 			android:title="검색"/>
 
-
-
 </menu>

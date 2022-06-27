@@ -103,6 +103,8 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                     startActivity(intent)
                 }
             })
+
+            ///
         }
 
 //        // 아이템 추가
