@@ -1,14 +1,20 @@
 package com.example.cafein_app
 
+import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.ActionBar
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.example.cafein_app.databinding.HomeActivityBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomeActivity : AppCompatActivity() {
+
+    private lateinit var binding: HomeActivityBinding
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.home_appbar, menu)
@@ -36,6 +42,10 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.home_activity)
 
+        binding = HomeActivityBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
+
         var action_bar: ActionBar = supportActionBar!!
 
         // 하단 탭이 눌렸을 때 화면을 전환하기 위해선 이벤트 처리하기 위해 BottomNavigationView 객체 생성
@@ -57,6 +67,18 @@ class HomeActivity : AppCompatActivity() {
                         val writingFragment = WritingFragment()
                         supportFragmentManager.beginTransaction().replace(R.id.fl_container, writingFragment).commit()
                         action_bar.setTitle("글쓰기")
+
+                        val builder = AlertDialog.Builder(context)
+                            .setTitle("Warning")
+                            .setMessage("사용자는 점주가 아닙니다")
+                            .setPositiveButton("확인", DialogInterface.OnClickListener{ dialog, which ->
+                                Toast.makeText(context, "확인", Toast.LENGTH_SHORT).show()
+                            })
+
+                            .setNegativeButton("취소", DialogInterface.OnClickListener{ dialog, which ->
+                                Toast.makeText(context, "취소", Toast.LENGTH_SHORT).show()
+                            })
+                        builder.show()
 
                     }
                     R.id.third -> {
