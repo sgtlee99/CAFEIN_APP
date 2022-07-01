@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
+import android.widget.RadioButton
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.cafein_app.R
@@ -20,24 +21,20 @@ class SurveyFragment6 : Fragment() {
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        var check1 = view?.findViewById<CheckBox>(R.id.cb1)
-        var check2 = view?.findViewById<CheckBox>(R.id.cb2)
+        var check1_6 = view?.findViewById<RadioButton>(R.id.sns_but1)
+        var check2_6 = view?.findViewById<RadioButton>(R.id.sns_but2)
 
-        check1?.setOnClickListener() {
-            if (check1.isChecked) {
+        check1_6?.setOnClickListener() {
+            if (check1_6.isChecked) {
                 Toast.makeText(context, "체크되었습니다. ", Toast.LENGTH_LONG).show()
-            } else {
-                Toast.makeText(context, "체크가 취소되었습니다. ", Toast.LENGTH_LONG).show()
-            }
-
-            check2?.setOnClickListener() {
-                if (check2.isChecked) {
-                    Toast.makeText(context, "체크되었습니다. ", Toast.LENGTH_LONG).show()
-                } else {
-                    Toast.makeText(context, "체크가 취소되었습니다. ", Toast.LENGTH_LONG).show()
-                }
             }
         }
-    }
 
-}
+            check2_6?.setOnClickListener() {
+                if (check2_6.isChecked) {
+                    Toast.makeText(context, "체크되었습니다. ", Toast.LENGTH_LONG).show()
+                }
+            }
+
+        }
+    }

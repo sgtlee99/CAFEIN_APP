@@ -31,8 +31,8 @@
             android:max="80"
             android:min="10" />
 
-        <TextView
-            android:id="@+id/tv"
+        <EditText
+            android:id="@+id/et"
             android:layout_width="match_parent"
             android:layout_height="158dp"
             android:background="#111111"
