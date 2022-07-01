@@ -64,6 +64,9 @@
         <activity
                 android:name="signuppack.ViewPager2"
                 android:label="Page"/>
+        <activity
+                android:name=".ReviewWritingActivity"
+                android:label="Review"/>
 
     </application>
 

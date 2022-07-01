@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 글 작성 프래그먼트에 다이얼로그를 띄우기위한 xml코드 -->
+
+    <!--
+    android:orientation="vertical"
+    android:gravity="center">
+    -->
+
+    <TextView
+        android:text="textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:layout_weight="1"
+        android:layout_marginTop="20dp"
+        android:gravity="center" />
+
+    <!--
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/butSave"
+            android:text="확인"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    -->
+
+</LinearLayout>
