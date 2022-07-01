@@ -64,8 +64,9 @@
         <activity
                 android:name="signuppack.ViewPager2"
                 android:label="Page"/>
-        <activity android:name=".ReviewWritingActivity"
-                  android:label="리뷰작성"/>
+        <activity
+                android:name=".ReviewWritingActivity"
+                android:label="Review"/>
 
     </application>
 

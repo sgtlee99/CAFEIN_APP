@@ -4,9 +4,7 @@ import DB_Dao_Helper.LoginDatabase
 import DB_Dao_Helper.Tag_Info
 import android.content.Intent
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.LiveData
@@ -28,6 +26,11 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     val itemList = arrayListOf<CardView_Info>()      // 아이템 배열
 
 
+
+
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -37,6 +40,10 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val view = binding.root
         return view
+
+        // contextmenu 지정
+        registerForContextMenu(binding.cardviewRecyclerviewview)
+
     }
 
     override fun onDestroyView() {
@@ -103,9 +110,9 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                     startActivity(intent)
                 }
             })
-
-            ///
         }
+
+
 
 //        // 아이템 추가
         itemList.add(CardView_Info("영진카페", "#복현동 #아메리카노", R.drawable.cafe_front, 3, 2, 5, 4))
