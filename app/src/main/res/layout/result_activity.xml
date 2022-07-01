@@ -16,13 +16,13 @@
             android:src="@drawable/originpage_cat" />
 
         <TextView
-            android:id="@+id/tv"
+            android:id="@+id/result_tv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
             android:text="캣츠 캣츠"
-            android:textSize="50dp" />
+            android:textSize="8dp" />
 
         <Button
             android:id="@+id/next_btn"
@@ -31,7 +31,7 @@
             android:layout_gravity="center"
             android:backgroundTint="@color/orange"
             android:text="LOGIN"
-            android:textColor="#FFFFFFFF"
+            android:textColor="#ffffff"
             android:textSize="20dp" />
 
     </LinearLayout>

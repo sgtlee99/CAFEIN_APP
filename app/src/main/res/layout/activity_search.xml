@@ -23,4 +23,5 @@
 			android:id="@+id/searchpage_recyclerview"
 			/>
 
+
 </LinearLayout>

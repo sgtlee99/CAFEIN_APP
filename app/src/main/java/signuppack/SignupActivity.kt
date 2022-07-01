@@ -31,13 +31,19 @@ class SignupActivity : AppCompatActivity() {
             applicationContext, LoginDatabase::class.java, "database"
         ).allowMainThreadQueries().build()
 
+        //DB대신 sharedpreferences 사용
+//        val share_signup = getSharedPreferences("sign", 0)
+//        val editor = share_signup.edit()
+//        editor.putString("id",id)
+//
 
 
 
         //설문조사로 이동
         surveytest.setOnClickListener {
-            var intent = Intent(this, ViewPager2 ::class.java)
+            var intent = Intent(this, SurveyActivity1 ::class.java)
             startActivity(intent)
+//            overridePendingTransition(R.anim.slide_right_enter, R.anim.slide_right_exit)
         }
 
         //회원가입
@@ -53,9 +59,9 @@ class SignupActivity : AppCompatActivity() {
             val pw = input_signupPW.text.toString()
             val pw_cf = input_signupPW_confirm.text.toString()
             val nick = input_signipNickname.text.toString()
-//            val hello =
-            //val owner
-            //val sex
+            val email = input_signipEmail.text.toString()
+
+
 
             //사용자가 입력항목을 다 채우지 않은 경우
             if (id.isEmpty() || pw.isEmpty() || pw_cf.isEmpty() || nick.isEmpty()) {
@@ -70,14 +76,16 @@ class SignupActivity : AppCompatActivity() {
                 //회원가입 성공 토스트 메시지
                 Toast.makeText(this, "${nick}님 회원가입 성공입니다.", Toast.LENGTH_SHORT).show()
 
-                val sharedPreference = getSharedPreferences("fill name", Context.MODE_PRIVATE)
+                val sharedPreference = getSharedPreferences("signup", 0)
                 val editor = sharedPreference.edit()
 
                 editor.putString("id", id)
                 editor.putString("pw", pw)
                 editor.putString("nickname", nick)
+                editor.putString("email",email)
 
                 editor.apply()
+
                 //★데이터 베이스에 저장★
                 db.dao().insert(USER(id,pw,nick))
                 //로그인 화면으로 이동

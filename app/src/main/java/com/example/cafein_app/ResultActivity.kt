@@ -3,6 +3,7 @@ package com.example.cafein_app
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 
@@ -17,5 +18,10 @@ class ResultActivity : AppCompatActivity() {
             var intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
+
+        var share = getSharedPreferences("sign",0)
+        var result_text = findViewById<TextView>(R.id.result_tv)
+        result_text.text = share.getString("id","")
+//        + share.getString("pw","") + share.getString("nick","")+share.getString("email","")
     }
 }

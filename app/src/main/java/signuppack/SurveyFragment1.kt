@@ -26,7 +26,6 @@ class SurveyFragment1 : Fragment() {
         val seekBar = view?.findViewById<SeekBar>(R.id.seekBar)
         val age_text = view?.findViewById<TextView>(R.id.age)
 
-
                 seekBar?.setOnSeekBarChangeListener (
                 object : SeekBar.OnSeekBarChangeListener {
                     override fun onProgressChanged(
