@@ -14,28 +14,28 @@
             android:layout_height="430dp"
             android:src="@drawable/style" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <RadioGroup
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:orientation="horizontal">
 
-            <CheckBox
-                android:id="@+id/style_cb1"
+            <RadioButton
+                android:id="@+id/style_but1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:text="인스타 감성"
+                android:text="감성카페"
                 android:textSize="30dp" />
 
-            <CheckBox
-                android:id="@+id/style_cb2"
+            <RadioButton
+                android:id="@+id/style_but2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="60dp"
-                android:text="동네 카페"
+                android:layout_marginLeft="80dp"
+                android:text="동네카페"
                 android:textSize="30dp" />
-
-        </LinearLayout>
+        </RadioGroup>
 
         <Button
             android:id="@+id/b"
@@ -50,7 +50,7 @@
         <TextView
             android:id="@+id/tv"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="158dp"
             android:background="#111111"
             android:gravity="center"
             android:text="좋아하는 카페 스타일은 무엇인가요?"

@@ -11,9 +11,11 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.os.bundleOf
 import androidx.room.Room
 import com.example.cafein_app.LoginActivity
 import com.example.cafein_app.R
+import com.example.cafein_app.ResultActivity
 import kotlinx.android.synthetic.main.signup_activity.*
 
 //회원가입 과정
@@ -53,9 +55,8 @@ class SignupActivity : AppCompatActivity() {
             val pw = input_signupPW.text.toString()
             val pw_cf = input_signupPW_confirm.text.toString()
             val nick = input_signipNickname.text.toString()
-//            val hello =
-            //val owner
-            //val sex
+
+
 
             //사용자가 입력항목을 다 채우지 않은 경우
             if (id.isEmpty() || pw.isEmpty() || pw_cf.isEmpty() || nick.isEmpty()) {
@@ -83,6 +84,14 @@ class SignupActivity : AppCompatActivity() {
                 //로그인 화면으로 이동
                 var intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)
+
+                val bun = bundleOf(
+                    "msg1" to id,
+                    "msg2" to pw,
+                    "msg3" to nick
+                )
+                intent.putExtras(bun)
+
                 //다음 설문조사로 이동
 //                var intent = Intent(this, ViewPager2::class.java)
 //                startActivity(intent)

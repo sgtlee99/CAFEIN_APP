@@ -5,46 +5,45 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_height="match_parent"
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
         <ImageView
-            android:layout_height="430dp"
             android:layout_width="match_parent"
+            android:layout_height="430dp"
             android:src="@drawable/icon" />
 
-        <LinearLayout
+        <RadioGroup
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_width="match_parent"
             android:layout_weight="1"
             android:orientation="horizontal">
 
-            <CheckBox
-                android:id="@+id/cb1"
+            <RadioButton
+                android:id="@+id/c_but"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
-                android:layout_width="wrap_content"
                 android:text="커피"
                 android:textSize="30dp" />
 
-            <CheckBox
-                android:id="@+id/cb2"
+            <RadioButton
+                android:id="@+id/d_but"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="125dp"
-                android:layout_width="wrap_content"
                 android:text="디저트"
                 android:textSize="30dp" />
-
-        </LinearLayout>
+        </RadioGroup>
 
 
         <TextView
+            android:id="@+id/tv"
+            android:layout_width="match_parent"
+            android:layout_height="158dp"
             android:background="#111111"
             android:gravity="center"
-            android:id="@+id/tv"
-            android:layout_height="158dp"
-            android:layout_width="match_parent"
             android:text="카페를 이용하는 주된 목적(1)은 무엇인가요?"
             android:textColor="#ffffff"
             android:textSize="20dp"

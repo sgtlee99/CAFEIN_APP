@@ -14,29 +14,28 @@
             android:layout_height="430dp"
             android:src="@drawable/sns"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <RadioGroup
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="horizontal">
 
-            <CheckBox
-                android:id="@+id/sns_cb1"
+            <RadioButton
+                android:id="@+id/sns_but1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="30dp"
                 android:text="인스타"
                 android:textSize="30dp" />
 
-            <CheckBox
-                android:id="@+id/sns_cb2"
+            <RadioButton
+                android:id="@+id/sns_but2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="120dp"
+                android:layout_marginLeft="110dp"
                 android:text="블로그"
                 android:textSize="30dp" />
-
-        </LinearLayout>
+        </RadioGroup>
 
         <TextView
             android:id="@+id/tv"

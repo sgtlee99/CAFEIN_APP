@@ -12,6 +12,8 @@ import com.example.myapplication1.CardView_Info
 
 class LikeCafeActivity : AppCompatActivity() {
 
+    var bun = Bundle()
+
     private lateinit var binding : LikeCafeActivityBinding
     val itemList2 = arrayListOf<CardView_Info>()
     val like_postlist = CardViewAdapter2(itemList2)

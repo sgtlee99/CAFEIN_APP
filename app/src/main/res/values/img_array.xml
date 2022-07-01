@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="images">
+        <item>@drawable/originpage_cat</item>
+        <item>@drawable/originpage_bear</item>
+        <item>@drawable/originpage_dog</item>
+        <item>@drawable/originpage_fox</item>
+    </array>
+</resources>
