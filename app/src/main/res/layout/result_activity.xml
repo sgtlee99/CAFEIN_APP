@@ -15,13 +15,52 @@
             android:layout_weight="1" />
 
         <TextView
-            android:id="@+id/tv_7"
-            android:layout_width="match_parent"
+            android:id="@+id/tv_7_1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:hint="결과7"
+            android:hint="결과7_1"
             android:text=""
-            android:textSize="50dp" />
+            android:textSize="0dp" />
+
+        <TextView
+            android:id="@+id/tv_7_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="결과7_2"
+            android:text=""
+            android:textSize="0dp" />
+
+        <TextView
+            android:id="@+id/tv_7_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="결과7_3"
+            android:text=""
+            android:textSize="0dp" />
+
+        <TextView
+            android:id="@+id/tv_7_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="결과7_3"
+            android:text=""
+            android:textSize="0dp" />
+
+        <TextView
+            android:id="@+id/tv_7_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="결과7_5"
+            android:text=""
+            android:textSize="0dp" />
+
+        <TextView
+            android:id="@+id/tv_7_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="결과7_6"
+            android:text=""
+            android:textSize="0dp" />
 
         <Button
             android:id="@+id/next_btn"
