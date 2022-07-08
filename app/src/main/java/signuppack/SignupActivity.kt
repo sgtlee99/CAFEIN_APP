@@ -40,7 +40,7 @@ class SignupActivity : AppCompatActivity() {
 
         //설문조사로 이동
         surveytest.setOnClickListener {
-            var intent = Intent(this, ViewPager2 ::class.java)
+            var intent = Intent(this, SurveryActivity ::class.java)
             startActivity(intent)
         }
 

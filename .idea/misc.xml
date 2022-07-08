@@ -3,6 +3,24 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/LG/CAFEIN_APP/app/src/main/res/layout/activity_survery.xml" value="0.2" />
+        <entry key="..\:/Users/LG/CAFEIN_APP/app/src/main/res/layout/board_card_view.xml" value="0.1911231884057971" />
+        <entry key="..\:/Users/LG/CAFEIN_APP/app/src/main/res/layout/fragment_home.xml" value="0.24909420289855072" />
+        <entry key="..\:/Users/LG/CAFEIN_APP/app/src/main/res/layout/home_activity.xml" value="0.24909420289855072" />
+        <entry key="..\:/Users/LG/CAFEIN_APP/app/src/main/res/layout/login_activity.xml" value="0.17708333333333334" />
+        <entry key="..\:/Users/LG/CAFEIN_APP/app/src/main/res/layout/result_activity.xml" value="0.1" />
+        <entry key="..\:/Users/LG/CAFEIN_APP/app/src/main/res/layout/survey_activity1.xml" value="0.14492753623188406" />
+        <entry key="..\:/Users/LG/CAFEIN_APP/app/src/main/res/layout/survey_activity2.xml" value="0.1" />
+        <entry key="..\:/Users/LG/CAFEIN_APP/app/src/main/res/layout/survey_fragment1.xml" value="0.1" />
+        <entry key="..\:/Users/LG/CAFEIN_APP/app/src/main/res/layout/survey_fragment2.xml" value="0.176" />
+        <entry key="..\:/Users/LG/CAFEIN_APP/app/src/main/res/layout/survey_fragment3.xml" value="0.24909420289855072" />
+        <entry key="..\:/Users/LG/CAFEIN_APP/app/src/main/res/layout/survey_fragment4.xml" value="0.24909420289855072" />
+        <entry key="..\:/Users/LG/CAFEIN_APP/app/src/main/res/layout/survey_fragment5.xml" value="0.2" />
+        <entry key="..\:/Users/LG/CAFEIN_APP/app/src/main/res/layout/survey_fragment6.xml" value="0.24909420289855072" />
+        <entry key="..\:/Users/LG/CAFEIN_APP/app/src/main/res/layout/survey_fragment7.xml" value="0.2" />
+        <entry key="..\:/Users/LG/CAFEIN_APP/app/src/main/res/layout/viewpager2.xml" value="0.17346014492753623" />
+        <entry key="..\:/Users/LG/CAFEIN_APP/app/src/main/res/menu/home_appbar.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/LG/CAFEIN_APP/app/src/main/res/menu/home_appbar2.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/KIMSH/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/layout/activity_search.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/KIMSH/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/layout/alert_popup_writingfragment.xml" value="0.264" />
         <entry key="..\:/Users/KIMSH/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/layout/board_card_view.xml" value="0.13451086956521738" />
@@ -143,7 +161,6 @@
         <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/layout/fragment_writing.xml" value="0.2125" />
         <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/layout/home_activity.xml" value="0.1" />
         <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/layout/item_user.xml" value="0.1" />
-        <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/layout/like_cafe_activity.xml" value="0.1" />
         <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/layout/login_activity.xml" value="0.1" />
         <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/layout/my_info_change_activity.xml" value="0.2418478260869565" />
         <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/layout/origin_activity.xml" value="0.264" />

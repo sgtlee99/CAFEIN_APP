@@ -26,14 +26,66 @@ class ResultActivity : AppCompatActivity() {
 //        }
 
 
-        if (intent.hasExtra("msg")) {
-            tv_7.text = intent.getStringExtra("msg")
-            if (tv_7.text == "감성카페") {
-                re_img.setImageResource(R.drawable.originpage_cat)
-            } else if (tv_7.text == "동네카페") {
-                re_img.setImageResource(R.drawable.originpage_bear)
-            }
+//        if (intent.hasExtra("msg") && (intent.hasExtra("msg1"))) { // 받음
+//            tv_7_1.text = intent.getStringExtra("msg") // 담음
+//            tv_7_2.text = intent.getStringExtra("msg1")
+//            when (tv_7_1.text) {
+//                "커피", "데이터" -> re_img.setImageResource(R.drawable.originpage_cat)
+//                "커피", "스터디" -> re_img.setImageResource(R.drawable.originpage_bear)
+//                "디저트", "데이트" -> re_img.setImageResource(R.drawable.originpage_dog)
+//                "디저트", "스터디" -> re_img.setImageResource(R.drawable.originpage_fox)
+//                else -> println("null")
+//            }
+//        }
+
+        // 데이터 받아와 담기
+        intent.hasExtra("msg")
+        tv_7_1.text = intent.getStringExtra("msg")
+        intent.hasExtra("msg1")
+        tv_7_2.text = intent.getStringExtra("msg1")
+        intent.hasExtra("msg2")
+        tv_7_3.text = intent.getStringExtra("msg2")
+        intent.hasExtra("msg3")
+        tv_7_4.text = intent.getStringExtra("msg3")
+        intent.hasExtra("msg4")
+        tv_7_5.text = intent.getStringExtra("msg4")
+        intent.hasExtra("msg5")
+        tv_7_6.text = intent.getStringExtra("msg5")
+
+
+        // 조건 검사
+        if (tv_7_1.text == "커피" && tv_7_2.text == "데이트" && tv_7_3.text == "아메리카노"
+            && tv_7_4.text == "마카롱" && tv_7_5.text == "인스타" && tv_7_6.text == "감성카페") {
+            re_img.setImageResource(R.drawable.originpage_cat)
+        } else if (tv_7_1.text == "디저트" && tv_7_2.text == "스터디" && tv_7_3.text == "라떼"
+            && tv_7_4.text == "케이크" && tv_7_5.text == "블로그" && tv_7_6.text == "동네카페") {
+            re_img.setImageResource(R.drawable.originpage_bear)
+        } else if (tv_7_1.text == "커피" && tv_7_2.text == "스터디" && tv_7_3.text == "아메리카노"
+            && tv_7_4.text == "케이크" && tv_7_5.text == "인스타" && tv_7_6.text == "동네카페") {
+            re_img.setImageResource(R.drawable.originpage_fox)
+        } else if (tv_7_1.text == "디저트" && tv_7_2.text == "데이트" && tv_7_3.text == "라떼"
+            && tv_7_4.text == "마카롱" && tv_7_5.text == "블로그" && tv_7_6.text == "감성카페") {
+            re_img.setImageResource(R.drawable.originpage_dog)
         }
+
+
+
+//        if (intent.hasExtra("msg1")) { // 받음
+//            tv_7_2.text = intent.getStringExtra("msg1") // 담음
+//            if (tv_7_2.text =="스터디") {
+//                re_img.setImageResource(R.drawable.originpage_cat)
+//            } else if (tv_7_2.text =="데이트") {
+//                re_img.setImageResource(R.drawable.originpage_bear)
+//            }
+//        }
+
+
+
+//        when (tv_7_1.text) {
+//            "커피" -> re_img.setImageResource(R.drawable.originpage_cat)
+//            "디저트" -> re_img.setImageResource(R.drawable.originpage_bear)
+//            else -> println("null")
+//        }
 
 
 
