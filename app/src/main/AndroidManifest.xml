@@ -65,7 +65,7 @@
             android:name="signuppack.SignupActivity"
             android:exported="true"/>
         <activity
-                android:name="signuppack.ViewPager2"
+                android:name="signuppack.SurveyActivity"
                 android:label="Page"/>
         <activity
                 android:name=".ReviewWritingActivity"

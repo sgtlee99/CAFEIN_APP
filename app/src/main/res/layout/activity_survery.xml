@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+			xmlns:app="http://schemas.android.com/apk/res-auto"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+	<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical">
+
+
+		<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:orientation="vertical">
+
+			<TextView
+					android:id="@+id/tv1"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="카페를 이용하는 주된 목적(1)은 무엇인가요?"
+					android:textSize="20dp" />
+
+			<ImageView
+					android:layout_width="wrap_content"
+					android:layout_height="150dp"
+					android:src="@drawable/icon" />
+
+			<RadioGroup
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:orientation="vertical">
+
+				<RadioButton
+						android:id="@+id/rb1_1"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="커피" />
+
+				<RadioButton
+						android:id="@+id/rb1_2"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="디저트" />
+
+			</RadioGroup>
+		</LinearLayout>
+
+		<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:orientation="vertical">
+
+			<TextView
+					android:id="@+id/tv2"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="카페를 이용하는 주된 목적(2)은 무엇인가요?"
+					android:textSize="20dp" />
+
+			<ImageView
+					android:layout_width="match_parent"
+					android:layout_height="150dp"
+					android:src="@drawable/object" />
+
+			<RadioGroup
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:orientation="vertical">
+
+				<RadioButton
+						android:id="@+id/rb2_1"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="데이트" />
+
+				<RadioButton
+						android:id="@+id/rb2_2"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="스터디" />
+			</RadioGroup>
+		</LinearLayout>
+
+		<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:orientation="vertical">
+
+			<TextView
+					android:id="@+id/tv3"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="30dp"
+					android:text="선호하는 커피 종류는 무엇인가요?"
+					android:textSize="20dp" />
+
+			<ImageView
+					android:layout_width="match_parent"
+					android:layout_height="150dp"
+					android:src="@drawable/coffee" />
+
+			<RadioGroup
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:orientation="vertical">
+
+				<RadioButton
+						android:id="@+id/rb3_1"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="아메리카노" />
+
+				<RadioButton
+						android:id="@+id/rb3_2"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="라떼" />
+			</RadioGroup>
+		</LinearLayout>
+
+		<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:orientation="vertical">
+
+			<TextView
+					android:id="@+id/tv4"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="30dp"
+					android:text="선호하는 디저트 종류는 무엇인가요?"
+					android:textSize="20dp" />
+
+			<ImageView
+					android:layout_width="match_parent"
+					android:layout_height="150dp"
+					android:src="@drawable/dessert" />
+
+			<RadioGroup
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:orientation="vertical">
+
+				<RadioButton
+						android:id="@+id/rb4_1"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="마카롱" />
+
+				<RadioButton
+						android:id="@+id/rb4_2"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="케이크" />
+			</RadioGroup>
+		</LinearLayout>
+
+		<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:orientation="vertical">
+
+			<TextView
+					android:id="@+id/tv5"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="30dp"
+					android:text="자주 사용하는 SNS는 무엇인가요?"
+					android:textSize="20dp" />
+
+			<ImageView
+					android:layout_width="match_parent"
+					android:layout_height="150dp"
+					android:src="@drawable/sns" />
+
+			<RadioGroup
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:orientation="vertical">
+
+				<RadioButton
+						android:id="@+id/rb5_1"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="인스타" />
+
+				<RadioButton
+						android:id="@+id/rb5_2"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="블로그" />
+			</RadioGroup>
+		</LinearLayout>
+
+		<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:orientation="vertical">
+
+			<TextView
+					android:id="@+id/tv6"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="30dp"
+					android:text="좋아하는 카페 스타일은 무엇인가요?"
+					android:textSize="20dp" />
+
+			<ImageView
+					android:layout_width="match_parent"
+					android:layout_height="150dp"
+					android:src="@drawable/style" />
+
+			<RadioGroup
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:orientation="vertical">
+
+				<RadioButton
+						android:id="@+id/rb6_1"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="감성카페" />
+
+				<RadioButton
+						android:id="@+id/rb6_2"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="동네카페" />
+			</RadioGroup>
+		</LinearLayout>
+
+		<Button
+				android:id="@+id/pass_btn"
+				android:layout_width="250dp"
+				android:layout_height="60dp"
+				android:layout_gravity="center"
+				android:backgroundTint="@color/orange"
+				android:text="NEXT"
+				android:textColor="#FFFFFFFF"
+				android:textSize="20dp" />
+
+	</LinearLayout>
+</ScrollView>
