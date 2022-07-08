@@ -60,6 +60,12 @@ class ResultActivity : AppCompatActivity() {
         } else if (tv_7_1.text == "디저트" && tv_7_2.text == "스터디" && tv_7_3.text == "라떼"
             && tv_7_4.text == "케이크" && tv_7_5.text == "블로그" && tv_7_6.text == "동네카페") {
             re_img.setImageResource(R.drawable.originpage_bear)
+        } else if (tv_7_1.text == "커피" && tv_7_2.text == "스터디" && tv_7_3.text == "아메리카노"
+            && tv_7_4.text == "케이크" && tv_7_5.text == "인스타" && tv_7_6.text == "동네카페") {
+            re_img.setImageResource(R.drawable.originpage_fox)
+        } else if (tv_7_1.text == "디저트" && tv_7_2.text == "데이트" && tv_7_3.text == "라떼"
+            && tv_7_4.text == "마카롱" && tv_7_5.text == "블로그" && tv_7_6.text == "감성카페") {
+            re_img.setImageResource(R.drawable.originpage_dog)
         }
 
 
