@@ -3,6 +3,31 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/KIMSH/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/layout/activity_search.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/KIMSH/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/layout/alert_popup_writingfragment.xml" value="0.264" />
+        <entry key="..\:/Users/KIMSH/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/layout/board_card_view.xml" value="0.13451086956521738" />
+        <entry key="..\:/Users/KIMSH/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/layout/board_fragment_activity.xml" value="0.12158054711246201" />
+        <entry key="..\:/Users/KIMSH/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/layout/fragment_boardreview.xml" value="0.176" />
+        <entry key="..\:/Users/KIMSH/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/layout/fragment_boartview.xml" value="0.12158054711246201" />
+        <entry key="..\:/Users/KIMSH/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/layout/fragment_home.xml" value="0.2" />
+        <entry key="..\:/Users/KIMSH/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/layout/fragment_setting.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/KIMSH/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/layout/fragment_writing.xml" value="0.1" />
+        <entry key="..\:/Users/KIMSH/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/layout/home_activity.xml" value="0.264" />
+        <entry key="..\:/Users/KIMSH/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/layout/like_cafe_activity.xml" value="0.12158054711246201" />
+        <entry key="..\:/Users/KIMSH/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/layout/login_activity.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/KIMSH/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/layout/my_info_change_activity.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/KIMSH/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/layout/my_written_board_activity.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/KIMSH/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/layout/result_activity.xml" value="0.12158054711246201" />
+        <entry key="..\:/Users/KIMSH/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/layout/review_items.xml" value="0.12158054711246201" />
+        <entry key="..\:/Users/KIMSH/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/layout/review_writing_activity.xml" value="0.12158054711246201" />
+        <entry key="..\:/Users/KIMSH/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/layout/signup_activity.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/KIMSH/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/layout/tag_items.xml" value="0.12158054711246201" />
+        <entry key="..\:/Users/KIMSH/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/layout/viewpager2.xml" value="0.12158054711246201" />
+        <entry key="..\:/Users/KIMSH/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/menu/home_appbar.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/KIMSH/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/menu/home_appbar2.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/KIMSH/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/menu/navi_board.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/KIMSH/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/menu/navi_menu.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/KIMSH/AndroidStudioProjects/CAFEIN_APP/app/src/main/res/menu/review_appbar.xml" value="0.2526041666666667" />
         <entry key="..\:/Users/LG/CAFEIN_APP/app/src/main/res/layout/board_card_view.xml" value="0.25364583333333335" />
         <entry key="..\:/Users/LG/CAFEIN_APP/app/src/main/res/layout/board_fragment_activity.xml" value="0.1875" />
         <entry key="..\:/Users/LG/CAFEIN_APP/app/src/main/res/layout/fragment_boardreview.xml" value="0.25364583333333335" />

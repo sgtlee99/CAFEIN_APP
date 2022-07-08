@@ -5,11 +5,14 @@ import DB_Dao_Helper.Tag_Info
 import android.content.Intent
 import android.os.Bundle
 import android.view.*
+import android.widget.Button
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.LinearSmoothScroller
+import androidx.recyclerview.widget.RecyclerView
 import androidx.room.Room
 import com.example.cafein_app.databinding.FragmentHomeBinding
 import com.example.myapplication1.CardViewAdapter
@@ -26,14 +29,14 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     val itemList = arrayListOf<CardView_Info>()      // 아이템 배열
 
 
-
-
-
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+    }
+
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 //        return inflater.inflate(R.layout.fragment_home, container, false)
@@ -51,8 +54,10 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         _binding = null
     }
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
 
 //        tagDb = context?.let { LoginDatabase.getInstance(it) }
 //        tagDb = LoginDatabase.getInstance(context)
@@ -113,6 +118,8 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         }
 
 
+        upListener(binding.cardviewRecyclerviewview)
+
 
 //        // 아이템 추가
         itemList.add(CardView_Info("영진카페", "#복현동 #아메리카노", R.drawable.cafe_front, 3, 2, 5, 4))
@@ -139,6 +146,16 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         // 리스트가 변경됨을 어댑터에 알림
         TRecyclerViewAdapter(tagList).notifyDataSetChanged()
         CardViewAdapter(itemList).notifyDataSetChanged()
+
+
+    }
+
+    private fun upListener(view: RecyclerView?) {
+
+        btnUp.setOnClickListener {
+            view?.smoothScrollToPosition(0)
+        }
+
     }
 
 }

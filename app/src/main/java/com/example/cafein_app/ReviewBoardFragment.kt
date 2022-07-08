@@ -2,14 +2,13 @@ package com.example.cafein_app
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.cafein_app.databinding.FragmentBoardreviewBinding
 import com.example.cafein_app.databinding.FragmentHomeBinding
+import com.example.cafein_app.databinding.HomeActivityBinding
 import com.example.myapplication1.CardViewAdapter
 import com.example.myapplication1.CardView_Info
 
@@ -26,20 +25,43 @@ class ReviewBoardFragment : Fragment(R.layout.fragment_boardreview) {
         }
 
 
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.review_appbar, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.btnReviewWriting -> {
+                toReview()
+                return true
+            }
+            else -> {
+                return super.onOptionsItemSelected(item)
+            }
+        }
+    }
+
+    private fun toReview() {
+        startActivity(Intent(context, ReviewWritingActivity::class.java))
+    }
+
+
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        var reviewwritingbtn = view?.findViewById<Button>(R.id.btnReviewWriting)
-        reviewwritingbtn?.setOnClickListener {
-            var intent = Intent(context, ReviewWritingActivity::class.java)
-            startActivity(intent)
-        }
+        //var reviewwritingbtn = view?.findViewById<Button>(R.id.btnReviewWriting)
+        //reviewwritingbtn?.setOnClickListener {
+        //    var intent = Intent(context, ReviewWritingActivity::class.java)
+        //    startActivity(intent)
+        //}
     }
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 //        return inflater.inflate(R.layout.fragment_boardreview, container, false)
         _binding = FragmentBoardreviewBinding.inflate(inflater, container, false)
+        setHasOptionsMenu(true)   // 프래그먼트가 옵션메뉴를 가질 수 있도록 설정해줌
         val view = binding.root
         return view
 
