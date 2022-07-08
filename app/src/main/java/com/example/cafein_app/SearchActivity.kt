@@ -51,7 +51,6 @@ class SearchActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelec
         itemList = tempCards()
         setAdapter()
 
-
     }
 
     var searchViewTextListener: SearchView.OnQueryTextListener =

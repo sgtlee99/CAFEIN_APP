@@ -6,12 +6,14 @@ import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
+import android.text.TextWatcher
 import android.util.Log
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.os.bundleOf
+import androidx.core.widget.addTextChangedListener
 import androidx.room.Room
 import com.example.cafein_app.LoginActivity
 import com.example.cafein_app.R
@@ -42,6 +44,13 @@ class SignupActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+
+        val id = input_signupID.text.toString()
+        val pw = input_signupPW.text.toString()
+        val pw_cf = input_signupPW_confirm.text.toString()
+        val nick = input_signipNickname.text.toString()
+
+//        input_signipEmail.
         //회원가입
         var signupnextbutton = findViewById<Button>(R.id.signuppage_NextButton)
 
@@ -51,10 +60,7 @@ class SignupActivity : AppCompatActivity() {
             //====회원가입 수행====
             //아이디 비밀번호 비밀번호확인 닉네임 점주(스위치) 성별(체크박스)
             //editText에 적힌 값을 받아옴
-            val id = input_signupID.text.toString()
-            val pw = input_signupPW.text.toString()
-            val pw_cf = input_signupPW_confirm.text.toString()
-            val nick = input_signipNickname.text.toString()
+
 
 
 

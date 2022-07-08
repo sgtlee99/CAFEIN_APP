@@ -87,6 +87,7 @@
         <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/drawable/background_splash.xml" value="0.22685185185185186" />
         <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/drawable/bluebutton_round.xml" value="0.22685185185185186" />
         <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/drawable/cardview_stroke.xml" value="0.2677083333333333" />
+        <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/drawable/greenbutton_round.xml" value="0.20677083333333332" />
         <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/drawable/ic_launcher_background.xml" value="0.22685185185185186" />
         <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/drawable/img_outline.xml" value="0.22685185185185186" />
         <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/drawable/like_button_select.xml" value="0.26666666666666666" />
@@ -99,10 +100,12 @@
         <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/drawable/my_written_board_shape3.xml" value="0.22685185185185186" />
         <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/drawable/mypage_shape.xml" value="0.22685185185185186" />
         <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/drawable/orangebutton_round.xml" value="0.22685185185185186" />
+        <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/drawable/red_edittext.xml" value="0.16296296296296298" />
         <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/drawable/redbutton_round.xml" value="0.22685185185185186" />
         <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/layout/activity_main.xml" value="0.1125" />
         <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/layout/activity_search.xml" value="0.1" />
         <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/layout/activity_search_include.xml" value="0.23505434782608695" />
+        <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/layout/alert_popup_writingfragment.xml" value="0.17916666666666667" />
         <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/layout/board_card_view.xml" value="0.2515625" />
         <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/layout/board_fragment_activity.xml" value="0.1" />
         <entry key="..\:/Users/sss/IdeaProjects/CAFEIN_APP/app/src/main/res/layout/filter_button.xml" value="0.25" />
