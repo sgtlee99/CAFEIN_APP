@@ -37,7 +37,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         super.onActivityCreated(savedInstanceState)
     }
 
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 //        return inflater.inflate(R.layout.fragment_home, container, false)
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
@@ -101,7 +100,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                     Toast.makeText(v.context, "Tag", Toast.LENGTH_SHORT).show()
 //                    Toast.makeText(v.context,tagList.toString(),Toast.LENGTH_LONG).show()
                 }
-
             })
         }
 //            //=============카드 뷰 ====================================

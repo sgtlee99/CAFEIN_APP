@@ -16,6 +16,7 @@ class SurveryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_survery)
 
+
 //        var scrollView = findViewById<ScrollView>(R.id.scrollView)
 //        var rb1_1 = findViewById<RadioButton>(R.id.rb1_1)
 //        var rb5_2 = findViewById<RadioButton>(R.id.rb5_2)

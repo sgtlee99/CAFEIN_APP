@@ -73,7 +73,7 @@ class LoginActivity : AppCompatActivity() {
                     startLogin()
                 } else {
                     Log.d("RESPONSE : ", "FAILURE")
-//                    Toast.makeText(this, "[로그인 실패!]", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@LoginActivity, "[로그인 실패!]", Toast.LENGTH_SHORT).show()
                 }
             }
 
