@@ -37,7 +37,7 @@
         />
 
     <EditText
-        android:id="@+id/input_signipNickname"
+        android:id="@+id/input_signupNickname"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
@@ -45,7 +45,7 @@
         android:gravity="center_vertical"
         android:hint="NickName" />
     <EditText
-            android:id="@+id/input_signipEmail"
+            android:id="@+id/input_signupEmail"
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:layout_gravity="center_horizontal"
@@ -54,7 +54,7 @@
             android:hint="E-mail" />
 
     <Switch
-        android:id="@+id/input_owner"
+        android:id="@+id/switch_owner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -63,32 +63,65 @@
         android:text="점주님 이신가요?" />
 
     <RadioGroup
+            android:id="@+id/gender_group"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
         <RadioButton
-            android:id="@+id/male_radioButton2"
+            android:id="@+id/male_radioButton"
             android:layout_width="300dp"
             android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="18dp"
-            android:text="Male" />
+            android:layout_weight="1"
+            android:layout_marginLeft="30dp"
+            android:text="남자" />
 
         <RadioButton
             android:id="@+id/female_radioButton"
             android:layout_width="300dp"
             android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:text="Female" />
+            android:layout_weight="1"
+            android:layout_marginLeft="30dp"
+
+            android:text="여자" />
     </RadioGroup>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="슬라이드해 나이를 설정해주세요"
+            android:layout_marginLeft="25dp"
+            android:layout_weight="1"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="0"
+                android:textSize="40dp"
+                android:layout_weight="1"
+                android:layout_marginRight="30dp"
+                android:id="@+id/age_View"/>
+    </LinearLayout>
+        <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/age_seekbar"
+        android:layout_margin="15dp"
+                android:max="80"
+                android:min="20"
+                android:progress="0"/>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="18dp"
-        android:text="Suvey for recommend" />
-
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="설문조사로 이동합니다"
+            android:layout_marginTop="25dp"
+            android:layout_gravity="center"
+            />
     <Button
         android:id="@+id/signuppage_NextButton"
         android:layout_width="300dp"
@@ -99,9 +132,4 @@
         android:text="NEXT"
         android:textColor="#FFFFFFFF" />
 
-    <Button
-        android:id="@+id/surveytest"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="설문하러가기" />
 </LinearLayout>

@@ -9,3 +9,8 @@ public interface Login_API {
     fun getLoginResponse(@Body user : Login_User) : Call<String>
 
 }
+//public interface Register_API {
+//    //register
+//    @POST("android/register")
+//    fun getRegisterResponse(@Body )
+//}

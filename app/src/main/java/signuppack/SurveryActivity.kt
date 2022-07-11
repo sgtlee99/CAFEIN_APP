@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.RadioButton
 import android.widget.ScrollView
 import android.widget.Toast
+import androidx.annotation.Nullable
 import com.example.cafein_app.R
 import com.example.cafein_app.ResultActivity
 import kotlinx.android.synthetic.main.activity_survery.*
@@ -38,24 +39,27 @@ class SurveryActivity : AppCompatActivity() {
         var check6_1 = findViewById<RadioButton>(R.id.rb6_1)
         var check6_2 = findViewById<RadioButton>(R.id.rb6_2)
 
+        //회원가입정보 거쳐갑니다
+        var id = intent.getStringExtra("signup_id")
+        var pw = intent.getStringExtra("signup_pw")
+        var nick = intent.getStringExtra("signup_nick")
+        var email = intent.getStringExtra("signup_email")
+        var isowner = intent.getBooleanExtra("signup_owner", true)
+        var ismale = intent.getBooleanExtra("signup_sex", true)
+        var age = intent.getIntExtra("signup_age", 20)
 
-//        check1_1.setOnClickListener {
-//            if (check1_1.isChecked) {
-//                Toast.makeText(this, "체크되었습니다. ", Toast.LENGTH_LONG).show()
-//            }
-//        }
-//
-//        check2_1.setOnClickListener {
-//            if (check2_1.isChecked) {
-//                Toast.makeText(this, "체크되었습니다. ", Toast.LENGTH_LONG).show()
-//            }
-//        }
 
 
         btn.setOnClickListener {
             var intent = Intent(this, ResultActivity::class.java)
 
-
+            intent.putExtra("signup_id", id)
+            intent.putExtra("signup_pw", pw)
+            intent.putExtra("signup_nick", nick)
+            intent.putExtra("signup_email", email)
+            intent.putExtra("signup_owner", isowner)
+            intent.putExtra("signup_sex", ismale)
+            intent.putExtra("signup_age", age)
 
             if (check1_1 != null) {
                 if (check1_1.isChecked) {
@@ -118,5 +122,25 @@ class SurveryActivity : AppCompatActivity() {
                 }
             }
         }
+
+    }
+
+    fun data_shoot(
+        id: String,
+        pw: String,
+        nickname: String,
+        email: String,
+        owner: Boolean,
+        sex: Boolean,
+        age: Int
+    ) {
+        var intent = Intent(this, ResultActivity::class.java)
+        intent.putExtra("signup_id", id)
+        intent.putExtra("signup_pw", pw)
+        intent.putExtra("signup_nick", nickname)
+        intent.putExtra("signup_email", email)
+        intent.putExtra("signup_owner", owner)
+        intent.putExtra("signup_sex", sex)
+        intent.putExtra("signup_age", age)
     }
 }

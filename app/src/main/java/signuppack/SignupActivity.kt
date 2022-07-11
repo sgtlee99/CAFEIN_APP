@@ -9,6 +9,7 @@ import android.os.Bundle
 import android.text.TextWatcher
 import android.util.Log
 import android.widget.Button
+import android.widget.SeekBar
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -21,11 +22,15 @@ import com.example.cafein_app.ResultActivity
 import kotlinx.android.synthetic.main.signup_activity.*
 
 //회원가입 과정
-//기초 정보 입력 (아이디, 비번, 닉네임 등) -> 설문조사 ->
+//기초 정보 입력 (아이디, 비번, 닉네임 등) -> 설문조사 -> 설문조사 결과창에서 모든 정보를 취합하여 웹서버로 전송함
 class SignupActivity : AppCompatActivity() {
     val TAG: String = "SIGNUP"
+
     var isExitBlank = false
     var isPWSame = false
+
+    var isOwner = false
+    var isMale = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,85 +41,62 @@ class SignupActivity : AppCompatActivity() {
         ).allowMainThreadQueries().build()
 
 
-
-
-        //설문조사로 이동
-        surveytest.setOnClickListener {
-            var intent = Intent(this, SurveryActivity ::class.java)
-            startActivity(intent)
+        //스위치가 on 일때 => 점주일때 => true
+        switch_owner.setOnCheckedChangeListener { compoundButton, b ->
+            isOwner = switch_owner.isChecked
         }
-
-
-        val id = input_signupID.text.toString()
-        val pw = input_signupPW.text.toString()
-        val pw_cf = input_signupPW_confirm.text.toString()
-        val nick = input_signipNickname.text.toString()
-
-//        input_signipEmail.
-        //회원가입
-        var signupnextbutton = findViewById<Button>(R.id.signuppage_NextButton)
-
-        signupnextbutton.setOnClickListener {
-            //버튼이 눌렸다는걸 로그 전송
-            Log.d(TAG, "회원버튼 -> 설문지 버튼 클릭")
-            //====회원가입 수행====
-            //아이디 비밀번호 비밀번호확인 닉네임 점주(스위치) 성별(체크박스)
-            //editText에 적힌 값을 받아옴
-
-
-
-
-            //사용자가 입력항목을 다 채우지 않은 경우
-            if (id.isEmpty() || pw.isEmpty() || pw_cf.isEmpty() || nick.isEmpty()) {
-                isExitBlank = true
-            } else {
-                if (pw == pw_cf) {
-                    isPWSame = true
-                }
+        //라디오 버튼에 따라 성별 boolean 값 변경 : 남 -> ture
+        gender_group.setOnCheckedChangeListener { radioGroup, i ->
+            when (i) {
+                R.id.male_radioButton -> isMale = true
+                R.id.female_radioButton -> isMale = false
+            }
+        }
+        //seekbar로 나이 입력
+        var age = 0
+        var age_bar: SeekBar = findViewById(R.id.age_seekbar)
+        age_bar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
+                age_View.text = p1.toString()
+                age = p1
             }
 
-            if (!isExitBlank && isPWSame) { //입력항목이 다 채워진경우 && 비밀번호와 비밀번호 확인 일치
-                //회원가입 성공 토스트 메시지
-                Toast.makeText(this, "${nick}님 회원가입 성공입니다.", Toast.LENGTH_SHORT).show()
+            override fun onStartTrackingTouch(p0: SeekBar?) {}
+            override fun onStopTrackingTouch(p0: SeekBar?) {}
+        })
 
-                val sharedPreference = getSharedPreferences("fill name", Context.MODE_PRIVATE)
-                val editor = sharedPreference.edit()
+        //회원가입
+        //Next 버튼 이벤트
+        signuppage_NextButton.setOnClickListener {
+            //버튼이 눌렸다는걸 로그 전송
+            Log.d(TAG, "회원버튼 -> 설문지 버튼 클릭")
+            var id: String = input_signupID.text.toString()
+            var pw: String = input_signupPW.text.toString()
+            var pw_check: String = input_signupPW_confirm.text.toString()
+            var nick: String = input_signupNickname.text.toString()
+            var email: String = input_signupEmail.text.toString()
 
-                editor.putString("id", id)
-                editor.putString("pw", pw)
-                editor.putString("nickname", nick)
-
-                editor.apply()
-                //★데이터 베이스에 저장★
-                db.dao().insert(USER(id,pw,nick))
-                //로그인 화면으로 이동
-                var intent = Intent(this, LoginActivity::class.java)
-                startActivity(intent)
-
-                val bun = bundleOf(
-                    "msg1" to id,
-                    "msg2" to pw,
-                    "msg3" to nick
-                )
-                intent.putExtras(bun)
-
-                //다음 설문조사로 이동
-//                var intent = Intent(this, ViewPager2::class.java)
-//                startActivity(intent)
+            //사용자가 입력항목을 다 채우지 않은 경우
+            if ((pw != pw_check) || id.isEmpty() || nick.isEmpty() || email.isEmpty()) {
+                dialog("blank")
             } else {
-                //상태에따른 다이얼로그 띄우기
-                if (isExitBlank) { //작성안한 곳이 있을 경우
-                    dialog("blank") //다이얼로그 함수 만들어서 사용
-                } else if (!isPWSame) {//비밀번호가 확인 되지 않은경우
-                    dialog("not same")
-                }
+                Toast.makeText(this, "추천을 위한 설문조사를 시작합니다", Toast.LENGTH_SHORT).show()
+
+                var intent = Intent(this, SurveryActivity::class.java)
+                intent.putExtra("signup_id", id)
+                intent.putExtra("signup_pw", pw)
+                intent.putExtra("signup_nick", nick)
+                intent.putExtra("signup_email", email)
+                intent.putExtra("signup_owner", isOwner)
+                intent.putExtra("signup_sex", isMale)
+                intent.putExtra("signup_age", age)
+                startActivity(intent)
             }
         }
     }
 
     fun dialog(type: String) {
         val dialog = AlertDialog.Builder(this)
-
         if (type.equals("blank")) {  //작성안한 곳이 있을 경우
             dialog.setTitle("회원가입 실패!")
             dialog.setMessage("입력하지 않은 항목이 있습니다.")
@@ -132,6 +114,9 @@ class SignupActivity : AppCompatActivity() {
         }
         dialog.setPositiveButton("확인", dialog_listener)
         dialog.show()
-
     }
+
+
+
+
 }

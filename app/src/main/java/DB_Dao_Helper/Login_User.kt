@@ -9,3 +9,6 @@ class Login_User {
         get(){return field}
         set(value){field = value}
 }
+//class Register_User {
+//
+//}
