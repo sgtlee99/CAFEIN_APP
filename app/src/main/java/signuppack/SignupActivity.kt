@@ -32,6 +32,9 @@ class SignupActivity : AppCompatActivity() {
     var isOwner = false
     var isMale = true
 
+    var sex : String? = null
+    var com : String? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.signup_activity)
@@ -43,13 +46,17 @@ class SignupActivity : AppCompatActivity() {
 
         //스위치가 on 일때 => 점주일때 => true
         switch_owner.setOnCheckedChangeListener { compoundButton, b ->
-            isOwner = switch_owner.isChecked
+            if (switch_owner.isChecked) {
+                com = "MANAGER"
+            } else {
+                com = "GUEST"
+            }
         }
         //라디오 버튼에 따라 성별 boolean 값 변경 : 남 -> ture
         gender_group.setOnCheckedChangeListener { radioGroup, i ->
             when (i) {
-                R.id.male_radioButton -> isMale = true
-                R.id.female_radioButton -> isMale = false
+                R.id.male_radioButton -> sex = "MALE"
+                R.id.female_radioButton -> sex = "FEMALE"
             }
         }
         //seekbar로 나이 입력
@@ -87,8 +94,8 @@ class SignupActivity : AppCompatActivity() {
                 intent.putExtra("signup_pw", pw)
                 intent.putExtra("signup_nick", nick)
                 intent.putExtra("signup_email", email)
-                intent.putExtra("signup_owner", isOwner)
-                intent.putExtra("signup_sex", isMale)
+                intent.putExtra("signup_owner", com)
+                intent.putExtra("signup_sex", sex)
                 intent.putExtra("signup_age", age)
                 startActivity(intent)
             }
