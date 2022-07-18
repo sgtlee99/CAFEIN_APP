@@ -10,6 +10,7 @@ import retrofit2.create
 object RetrofitBuilder {
     var login_api : Login_API
     var register_api : Register_API
+    var post_api : Post_API
 
     var gson : Gson = GsonBuilder()
         .setLenient()
@@ -23,5 +24,6 @@ object RetrofitBuilder {
             .build()
         login_api = retrofit.create(Login_API::class.java)
         register_api = retrofit.create(Register_API::class.java)
+        post_api = retrofit.create(Post_API::class.java)
     }
 }
