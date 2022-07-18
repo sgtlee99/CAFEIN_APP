@@ -1,22 +1,15 @@
 package com.example.cafein_app
 
-import DB_Dao_Helper.LoginDatabase
-import DB_Dao_Helper.Tag_Info
 import android.Manifest
-import android.Manifest.permission.CAMERA
-import android.app.Activity
 import android.app.Activity.RESULT_OK
 import android.content.ContentValues
-import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import android.graphics.ImageDecoder
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.provider.MediaStore
-import android.text.TextUtils
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -27,14 +20,9 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.core.app.ActivityCompat
-import androidx.core.content.FileProvider
-import androidx.lifecycle.ViewModelProvider
-import androidx.room.Room
 import com.example.cafein_app.databinding.FragmentWritingBinding
 import kotlinx.android.synthetic.main.fragment_writing.*
 import kotlinx.android.synthetic.main.fragment_writing.view.*
-import java.io.File
 import java.io.IOException
 import java.text.SimpleDateFormat
 
@@ -222,7 +210,7 @@ class WritingFragment : Fragment() {
 
         // 자동태그
         var tag_btn: Button = view?.findViewById(R.id.tagBtn) // 추출버튼
-        var post: EditText = view?.findViewById(R.id.edt) // 내용입력
+        var post: EditText = view?.findViewById(R.id.input_post_contents) // 내용입력
         var tag_complete: TextView = view?.findViewById(R.id.input_auto_tag) // 자동태그 텍스트뷰
 
         tag_btn.setOnClickListener {
@@ -237,24 +225,19 @@ class WritingFragment : Fragment() {
 
             tag_complete.text = result
         }
-
-
-
-        val db = Room.databaseBuilder(
-            activity!!.applicationContext, LoginDatabase::class.java, "database"
-        ).allowMainThreadQueries().build()
-
-
+        //글쓰기 완료 버튼을 눌렀을 때
         var complete_button = view?.findViewById<Button>(R.id.post_complete_button)
         complete_button?.setOnClickListener {
+
+            var title = input_post_title.text.toString()    //제목
+            var contents = input_post_contents.text.toString()  //내용
             //태그들
             var direct_tag = input_direct_tag.text.toString()
             var auto_tag = input_auto_tag.text.toString()
 
-            db.TagDao().insertTag(Tag_Info(0, 1, direct_tag)) //포스트 넘 빠져있음
+            //글작성 완료
             Toast.makeText(context, "포스트 작성 완료", Toast.LENGTH_SHORT).show()
             toHomeActivity()
-
         }
 
     }

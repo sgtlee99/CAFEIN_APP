@@ -18,8 +18,8 @@ object RetrofitBuilder {
     init {
         val retrofit = Retrofit.Builder()
             .baseUrl("http://172.26.17.73:8080")
-//            .addConverterFactory(GsonConverterFactory.create(gson))//Gson을 역직렬화
-            .addConverterFactory(ScalarsConverterFactory.create())
+            .addConverterFactory(GsonConverterFactory.create(gson))//Gson을 역직렬화
+//            .addConverterFactory(ScalarsConverterFactory.create())
             .build()
         login_api = retrofit.create(Login_API::class.java)
         register_api = retrofit.create(Register_API::class.java)

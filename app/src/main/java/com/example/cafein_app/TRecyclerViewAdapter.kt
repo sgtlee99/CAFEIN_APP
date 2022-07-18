@@ -1,6 +1,5 @@
 package com.example.cafein_app
 
-import DB_Dao_Helper.Tag_Info
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup

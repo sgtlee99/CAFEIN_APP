@@ -85,7 +85,7 @@ class ResultActivity : AppCompatActivity() {
             re_user.nick = nick
             re_user.com = com
             re_user.email = email
-            re_user.group = group.toString()
+            re_user.groups = group.toString()
             re_user.sex = sex
             re_user.age= age
             //            Log.d("BUTTON CLICKED", "$id : $pw : $nick : $email : $com : $sex : $age : $group")

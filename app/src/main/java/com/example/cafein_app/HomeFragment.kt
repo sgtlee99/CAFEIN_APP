@@ -1,17 +1,13 @@
 package com.example.cafein_app
 
 import DB_Dao_Helper.LoginDatabase
-import DB_Dao_Helper.Tag_Info
 import android.content.Intent
 import android.os.Bundle
 import android.view.*
-import android.widget.Button
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.LinearSmoothScroller
 import androidx.recyclerview.widget.RecyclerView
 import androidx.room.Room
 import com.example.cafein_app.databinding.FragmentHomeBinding

@@ -1,6 +1,6 @@
 package DB_Dao_Helper
 
-class Login_User {
+class Login_User {  //로그인
     var id : String? = null
         get(){return field}
         set(value){field = value}
@@ -9,8 +9,8 @@ class Login_User {
         get(){return field}
         set(value){field = value}
 }
-//아이디, 비번, 닉네임, owner, 이메일, 그룹, 성별, 나이
-class Register_User {
+
+class Register_User {   //회원가입
     var id : String? = null
         get(){return field}
         set(value){field = value}
@@ -26,7 +26,7 @@ class Register_User {
     var email : String? = null
         get(){return field}
         set(value){field = value}
-    var group : String? = null
+    var groups : String? = null
         get(){return field}
         set(value){field = value}
     var sex : String? = null

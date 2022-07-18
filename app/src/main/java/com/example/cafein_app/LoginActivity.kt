@@ -49,14 +49,16 @@ class LoginActivity : AppCompatActivity() {
         var loginbutton = findViewById<Button>(R.id.loginpage_loginbutton)
         loginbutton.setOnClickListener {
 
-//            startLogin()
-            id = userId.text.toString()
-            pw = userPassword.text.toString()
-            val user = Login_User()
-            user.id = userId.text.toString()
-            user.password = userPassword.text.toString()
-            Log.d("BUTTON CLICKED", "id : ${user.id}, pw : ${user.password}")
-            Login(user)
+            //개발 버전에서 적용 버튼 로그인
+            startLogin()
+            //완성버전에서 적용 rest 로그인
+//            id = userId.text.toString()
+//            pw = userPassword.text.toString()
+//            val user = Login_User()
+//            user.id = userId.text.toString()
+//            user.password = userPassword.text.toString()
+//            Log.d("BUTTON CLICKED", "id : ${user.id}, pw : ${user.password}")
+//            Login(user)
 
         }
 
