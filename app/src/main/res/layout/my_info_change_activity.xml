@@ -1,93 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MyInfoChangeActivity">
+			  xmlns:app="http://schemas.android.com/apk/res-auto"
+			  xmlns:tools="http://schemas.android.com/tools"
+			  android:layout_width="match_parent"
+			  android:layout_height="match_parent"
+			  android:orientation="vertical"
+			  tools:context=".MyInfoChangeActivity">
 
-    <EditText
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:id="@+id/infochange_NickName"
-        android:hint="닉네임"
-        android:background="@drawable/text_outline"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center_vertical"
-        android:layout_marginTop="40dp" />
+	<ScrollView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
 
-    <EditText
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:id="@+id/infochange_pwInput"
-        android:hint="비밀번호"
-        android:background="@drawable/text_outline"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center_vertical"
-        android:layout_marginTop="10dp" />
+		<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:orientation="vertical">
 
-    <EditText
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:id="@+id/infochange_pwInput_confirm"
-        android:hint="비밀번호 확인"
-        android:background="@drawable/text_outline"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center_vertical"
-        android:layout_marginTop="10dp" />
+			<EditText
+					android:layout_width="300dp"
+					android:layout_height="50dp"
+					android:hint="비밀번호"
+					android:background="@drawable/text_outline"
+					android:layout_gravity="center_horizontal"
+					android:gravity="center_vertical"
+					android:layout_marginTop="40dp"
+					android:id="@+id/infochange_pw"
+					/>
 
-
-    <RadioGroup
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="30dp"
-            android:id="@+id/gender_TextView"
-            android:text="성별"
-            android:layout_marginStart="56dp"
-            android:layout_marginTop="35dp"
-            android:textSize="20sp" />
-
-        <RadioButton
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:id="@+id/infochange_MaleradioButton"
-            android:text="Male"
-            android:layout_gravity="center" />
-
-        <RadioButton
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:id="@+id/infochange_FemaleradioButton"
-            android:text="Female"
-            android:layout_gravity="center" />
-    </RadioGroup>
+			<EditText
+					android:layout_width="300dp"
+					android:layout_height="50dp"
+					android:hint="닉네임"
+					android:background="@drawable/text_outline"
+					android:layout_gravity="center_horizontal"
+					android:gravity="center_vertical"
+					android:layout_marginTop="10dp"
+					android:id="@+id/infochange_nick"
+					/>
 
 
-    <Button
-        android:layout_width="300dp"
-        android:layout_height="60dp"
-        android:id="@+id/infochange_SurveyButton"
-        android:text="설문조사 다시하기"
-        android:layout_gravity="center"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="75dp"
-        android:textColor="#FFFFFFFF"
-        android:backgroundTint="@color/orange" />
+			<EditText
+					android:layout_width="300dp"
+					android:layout_height="50dp"
+					android:hint="이메일"
+					android:background="@drawable/text_outline"
+					android:layout_gravity="center_horizontal"
+					android:gravity="center_vertical"
+					android:layout_marginTop="10dp"
+					android:id="@+id/infochange_email"
+					/>
 
-    <Button
-        android:layout_width="300dp"
-        android:layout_height="60dp"
-        android:id="@+id/infochange_OkButton"
-        android:text="수정 완료"
-        android:layout_gravity="center"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-        android:textColor="#FFFFFFFF"
-        android:backgroundTint="@color/orange" />
 
+
+			<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="70dp"
+					android:orientation="horizontal"
+					android:layout_marginTop="25dp"
+					android:layout_marginLeft="50dp"
+					android:layout_marginRight="50dp">
+
+				<TextView
+
+						android:layout_width="50dp"
+						android:layout_height="30dp"
+						android:text="나이"
+						android:gravity="center"
+						android:layout_weight="1"
+						android:textSize="20sp"/>
+
+				<EditText
+						android:gravity="center"
+						android:layout_width="75dp"
+						android:layout_height="75dp"
+						android:layout_weight="1"
+						android:id="@+id/infochange_age"/>
+
+				<TextView
+						android:gravity="center"
+						android:layout_width="50dp"
+						android:layout_height="30dp"
+						android:text="세"
+						android:textSize="20sp"
+						android:layout_weight="1"/>
+
+			</LinearLayout>
+
+			<TextView
+					android:layout_width="50dp"
+					android:layout_height="30dp"
+					android:text="성별"
+					android:layout_gravity="center"
+					android:layout_marginTop="20dp"
+					android:textSize="20sp"
+					/>
+
+			<RadioGroup
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal"
+					android:layout_marginLeft="50dp"
+					android:layout_marginRight="50dp"
+					android:id="@+id/infochange_gender">
+
+				<RadioButton
+						android:layout_width="300dp"
+						android:layout_height="50dp"
+						android:text="Male"
+						android:layout_gravity="center"
+						android:id="@+id/infochange_gender_male"
+						android:layout_weight="1"
+						/>
+
+				<RadioButton
+						android:layout_width="300dp"
+						android:layout_height="50dp"
+						android:text="Female"
+						android:layout_gravity="center"
+						android:layout_weight="1"
+						android:id="@+id/infochange_gender_female"
+						/>
+			</RadioGroup>
+
+
+			<Button
+					android:layout_width="300dp"
+					android:layout_height="60dp"
+					android:id="@+id/infochange_SurveyButton"
+					android:text="설문조사 다시하기"
+					android:layout_gravity="center"
+					android:layout_centerHorizontal="true"
+					android:layout_marginTop="75dp"
+					android:textColor="#FFFFFFFF"
+					android:backgroundTint="@color/orange"/>
+
+			<Button
+					android:layout_width="300dp"
+					android:layout_height="60dp"
+					android:id="@+id/infochange_OkButton"
+					android:text="수정 완료"
+					android:layout_gravity="center"
+					android:layout_centerHorizontal="true"
+					android:layout_marginTop="5dp"
+					android:textColor="#FFFFFFFF"
+					android:backgroundTint="@color/orange"/>
+
+		</LinearLayout>
+	</ScrollView>
 </LinearLayout>
 

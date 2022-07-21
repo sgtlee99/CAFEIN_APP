@@ -1,6 +1,7 @@
 package com.example.cafein_app
 
 import DB_Dao_Helper.LoginDatabase
+import DB_Dao_Helper.Tag_Info
 import android.content.Intent
 import android.os.Bundle
 import android.view.*

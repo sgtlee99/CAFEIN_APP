@@ -13,3 +13,9 @@ public interface Register_API {
     @POST("android/register")
     fun getRegisterResponse(@Body re_user : Register_User) : Call<String>
 }
+
+public interface Update_API {
+    //update
+    @POST("android/update")
+    fun getUpdateResponse(@Body up_user : Update_User) : Call<String>
+}

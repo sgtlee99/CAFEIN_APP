@@ -1,5 +1,7 @@
 package com.example.cafein_app
 
+import DB_Dao_Helper.Register_User
+import DB_Dao_Helper.RetrofitBuilder
 import android.Manifest
 import android.app.Activity.RESULT_OK
 import android.content.ContentValues
@@ -23,6 +25,9 @@ import androidx.activity.result.contract.ActivityResultContracts
 import com.example.cafein_app.databinding.FragmentWritingBinding
 import kotlinx.android.synthetic.main.fragment_writing.*
 import kotlinx.android.synthetic.main.fragment_writing.view.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import java.io.IOException
 import java.text.SimpleDateFormat
 
@@ -234,6 +239,7 @@ class WritingFragment : Fragment() {
             //태그들
             var direct_tag = input_direct_tag.text.toString()
             var auto_tag = input_auto_tag.text.toString()
+            var tag = "$direct_tag $auto_tag"   //태그를 합쳐서 문자열 형태로 한번에 처리
 
             //글작성 완료
             Toast.makeText(context, "포스트 작성 완료", Toast.LENGTH_SHORT).show()
@@ -242,6 +248,24 @@ class WritingFragment : Fragment() {
 
     }
 
+//    private fun SignUP(re_user: Register_User) {
+//        val call = RetrofitBuilder.register_api.getRegisterResponse(re_user)
+//        call.enqueue(object : Callback<String> {
+//            override fun onResponse(call: Call<String>, response: Response<String>) {
+//                if (response.isSuccessful) {
+//                    Log.d("SHOW_RESPONSE : ", response.body().toString())
+//                    Toast.makeText(this@ResultActivity, "[회원가입성공]", Toast.LENGTH_SHORT).show()
+//                    toLoginPage()
+//                } else {
+//                    Log.d("SHOW_RESPONSE : ", "FAILURE")
+//                }
+//            }
+//
+//            override fun onFailure(call: Call<String>, t: Throwable) {
+//                Log.d("SHOW_CONNECTION FAILURE : ", t.localizedMessage)
+//            }
+//        })
+//    }
 
     private fun getTags(text: String): Sequence<MatchResult> {
         /*

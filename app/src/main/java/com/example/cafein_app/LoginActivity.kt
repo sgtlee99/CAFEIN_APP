@@ -39,10 +39,6 @@ class LoginActivity : AppCompatActivity() {
             dbtest.text = todos.toString()
         })
 
-        db.TagDao().tag_getAll().observe(this, Observer { todos ->
-            tagtest.text = todos.toString()
-        })
-
         var userId = findViewById<EditText>(R.id.input_loginID)
         var userPassword = findViewById<EditText>(R.id.input_loginPW)
         //로그인 버튼을 눌렀을때
