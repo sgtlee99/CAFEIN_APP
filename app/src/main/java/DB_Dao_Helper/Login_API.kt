@@ -16,6 +16,6 @@ public interface Register_API {
 
 public interface Update_API {
     //update
-    @POST("android/update")
+    @PUT("android/update")
     fun getUpdateResponse(@Body up_user : Update_User) : Call<String>
 }

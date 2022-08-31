@@ -235,6 +235,8 @@ class WritingFragment : Fragment() {
         complete_button?.setOnClickListener {
 
             var title = input_post_title.text.toString()    //제목
+            //사진이 들어가야함
+
             var contents = input_post_contents.text.toString()  //내용
             //태그들
             var direct_tag = input_direct_tag.text.toString()

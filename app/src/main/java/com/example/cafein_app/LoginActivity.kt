@@ -53,7 +53,7 @@ class LoginActivity : AppCompatActivity() {
 //            val user = Login_User()
 //            user.id = userId.text.toString()
 //            user.password = userPassword.text.toString()
-//            Log.d("BUTTON CLICKED", "id : ${user.id}, pw : ${user.password}")
+//            Log.d("SHOW_", "id : ${user.id}, pw : ${user.password}")
 //            Login(user)
 
         }
@@ -65,12 +65,11 @@ class LoginActivity : AppCompatActivity() {
         call.enqueue(object : Callback<String> {
             override fun onResponse(call: Call<String>, response: Response<String>) {
                 if (response.isSuccessful) {
-                    Log.d("RESPONSE : ", response.body().toString())
-                    Toast.makeText(this@LoginActivity,"안녕하세요",Toast.LENGTH_SHORT).show()
-
+                    Log.d("SHOW_RESPONSE : ", response.body().toString())
+                    Toast.makeText(this@LoginActivity,"로그인",Toast.LENGTH_SHORT).show()
                     startLogin()
                 } else {
-                    Log.d("RESPONSE : ", "FAILURE")
+                    Log.d("SHOW_RESPONSE : ", "FAILURE")
                     login_error_dialog("id not found")
                 }
             }

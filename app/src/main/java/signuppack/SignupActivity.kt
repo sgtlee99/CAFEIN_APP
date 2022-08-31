@@ -52,7 +52,7 @@ class SignupActivity : AppCompatActivity() {
                 com = "GUEST"
             }
         }
-        //라디오 버튼에 따라 성별 boolean 값 변경 : 남 -> ture
+        //라디오 버튼에 따라 성별 String 값 변경 : 남 -> "MALE"
         gender_group.setOnCheckedChangeListener { radioGroup, i ->
             when (i) {
                 R.id.male_radioButton -> sex = "MALE"
