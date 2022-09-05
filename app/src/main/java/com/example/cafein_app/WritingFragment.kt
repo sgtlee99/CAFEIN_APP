@@ -1,5 +1,7 @@
 package com.example.cafein_app
 
+import DB_Dao_Helper.Login_User
+import DB_Dao_Helper.Post_Write
 import DB_Dao_Helper.Register_User
 import DB_Dao_Helper.RetrofitBuilder
 import android.Manifest
@@ -22,6 +24,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.fragment.app.activityViewModels
 import com.example.cafein_app.databinding.FragmentWritingBinding
 import kotlinx.android.synthetic.main.fragment_writing.*
 import kotlinx.android.synthetic.main.fragment_writing.view.*
@@ -32,6 +35,9 @@ import java.io.IOException
 import java.text.SimpleDateFormat
 
 class WritingFragment : Fragment() {
+
+    val loged_viewModel by activityViewModels<LoginViewModel>()
+    var add_user_info : String? =""
 
     private val GALLERY = 1
 
@@ -58,6 +64,9 @@ class WritingFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+
+
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -135,6 +144,7 @@ class WritingFragment : Fragment() {
             e.printStackTrace()
         }
         return image
+        //변수 image에 bitmap 형식으로 이미지가 저장되나?
     }
 
 
@@ -149,9 +159,9 @@ class WritingFragment : Fragment() {
 
         val view = inflater.inflate(R.layout.fragment_writing, container, false)
 
+
         return binding.root
         // return view
-
         return view
     }
 
@@ -209,7 +219,7 @@ class WritingFragment : Fragment() {
         mBinding = null
         super.onDestroyView()
     }
-
+//글 작성 완료 시
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -234,40 +244,58 @@ class WritingFragment : Fragment() {
         var complete_button = view?.findViewById<Button>(R.id.post_complete_button)
         complete_button?.setOnClickListener {
 
+            var post_up = Post_Write()
+
+
             var title = input_post_title.text.toString()    //제목
             //사진이 들어가야함
-
             var contents = input_post_contents.text.toString()  //내용
             //태그들
             var direct_tag = input_direct_tag.text.toString()
             var auto_tag = input_auto_tag.text.toString()
-            var tag = "$direct_tag $auto_tag"   //태그를 합쳐서 문자열 형태로 한번에 처리
+            var tags = "$direct_tag $auto_tag"   //태그를 합쳐서 문자열 형태로 한번에 처리
+
+            post_up.title = title
+            //사진 들어가야 함
+            post_up.content = contents
+            post_up.tag = tags
+
+
+            //유저 아이디 실어서 보냄
+//            up_user = arguments?.getString("loged_user")
+            add_user_info = loged_viewModel.preferences
 
             //글작성 완료
-            Toast.makeText(context, "포스트 작성 완료", Toast.LENGTH_SHORT).show()
-            toHomeActivity()
+            Post_Upload(post_up) //모아서 보냄
+            Log.d("SHOW_TEST_RESULT", "$title : $contents : $tags : $add_user_info")
+
+//            Toast.makeText(context, "포스트 작성 완료", Toast.LENGTH_SHORT).show()
+//            toHomeActivity()
         }
 
     }
-
-//    private fun SignUP(re_user: Register_User) {
-//        val call = RetrofitBuilder.register_api.getRegisterResponse(re_user)
-//        call.enqueue(object : Callback<String> {
-//            override fun onResponse(call: Call<String>, response: Response<String>) {
-//                if (response.isSuccessful) {
-//                    Log.d("SHOW_RESPONSE : ", response.body().toString())
-//                    Toast.makeText(this@ResultActivity, "[회원가입성공]", Toast.LENGTH_SHORT).show()
-//                    toLoginPage()
-//                } else {
-//                    Log.d("SHOW_RESPONSE : ", "FAILURE")
-//                }
-//            }
+//    fun add_up_user(string : String) {
 //
-//            override fun onFailure(call: Call<String>, t: Throwable) {
-//                Log.d("SHOW_CONNECTION FAILURE : ", t.localizedMessage)
-//            }
-//        })
 //    }
+    private fun Post_Upload(post_up: Post_Write) {
+        val call = RetrofitBuilder.post_api.getPostResponse(post_up)
+        call.enqueue(object : Callback<String> {
+            override fun onResponse(call: Call<String>, response: Response<String>) {
+                if (response.isSuccessful) {
+                    Log.d("SHOW_RESPONSE : ", response.body().toString())
+                    Toast.makeText(context, "[글 작성 완료]", Toast.LENGTH_SHORT).show()
+                    toHomeActivity()
+                } else {
+                    Log.d("SHOW_RESPONSE : ", "POST UPLOAD FAILURE")
+                }
+            }
+
+            override fun onFailure(call: Call<String>, t: Throwable) {
+                Log.d("SHOW_CONNECTION FAILURE : ", t.localizedMessage)
+            }
+        })
+    }
+
 
     private fun getTags(text: String): Sequence<MatchResult> {
         /*

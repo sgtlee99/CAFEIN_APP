@@ -11,20 +11,21 @@ import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.room.Room
-import com.example.cafein_app.databinding.FragmentHomeBinding
 import kotlinx.android.synthetic.main.login_activity.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import signuppack.SignupActivity
 
 class LoginActivity : AppCompatActivity() {
     var id: String = ""
     var pw: String = ""
+    private val viewModel: LoginViewModel by viewModels()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login_activity)
@@ -46,6 +47,14 @@ class LoginActivity : AppCompatActivity() {
         loginbutton.setOnClickListener {
 
             //개발 버전에서 적용 버튼 로그인
+            id = userId.text.toString() //테스트용
+
+//            val bundle = Bundle()
+//            bundle.putString("loged_user", id)
+//            val writingfragment = WritingFragment()
+//            writingfragment.arguments = bundle
+
+
             startLogin()
             //완성버전에서 적용 rest 로그인
 //            id = userId.text.toString()
@@ -55,6 +64,8 @@ class LoginActivity : AppCompatActivity() {
 //            user.password = userPassword.text.toString()
 //            Log.d("SHOW_", "id : ${user.id}, pw : ${user.password}")
 //            Login(user)
+            ///////
+
 
         }
 

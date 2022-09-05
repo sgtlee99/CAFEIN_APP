@@ -18,35 +18,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomeActivity : AppCompatActivity() {
 
-    // 점주가 아닌 사용자가 글작성 프래그먼트로 이동하면 다이얼로그 띄우고 홈 프래그먼트로 이동시킴
-    private fun showPopup() {
-        val inflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-        val view = inflater.inflate(R.layout.alert_popup_writingfragment, null)
-        val textView: TextView = view.findViewById(R.id.textView3)
-        textView.text = "사용자는 점주가 아닙니다"
 
-        val alertDialog = AlertDialog.Builder(this)
-            .setTitle("Warning")
-            .setPositiveButton("확인", DialogInterface.OnClickListener{ dialog, which ->
-                Toast.makeText(applicationContext, "이전으로", Toast.LENGTH_SHORT).show()
-
-                // 나중에 보완할 코드
-                //supportFragmentManager.beginTransaction()
-                //    .replace(R.id.second, WritingFragment())
-                //    .addToBackStack(null)
-                //    .commit()
-
-
-                // 확인 누를때 홈 프래그먼트로 이동시키는 코드 (주석해제)
-                //var intent = Intent(this, HomeActivity::class.java)
-                //startActivity(intent)
-
-            })
-            .create()
-
-        alertDialog.setView(view)
-        alertDialog.show()
-    }
 
     private lateinit var binding: HomeActivityBinding
 
@@ -138,6 +110,34 @@ class HomeActivity : AppCompatActivity() {
             }
             selectedItemId = R.id.first
         }
+    }
+    // 점주가 아닌 사용자가 글작성 프래그먼트로 이동하면 다이얼로그 띄우고 홈 프래그먼트로 이동시킴
+    private fun showPopup() {
+        val inflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        val view = inflater.inflate(R.layout.alert_popup_writingfragment, null)
+        val textView: TextView = view.findViewById(R.id.textView3)
+        textView.text = "사용자는 점주가 아닙니다"
+
+        val alertDialog = AlertDialog.Builder(this)
+            .setTitle("Warning")
+            .setPositiveButton("확인", DialogInterface.OnClickListener{ dialog, which ->
+                Toast.makeText(applicationContext, "이전으로", Toast.LENGTH_SHORT).show()
+
+                // 나중에 보완할 코드
+                //supportFragmentManager.beginTransaction()
+                //    .replace(R.id.second, WritingFragment())
+                //    .addToBackStack(null)
+                //    .commit()
+
+
+                // 확인 누를때 홈 프래그먼트로 이동시키는 코드 (주석해제)
+                //var intent = Intent(this, HomeActivity::class.java)
+                //startActivity(intent)
+            })
+            .create()
+
+        alertDialog.setView(view)
+        alertDialog.show()
     }
 
 }
