@@ -35,8 +35,6 @@ import java.text.SimpleDateFormat
 
 class WritingFragment : Fragment() {
 
-//    val loged_viewModel by activityViewModels<LoginViewModel>()
-    var add_user_info : String? =""
 
     private val GALLERY = 1
 
@@ -65,33 +63,22 @@ class WritingFragment : Fragment() {
         super.onCreate(savedInstanceState)
 
 
-
     }
 
     @Deprecated("Deprecated in Java")
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         //프래그먼트에 사용할때는 activity!!. 붙여주기
-
-
-
-
         var btnOpenGallery = view?.findViewById<Button>(R.id.btnGallery)
         btnOpenGallery?.setOnClickListener {
             openGallery()
-
         }
-
-
         var btnOpenCamera = view?.findViewById<Button>(R.id.btnCamera)
         btnOpenCamera?.setOnClickListener {
             requestPermissionLauncher.launch(Manifest.permission.CAMERA)  // 권한
             openCamera()
         }
     }
-
-
-    // var realUri: Uri? = null
 
     private fun openCamera() {
         val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
@@ -103,13 +90,11 @@ class WritingFragment : Fragment() {
         }
     }
 
-
     private fun openGallery() {
         val intent = Intent(Intent.ACTION_PICK)
         intent.type = MediaStore.Images.Media.CONTENT_TYPE
         startActivityForResult(intent, REQ_STORAGE)
     }
-
 
     fun createImageUri(filename: String, mimeType: String): Uri? {
         val values = ContentValues()
@@ -158,9 +143,9 @@ class WritingFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_writing, container, false)
 
         //객체생성
-        val textMessage : TextView = view.findViewById(R.id.message_text)
+        val textMessage: TextView = view.findViewById(R.id.message_text)
         //넘어온 메시지 변수에 담기
-        val message : String? = this.arguments?.getString("id")
+        val message: String? = this.arguments?.getString("id")
         //메시지 텍스트 뷰에 담기
         textMessage.text = message
 
@@ -197,9 +182,13 @@ class WritingFragment : Fragment() {
         mBinding = null
         super.onDestroyView()
     }
-//글 작성 완료 시
+
+    //글 작성 완료 시
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val id_val: String? = arguments?.getString("id_data")
+        Log.d("SHOW_TEST", "아이디 writing으로 받아옴 : $id_val")
 
         // 자동태그
         var tag_btn: Button? = view?.findViewById(R.id.tagBtn) // 추출버튼
@@ -239,11 +228,11 @@ class WritingFragment : Fragment() {
             //사진 들어가야 함
             post_up.content = contents
             post_up.tag = tags
-
+            post_up.username = id_val
 
             //글작성 완료
             Post_Upload(post_up) //모아서 보냄
-            Log.d("SHOW_TEST_RESULT", "$title : $contents : $tags : ${message_text.text}")
+            Log.d("SHOW_TEST_RESULT", "$title : $contents : $tags : ${id_val}")
 
 //            Toast.makeText(context, "포스트 작성 완료", Toast.LENGTH_SHORT).show()
 //            toHomeActivity()

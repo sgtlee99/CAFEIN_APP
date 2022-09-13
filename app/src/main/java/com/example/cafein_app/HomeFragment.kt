@@ -4,6 +4,7 @@ import DB_Dao_Helper.LoginDatabase
 import DB_Dao_Helper.Tag_Info
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -54,6 +55,9 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        //받
+        val id_val : String? = arguments?.getString("id_data")
+        Log.d("SHOW_TEST", "아이디 home으로 받아옴 : $id_val")
 
         // db 연결
         val db = Room.databaseBuilder(

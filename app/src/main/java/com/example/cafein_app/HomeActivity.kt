@@ -57,13 +57,14 @@ class HomeActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-
         //로그인한 유저 아이디 받아오기
-
-
+        var data = intent.getStringExtra("id")
+        Log.d("SHOW_TEST_HOME_ACT", "$data")
 
 
         var action_bar: ActionBar = supportActionBar!!
+        //-------번들생성------
+        val bundle : Bundle = Bundle()
 
         // 하단 탭이 눌렸을 때 화면을 전환하기 위해선 이벤트 처리하기 위해 BottomNavigationView 객체 생성
         var bnv_main = findViewById(R.id.bnv_main) as BottomNavigationView
@@ -74,17 +75,27 @@ class HomeActivity : AppCompatActivity() {
             setOnNavigationItemSelectedListener {
                 when (it.itemId) {
                     R.id.first -> {
-                        // 다른 프래그먼트 화면으로 이동하는 기능
+                        bundle.putString("id_data", "$data")
                         val homeFragment = HomeFragment()
+                        homeFragment.arguments = bundle
+                        Log.d("SHOW_", "to homefragment")
                         supportFragmentManager.beginTransaction().replace(R.id.fl_container, homeFragment).commit()
                         action_bar.setTitle("CAFE-IN")
                     }
                     R.id.second -> {
-                        val writingFragment : WritingFragment= WritingFragment()
+                        bundle.putString("id_data", "$data")
+                        val writingFragment = WritingFragment()
+                        writingFragment.arguments = bundle
+                        Log.d("SHOW_", "to writingfragment")
                         supportFragmentManager.beginTransaction().replace(R.id.fl_container, writingFragment).commit()
                     }
                     R.id.third -> {
+                        bundle.putString("id_data", "$data")
+
                         val settingFragment = SettingFragment()
+                        settingFragment.arguments = bundle
+                        Log.d("SHOW_", "to settingfragment")
+
                         supportFragmentManager.beginTransaction().replace(R.id.fl_container, settingFragment).commit()
                         action_bar.setTitle("설정")
 
@@ -95,6 +106,7 @@ class HomeActivity : AppCompatActivity() {
             selectedItemId = R.id.first
         }
     }
+
 
     // 점주가 아닌 사용자가 글작성 프래그먼트로 이동하면 다이얼로그 띄우고 홈 프래그먼트로 이동시킴
     private fun showPopup() {
@@ -120,7 +132,6 @@ class HomeActivity : AppCompatActivity() {
                 //startActivity(intent)
             })
             .create()
-
         alertDialog.setView(view)
         alertDialog.show()
     }

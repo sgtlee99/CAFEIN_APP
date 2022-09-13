@@ -46,22 +46,22 @@ class LoginActivity : AppCompatActivity() {
         loginbutton.setOnClickListener {
 
             //개발 버전에서 적용 버튼 로그인
-            id = userId.text.toString() //테스트용
-            val message : String = input_loginID.text.toString()
-            val bundle : Bundle = Bundle()
-            bundle.putString("id", message)
-            Log.d("SHOW_TEST_RESULT", "로그인 by  : $message")
 
-            val writingFragment : WritingFragment = WritingFragment()
-            writingFragment.arguments = bundle
-//            val blankFragment : BlankFragment = BlankFragment()
-//            blankFragment.arguments = bundle
+
+//            val homeFragment : HomeFragment = HomeFragment()
+//            val bundle : Bundle = Bundle()
+            id = userId.text.toString() //테스트용
+//            val message : String = input_loginID.text.toString()
+//            bundle.putString("id", message)
+//            homeFragment.arguments = bundle
 
 
 
 //            startLogin()
             var intent = Intent(this, HomeActivity::class.java)
-            intent.putExtra("loged_user", id)
+            intent.putExtra("id", id)
+            Log.d("SHOW_TEST_RESULT", "로그인 by  : $id")
+
             startActivity(intent)
 
             //완성버전에서 적용 rest 로그인
