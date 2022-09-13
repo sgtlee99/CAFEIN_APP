@@ -24,7 +24,7 @@ import retrofit2.Response
 class LoginActivity : AppCompatActivity() {
     var id: String = ""
     var pw: String = ""
-    private val viewModel: LoginViewModel by viewModels()
+//    private val viewModel: LoginViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,14 +48,23 @@ class LoginActivity : AppCompatActivity() {
 
             //개발 버전에서 적용 버튼 로그인
             id = userId.text.toString() //테스트용
+            val message : String = input_loginID.text.toString()
+            val bundle : Bundle = Bundle()
+            bundle.putString("id", message)
+            Log.d("SHOW_TEST_RESULT", "로그인 by  : $message")
 
-//            val bundle = Bundle()
-//            bundle.putString("loged_user", id)
-//            val writingfragment = WritingFragment()
-//            writingfragment.arguments = bundle
+            val writingFragment : WritingFragment = WritingFragment()
+            writingFragment.arguments = bundle
+//            val blankFragment : BlankFragment = BlankFragment()
+//            blankFragment.arguments = bundle
 
 
-            startLogin()
+
+//            startLogin()
+            var intent = Intent(this, HomeActivity::class.java)
+            intent.putExtra("loged_user", id)
+            startActivity(intent)
+
             //완성버전에서 적용 rest 로그인
 //            id = userId.text.toString()
 //            pw = userPassword.text.toString()

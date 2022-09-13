@@ -47,6 +47,7 @@ class ReviewBoardFragment : Fragment(R.layout.fragment_boardreview) {
     }
 
 
+    @Deprecated("Deprecated in Java")
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 

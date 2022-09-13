@@ -36,7 +36,7 @@ import java.text.SimpleDateFormat
 
 class WritingFragment : Fragment() {
 
-    val loged_viewModel by activityViewModels<LoginViewModel>()
+//    val loged_viewModel by activityViewModels<LoginViewModel>()
     var add_user_info : String? =""
 
     private val GALLERY = 1
@@ -69,6 +69,7 @@ class WritingFragment : Fragment() {
 
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         //프래그먼트에 사용할때는 activity!!. 붙여주기
@@ -159,13 +160,19 @@ class WritingFragment : Fragment() {
 
         val view = inflater.inflate(R.layout.fragment_writing, container, false)
 
+        //객체생성
+        val textMessage : TextView = view.findViewById(R.id.message_text)
+        //넘어온 메시지 변수에 담기
+        val message : String? = this.arguments?.getString("id")
+        //메시지 텍스트 뷰에 담기
+        textMessage.text = message
 
         return binding.root
-        // return view
         return view
     }
 
 
+    @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
@@ -224,12 +231,12 @@ class WritingFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // 자동태그
-        var tag_btn: Button = view?.findViewById(R.id.tagBtn) // 추출버튼
-        var post: EditText = view?.findViewById(R.id.input_post_contents) // 내용입력
-        var tag_complete: TextView = view?.findViewById(R.id.input_auto_tag) // 자동태그 텍스트뷰
+        var tag_btn: Button? = view?.findViewById(R.id.tagBtn) // 추출버튼
+        var post: EditText? = view?.findViewById(R.id.input_post_contents) // 내용입력
+        var tag_complete: TextView? = view?.findViewById(R.id.input_auto_tag) // 자동태그 텍스트뷰
 
-        tag_btn.setOnClickListener {
-            val tags = getTags(post.text.toString())
+        tag_btn?.setOnClickListener {
+            val tags = getTags(post?.text.toString())
             var result = ""
 
             tags.forEach { tag ->
@@ -238,7 +245,7 @@ class WritingFragment : Fragment() {
 
             if (result == "") result = "태그가 없습니다"
 
-            tag_complete.text = result
+            tag_complete?.text = result
         }
         //글쓰기 완료 버튼을 눌렀을 때
         var complete_button = view?.findViewById<Button>(R.id.post_complete_button)
@@ -249,6 +256,8 @@ class WritingFragment : Fragment() {
 
             var title = input_post_title.text.toString()    //제목
             //사진이 들어가야함
+            //var post img
+            //
             var contents = input_post_contents.text.toString()  //내용
             //태그들
             var direct_tag = input_direct_tag.text.toString()
@@ -263,11 +272,18 @@ class WritingFragment : Fragment() {
 
             //유저 아이디 실어서 보냄
 //            up_user = arguments?.getString("loged_user")
-            add_user_info = loged_viewModel.preferences
+//            add_user_info = loged_viewModel.preferences
+//            val bundle = arguments
+//            test.text = bundle?.getString("loged_user","0")
+//            var bundle = Bundle()
+//            var test_name = bundle.getString("loged_user", "")
 
+
+
+//            loged = test.text.toString()
             //글작성 완료
             Post_Upload(post_up) //모아서 보냄
-            Log.d("SHOW_TEST_RESULT", "$title : $contents : $tags : $add_user_info")
+            Log.d("SHOW_TEST_RESULT", "$title : $contents : $tags : ${message_text.text}")
 
 //            Toast.makeText(context, "포스트 작성 완료", Toast.LENGTH_SHORT).show()
 //            toHomeActivity()
