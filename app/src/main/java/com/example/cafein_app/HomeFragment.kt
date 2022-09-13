@@ -55,17 +55,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
-//        tagDb = context?.let { LoginDatabase.getInstance(it) }
-//        tagDb = LoginDatabase.getInstance(context)
-
-//        var r = Runnable {
-//            //데이터를 읽고 쓸때는 쓰레드 사용
-//            tagList = tagDb?.TagDao()?.tag_getAll()!!
-//        }
-//        val thread = Thread(r)
-//        thread.start()
-
         // db 연결
         val db = Room.databaseBuilder(
             activity!!.applicationContext, LoginDatabase::class.java, "database"

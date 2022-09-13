@@ -18,17 +18,17 @@
 
 	</FrameLayout>
 
-	<com.google.android.material.floatingactionbutton.FloatingActionButton
-			android:layout_width="100dp"
-			android:layout_height="100dp"
-			android:id="@+id/floating_btn"
-			android:src="@drawable/wirte"
-			app:layout_anchor="@id/fl_container"
-			app:layout_anchorGravity="bottom|center|end"
-			tools:ignore="MissingConstraints"
-			app:layout_constraintBottom_toBottomOf="@+id/bnv_main"
-			app:layout_constraintEnd_toEndOf="@+id/fl_container"
-			app:layout_constraintStart_toStartOf="@+id/fl_container"/>
+<!--	<com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--			android:layout_width="100dp"-->
+<!--			android:layout_height="100dp"-->
+<!--			android:id="@+id/floating_btn"-->
+<!--			android:src="@drawable/wirte"-->
+<!--			app:layout_anchor="@id/fl_container"-->
+<!--			app:layout_anchorGravity="bottom|center|end"-->
+<!--			tools:ignore="MissingConstraints"-->
+<!--			app:layout_constraintBottom_toBottomOf="@+id/bnv_main"-->
+<!--			app:layout_constraintEnd_toEndOf="@+id/fl_container"-->
+<!--			app:layout_constraintStart_toStartOf="@+id/fl_container"/>-->
 
 	<com.google.android.material.bottomnavigation.BottomNavigationView
 			android:id="@+id/bnv_main"

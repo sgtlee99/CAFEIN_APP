@@ -17,14 +17,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.os.bundleOf
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
-import androidx.fragment.app.commit
 import com.example.cafein_app.databinding.HomeActivityBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.home_activity.*
 
 class HomeActivity : AppCompatActivity() {
 
-    var loged_user_info: String? = ""
 
 
     private lateinit var binding: HomeActivityBinding
@@ -61,43 +59,12 @@ class HomeActivity : AppCompatActivity() {
 
 
         //로그인한 유저 아이디 받아오기
-        loged_user_info = intent.getStringExtra("loged_user")
 
-        Log.d("SHOW_TEST_RESULT", "로그인 한 유저1 : $loged_user_info")
 
-//        val bundle = Bundle()
-//        bundle.putString("loged_user", loged_user_info)
-//        val writingfragment = WritingFragment()
-//        writingfragment.arguments = bundle
-
-//        var bundle = Bundle()
-//        bundle.putString("loged_user" ,loged_user_info)
-
-        //
 
 
         var action_bar: ActionBar = supportActionBar!!
 
-
-        floating_btn.setOnClickListener {
-//            val bundle : Bundle = Bundle()
-//            //데이터 담기
-//            bundle.putString("Message", loged_user_info)
-//            //프래그먼트 선언
-//            val writingFragment : WritingFragment= WritingFragment()
-//            //프래그먼트에 데이터 넘기기
-//            writingFragment.arguments = bundle
-//
-//            val manager : FragmentManager = supportFragmentManager
-//            val transaction : FragmentTransaction = manager.beginTransaction()
-//            transaction.replace(R.id.fl_container, writingFragment).commit()
-//
-////            supportFragmentManager.beginTransaction().replace(R.id.fl_container, writingFragment).commit()
-//            action_bar.title = "글쓰기"
-//            // 글 작성 프래그먼트 이동시 다이얼로그 띄움 (점주가 접근시 뜨지않게해야함)
-//            showPopup()
-            //여기까지
-        }
         // 하단 탭이 눌렸을 때 화면을 전환하기 위해선 이벤트 처리하기 위해 BottomNavigationView 객체 생성
         var bnv_main = findViewById(R.id.bnv_main) as BottomNavigationView
 //d
@@ -111,52 +78,10 @@ class HomeActivity : AppCompatActivity() {
                         val homeFragment = HomeFragment()
                         supportFragmentManager.beginTransaction().replace(R.id.fl_container, homeFragment).commit()
                         action_bar.setTitle("CAFE-IN")
-
                     }
                     R.id.second -> {
-//                        Log.d("SHOW_TEST_RESULT", "로그인 한 유저2 : $loged_user_info")
-//                        //객체생성
-////                        val bundle : Bundle = Bundle()
-////                        //데이터 담기
-////                        bundle.putString("Message", loged_user_info)
-////                        //프래그먼트 선언
                         val writingFragment : WritingFragment= WritingFragment()
-////                        //프래그먼트에 데이터 넘기기
-////                        writingFragment.arguments = bundle
-////
                         supportFragmentManager.beginTransaction().replace(R.id.fl_container, writingFragment).commit()
-//                        action_bar.title = "글쓰기"
-//                        // 글 작성 프래그먼트 이동시 다이얼로그 띄움 (점주가 접근시 뜨지않게해야함)
-//                        showPopup()
-////                        //여기까지
-//                        val blankFragment : BlankFragment = BlankFragment()
-//                        supportFragmentManager.beginTransaction().replace(R.id.fl_container, blankFragment).commit()
-
-
-
-
-
-
-                        //val builder = AlertDialog.Builder(context)
-                        //    .setTitle("Warning")
-                        //    .setMessage("사용자는 점주가 아닙니다")
-                        //    .setPositiveButton("확인", DialogInterface.OnClickListener{ dialog, which ->
-                        //        Toast.makeText(context, "확인", Toast.LENGTH_SHORT).show()
-
-                        // 테스트
-                        //finish()
-                        //onBackPressed()
-                        //supportFragmentManager.beginTransaction()
-                        //    .replace(R.id.first, HomeFragment())
-                        //    .addToBackStack(null)
-
-                        //})
-
-                        //.setNegativeButton("취소", DialogInterface.OnClickListener{ dialog, which ->
-                        //    Toast.makeText(context, "취소", Toast.LENGTH_SHORT).show()
-                        //})
-                        //builder.show()
-
                     }
                     R.id.third -> {
                         val settingFragment = SettingFragment()

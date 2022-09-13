@@ -85,11 +85,8 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     implementation 'com.squareup.retrofit2:converter-scalars:2.9.0'
     //viewModels 사용을 위함
-    implementation 'androidx.activity:activity-ktx:1.1.0'
-    implementation 'androidx.fragment:fragment-ktx:1.2.5'
     //플로팅 버튼
     implementation 'com.google.android.material:material:1.2.0-alpha01'
     //noinspection GradleCompatible
     implementation 'com.android.support:design:22.2.0'
-
 }

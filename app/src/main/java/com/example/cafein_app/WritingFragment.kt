@@ -24,7 +24,6 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.fragment.app.activityViewModels
 import com.example.cafein_app.databinding.FragmentWritingBinding
 import kotlinx.android.synthetic.main.fragment_writing.*
 import kotlinx.android.synthetic.main.fragment_writing.view.*
@@ -80,9 +79,7 @@ class WritingFragment : Fragment() {
         var btnOpenGallery = view?.findViewById<Button>(R.id.btnGallery)
         btnOpenGallery?.setOnClickListener {
             openGallery()
-            //val intent: Intent = Intent(Intent.ACTION_GET_CONTENT)
-            //intent.setType("image/*")
-            //startActivityForResult(intent,GALLERY)
+
         }
 
 
@@ -196,32 +193,6 @@ class WritingFragment : Fragment() {
         }
     }
 
-
-    /*
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-
-        if(resultCode == RESULT_OK) {
-            when (requestCode) {
-                REQ_CAMERA -> {
-                    if(data?.extras?.get("data")!=null) {
-                        val bitmap = data?.extras?.get("data") as Bitmap
-                        binding.showImageImageView.setImageBitmap(bitmap)
-                    }
-                }
-                REQ_STORAGE->{
-
-                }
-            }
-        }else{
-            Log.d("", "onActivityResult false")
-        }
-    }
-
-    */
-
-
     override fun onDestroyView() {
         mBinding = null
         super.onDestroyView()
@@ -270,17 +241,6 @@ class WritingFragment : Fragment() {
             post_up.tag = tags
 
 
-            //유저 아이디 실어서 보냄
-//            up_user = arguments?.getString("loged_user")
-//            add_user_info = loged_viewModel.preferences
-//            val bundle = arguments
-//            test.text = bundle?.getString("loged_user","0")
-//            var bundle = Bundle()
-//            var test_name = bundle.getString("loged_user", "")
-
-
-
-//            loged = test.text.toString()
             //글작성 완료
             Post_Upload(post_up) //모아서 보냄
             Log.d("SHOW_TEST_RESULT", "$title : $contents : $tags : ${message_text.text}")
@@ -290,9 +250,7 @@ class WritingFragment : Fragment() {
         }
 
     }
-//    fun add_up_user(string : String) {
-//
-//    }
+
     private fun Post_Upload(post_up: Post_Write) {
         val call = RetrofitBuilder.post_api.getPostResponse(post_up)
         call.enqueue(object : Callback<String> {
