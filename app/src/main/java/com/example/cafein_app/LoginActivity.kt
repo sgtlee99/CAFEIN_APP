@@ -21,9 +21,10 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class LoginActivity : AppCompatActivity() {
-    var id: String = ""
-    var pw: String = ""
-//    private val viewModel: LoginViewModel by viewModels()
+//    var id: String = ""
+//    var password: String = ""
+    var id : String =""
+    var password : String =""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -63,15 +64,19 @@ class LoginActivity : AppCompatActivity() {
 
 //            startActivity(intent)
 
-            //완성버전에서 적용 rest 로그인
-//            id = userId.text.toString()
-//            pw = userPassword.text.toString()
+//            //완성버전에서 적용 rest 로그인
+//            var id = userId.text.toString()
+//            var password = userPassword.text.toString()
+            id = userId.text.toString()
+            password = userPassword.text.toString()
+
             val user = Login_User()
-            user.id = userId.text.toString()
-            user.password = userPassword.text.toString()
-            Log.d("SHOW_", "id : ${user.id}, pw : ${user.password}")
-            var intent = Intent(this, HomeActivity::class.java)
-            intent.putExtra("id", id)
+//            user.id = userId.text.toString()
+//            user.password = userPassword.text.toString()
+            user.id = id
+            user.pw= password
+            Log.d("SHOW_", "id : ${user.id}, pw : ${user.pw}")
+
             Login(user)
             ///////
 
@@ -86,8 +91,7 @@ class LoginActivity : AppCompatActivity() {
             override fun onResponse(call: Call<String>, response: Response<String>) {
                 if (response.isSuccessful) {
                     Log.d("SHOW_RESPONSE : ", response.body().toString())
-                    Toast.makeText(this@LoginActivity,"로그인",Toast.LENGTH_SHORT).show()
-                    startLogin()
+//                    startLogin()
                 } else {
                     Log.d("SHOW_RESPONSE : ", "FAILURE")
                     login_error_dialog("id not found")
@@ -95,7 +99,12 @@ class LoginActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<String>, t: Throwable) {
-                Log.d("CONNECTION FAILURE : ", t.localizedMessage)
+                Log.d("SHOW_CONNECTION FAILURE : ", t.localizedMessage)
+                var intent = Intent(applicationContext, HomeActivity::class.java)
+                intent.putExtra("id", id)
+                startActivity(intent)
+//                startLogin()
+
             }
         })
     }
@@ -128,3 +137,37 @@ class LoginActivity : AppCompatActivity() {
         dialog.show()
     }
 }
+///
+///
+///
+///
+//id = userId.text.toString()
+//pw = userPassword.text.toString()
+//val user = Login_User()
+//user.id = userId.text.toString()
+//user.password = userPassword.text.toString()
+//Log.d("BUTTON CLICKED", "id : ${user.id}, pw : ${user.password}")
+//Login(user)
+//
+//}
+//
+//}
+//
+//private fun Login(user: Login_User) {
+//    val call = RetrofitBuilder.api.getLoginResponse(user)
+//    call.enqueue(object : Callback<String> {
+//        override fun onResponse(call: Call<String>, response: Response<String>) {
+//            if (response.isSuccessful) {
+//                Log.d("RESPONSE : ", response.body().toString())
+//                Toast.makeText(this@LoginActivity,"안녕하세요",Toast.LENGTH_SHORT).show()
+//                startLogin()
+//            } else {
+//                Log.d("RESPONSE : ", "FAILURE")
+//            }
+//        }
+//
+//        override fun onFailure(call: Call<String>, t: Throwable) {
+//            Log.d("CONNECTION FAILURE : ", t.localizedMessage)
+//        }
+//    })
+//}

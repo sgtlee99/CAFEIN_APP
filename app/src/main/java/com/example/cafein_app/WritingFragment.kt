@@ -214,11 +214,11 @@ class WritingFragment : Fragment() {
             var auto_tag = input_auto_tag.text.toString()
             var tags = "$direct_tag $auto_tag"   //태그를 합쳐서 문자열 형태로 한번에 처리
 
-            post_up.title = title
+            post_up.post_title = title
             //사진 들어가야 함
-            post_up.content = contents
-            post_up.tag = tags
-            post_up.username = id_val
+            post_up.post_text = contents
+            post_up.post_tag = tags
+            post_up.id = id_val
 
             //글작성 완료
             Post_Upload(post_up) //모아서 보냄

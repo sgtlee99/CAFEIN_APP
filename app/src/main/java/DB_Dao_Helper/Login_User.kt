@@ -3,7 +3,7 @@ package DB_Dao_Helper
 
 class Login_User {  //로그인
     var id : String? = null
-    var password : String? = null
+    var pw : String? = null
 }
 
 class Register_User {   //회원가입

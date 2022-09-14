@@ -11,7 +11,7 @@ import retrofit2.http.Part
 public interface Post_API {
     //login
 //    @Multipart
-    @POST("/android/postwrite")
+    @POST("/android/cafePost")
     fun getPostResponse(@Body post_up : Post_Write) : Call<String>//포스트바꿔야됨 //텍스트만?
 
     @Multipart

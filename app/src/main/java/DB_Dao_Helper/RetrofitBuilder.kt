@@ -4,7 +4,6 @@ import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.converter.scalars.ScalarsConverterFactory
 import retrofit2.create
 
 object RetrofitBuilder {
@@ -21,7 +20,6 @@ object RetrofitBuilder {
         val retrofit = Retrofit.Builder()
             .baseUrl("http://172.26.8.129:8080")//아이피 변경되면 같이 변경해줄것
             .addConverterFactory(GsonConverterFactory.create(gson))//Gson을 역직렬화
-//            .addConverterFactory(ScalarsConverterFactory.create())
             .build()
         login_api = retrofit.create(Login_API::class.java)
         register_api = retrofit.create(Register_API::class.java)
