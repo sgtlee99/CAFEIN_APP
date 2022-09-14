@@ -112,7 +112,7 @@ class ResultActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<String>, t: Throwable) {
-                Log.d("SHOW_CONNECTION FAILURE : ", t.localizedMessage)
+                Log.d("SHOW_CONNECTION FAILURE : ", "서버 연결 실패${t.localizedMessage}")
             }
         })
     }

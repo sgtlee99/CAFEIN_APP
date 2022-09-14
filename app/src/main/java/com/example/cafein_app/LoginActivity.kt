@@ -50,7 +50,7 @@ class LoginActivity : AppCompatActivity() {
 
 //            val homeFragment : HomeFragment = HomeFragment()
 //            val bundle : Bundle = Bundle()
-            id = userId.text.toString() //테스트용
+//            id = userId.text.toString() //테스트용
 //            val message : String = input_loginID.text.toString()
 //            bundle.putString("id", message)
 //            homeFragment.arguments = bundle
@@ -58,20 +58,21 @@ class LoginActivity : AppCompatActivity() {
 
 
 //            startLogin()
-            var intent = Intent(this, HomeActivity::class.java)
-            intent.putExtra("id", id)
-            Log.d("SHOW_TEST_RESULT", "로그인 by  : $id")
 
-            startActivity(intent)
+//            Log.d("SHOW_TEST_RESULT", "로그인 by  : $id")
+
+//            startActivity(intent)
 
             //완성버전에서 적용 rest 로그인
 //            id = userId.text.toString()
 //            pw = userPassword.text.toString()
-//            val user = Login_User()
-//            user.id = userId.text.toString()
-//            user.password = userPassword.text.toString()
-//            Log.d("SHOW_", "id : ${user.id}, pw : ${user.password}")
-//            Login(user)
+            val user = Login_User()
+            user.id = userId.text.toString()
+            user.password = userPassword.text.toString()
+            Log.d("SHOW_", "id : ${user.id}, pw : ${user.password}")
+            var intent = Intent(this, HomeActivity::class.java)
+            intent.putExtra("id", id)
+            Login(user)
             ///////
 
 

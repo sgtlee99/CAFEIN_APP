@@ -19,7 +19,7 @@ object RetrofitBuilder {
 
     init {
         val retrofit = Retrofit.Builder()
-            .baseUrl("http://172.26.13.188:8080")
+            .baseUrl("http://172.26.8.129:8080")//아이피 변경되면 같이 변경해줄것
             .addConverterFactory(GsonConverterFactory.create(gson))//Gson을 역직렬화
 //            .addConverterFactory(ScalarsConverterFactory.create())
             .build()

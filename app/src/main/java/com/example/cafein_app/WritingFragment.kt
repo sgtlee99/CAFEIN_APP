@@ -142,13 +142,6 @@ class WritingFragment : Fragment() {
 
         val view = inflater.inflate(R.layout.fragment_writing, container, false)
 
-        //객체생성
-        val textMessage: TextView = view.findViewById(R.id.message_text)
-        //넘어온 메시지 변수에 담기
-        val message: String? = this.arguments?.getString("id")
-        //메시지 텍스트 뷰에 담기
-        textMessage.text = message
-
         return binding.root
         return view
     }
@@ -212,12 +205,9 @@ class WritingFragment : Fragment() {
         complete_button?.setOnClickListener {
 
             var post_up = Post_Write()
-
-
             var title = input_post_title.text.toString()    //제목
             //사진이 들어가야함
             //var post img
-            //
             var contents = input_post_contents.text.toString()  //내용
             //태그들
             var direct_tag = input_direct_tag.text.toString()
@@ -258,7 +248,25 @@ class WritingFragment : Fragment() {
             }
         })
     }
-
+//
+//    private fun Post_Upl(post_up: Post_Write) {
+//        val call = RetrofitBuilder.post_api.getPostResponse(post_up)
+//        call.enqueue(object : Callback<String> {
+//            override fun onResponse(call: Call<String>, response: Response<String>) {
+//                if (response.isSuccessful) {
+//                    Log.d("SHOW_RESPONSE : ", response.body().toString())
+//                    Toast.makeText(context, "[글 작성 완료]", Toast.LENGTH_SHORT).show()
+//                    toHomeActivity()
+//                } else {
+//                    Log.d("SHOW_RESPONSE : ", "POST UPLOAD FAILURE")
+//                }
+//            }
+//
+//            override fun onFailure(call: Call<String>, t: Throwable) {
+//                Log.d("SHOW_CONNECTION FAILURE : ", t.localizedMessage)
+//            }
+//        })
+//    }
 
     private fun getTags(text: String): Sequence<MatchResult> {
         /*
