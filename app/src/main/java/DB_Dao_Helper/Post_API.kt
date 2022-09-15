@@ -18,7 +18,7 @@ public interface Post_API {
     @POST("/android/postimagewrite")
     fun getPostimageResponse(@Part photo: MultipartBody.Part ) : Call<ImageTransport> //이미지
 
-
+//
 }
 
 data class ImageTransport(var result : String? = null) {}
